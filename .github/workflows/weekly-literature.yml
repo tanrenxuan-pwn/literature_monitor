@@ -112,7 +112,7 @@ jobs:
 
           # Keep the large historical backfill checkpoint/OAI cache out of the
           # weekly repository commit. Incremental runs need only these paths.
-          git add -- \
+          git add -f -- \
             data/state/seen_keys.txt \
             "data/state/runs/${RUN_ID}.json" \
             data/normalized \

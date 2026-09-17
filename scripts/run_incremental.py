@@ -1728,7 +1728,7 @@ def ieee(
         "User-Agent": "Mozilla/5.0 literature-monitor/1.0",
         "Accept": "application/json",
     },
-    timeout=timeout("ieee", 90),
+    timeout=90,
     provider="ieee",
     expected_format="json",
             )

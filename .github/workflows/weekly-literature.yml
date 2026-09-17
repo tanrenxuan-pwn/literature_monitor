@@ -65,17 +65,17 @@ jobs:
 
           case "${RUN_MODE}" in
             preflight)
-              python scripts/run_incremental.py \
+              python run_incremental.py \
                 --sources "${SOURCES}" \
                 --preflight-only
               ;;
             probe)
-              python scripts/run_incremental.py \
+              python run_incremental.py \
                 --sources "${SOURCES}" \
                 --live-probe-only
               ;;
             dry-run)
-              python scripts/run_incremental.py \
+              python run_incremental.py \
                 --sources "${SOURCES}" \
                 --dry-run \
                 --run-id "${RUN_ID}"
@@ -85,17 +85,22 @@ jobs:
                 echo 'No dry-run candidate CSV was produced.' >&2
                 exit 1
               fi
-              python scripts/export_ris.py \
+              python export_ris.py \
                 --input "${new_csv}" \
                 --output "${validation_dir}/new_candidates.ris"
               ;;
             live)
-              python scripts/run_incremental.py \
+              python run_incremental.py \
                 --sources "${SOURCES}" \
                 --run-id "${RUN_ID}"
-              python scripts/export_ris.py \
+              python export_ris.py \
                 --input exports/latest_new.csv \
                 --output exports/latest_new.ris
+
+              # Next stage: generate weekly report after adding generate_weekly_report.py
+              if [ -f generate_weekly_report.py ]; then
+                python generate_weekly_report.py
+              fi
               ;;
             *)
               echo "Unsupported RUN_MODE: ${RUN_MODE}" >&2
@@ -142,6 +147,7 @@ jobs:
           path: |
             exports/latest_new.csv
             exports/latest_new.ris
+            reports/
             data/state/runs/${{ env.RUN_ID }}.json
             data/normalized/*${{ env.RUN_ID }}.csv
             data/validation/${{ env.RUN_ID }}/

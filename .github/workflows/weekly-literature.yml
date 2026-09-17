@@ -15,6 +15,7 @@ on:
           - preflight
           - probe
           - dry-run
+          - email-test
           - live
 
 permissions:
@@ -89,6 +90,9 @@ jobs:
                 --input "${new_csv}" \
                 --output "${validation_dir}/new_candidates.ris"
               ;;
+            email-test)
+              echo 'Email test uses existing exports and does not query providers.'
+              ;;
             live)
               python scripts/run_incremental.py \
                 --sources "${SOURCES}" \
@@ -131,6 +135,21 @@ jobs:
             git commit -m 'weekly literature update [skip ci]'
             git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
+
+      - name: Send weekly email report
+        if: ${{ success() && (env.RUN_MODE == 'live' || env.RUN_MODE == 'email-test') }}
+        # A live retrieval remains successful if SMTP is temporarily unavailable.
+        # The dedicated email test still fails visibly when its delivery fails.
+        continue-on-error: ${{ env.RUN_MODE == 'live' }}
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          RUN_ID: ${{ env.RUN_ID }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: python scripts/send_weekly_email.py
 
       - name: Upload run artifacts
         if: ${{ always() }}

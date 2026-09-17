@@ -306,9 +306,26 @@ OPENALEX_API_KEY
 OPENALEX_POLITE_EMAIL
 S2_API_KEY
 IEEE_API_KEY
+SMTP_HOST
+SMTP_PORT
+SMTP_USER
+SMTP_PASSWORD
+MAIL_TO
 ```
 
 只填写值，不要把 Key 写入 YAML、`settings.json` 或代码。Windows 用户环境变量不会自动传给 GitHub Actions；GitHub Secrets 必须单独配置。
+
+邮件周报推荐使用 QQ 邮箱 SMTP。先在 QQ 邮箱网页版的“设置”中开启 SMTP 服务并生成授权码，然后填写以下 GitHub Secrets：
+
+```text
+SMTP_HOST=smtp.qq.com
+SMTP_PORT=465
+SMTP_USER=你的完整 QQ 邮箱地址
+SMTP_PASSWORD=QQ 邮箱生成的 SMTP 授权码（不是 QQ 登录密码）
+MAIL_TO=接收周报的邮箱地址
+```
+
+`MAIL_TO` 可以填写一个邮箱，也可以用英文逗号或分号分隔多个邮箱。邮箱地址和授权码只放在 GitHub Secrets 中，不要提交到仓库。
 
 ### 首次测试
 
@@ -317,10 +334,13 @@ IEEE_API_KEY
 3. 再运行一次 `probe`。该模式每个来源只发起最小探针，不写入 `seen_keys`；四个来源均成功后才进入下一步。
 4. 运行 `dry-run`。它执行真实检索但不提交状态，日志应显示 `state_committed=false`；结果会作为该次运行的 Artifact 保存。
 5. 确认前三步无误后，选择 `live` 手动运行一次。成功日志应包含 `run_status=ok`、`failures=0` 和 `state_committed=true`；仓库中应出现新的 `data/state/runs/weekly-<run_id>.json`、增量 CSV 以及 `exports/latest_new.csv` / `exports/latest_new.ris` 提交。
+6. 配置好五项邮件 Secrets 后，选择 `email-test` 运行一次。该模式只读取仓库中最近一次增量结果并发送测试周报，不调用 OpenAlex、Semantic Scholar、arXiv 或 IEEE，也不消耗接口额度。邮件发送失败时该测试会标红；展开 `Send weekly email report`，看到 `Weekly email sent successfully` 后再检查收件箱和垃圾邮件箱。
 
 ### 确认定时运行
 
 定时任务只会在默认分支上的工作流文件生效。下一次运行应在 Actions 列表中显示事件为 `schedule`，并在日志中看到 14 天窗口的 `start`、`end`、四个来源调用和状态提交结果。GitHub 使用 UTC 解释 cron，因此无需在 YAML 中填写北京时间。
+
+每次定时 `live` 成功后，工作流会自动发送中文周报，正文包含检索窗口、运行状态、原始/去重/新增/失败数量和最多 25 条新增论文，并附带完整的 `latest_new.csv` 与可直接导入 Zotero 的 `latest_new.ris`。SMTP 暂时不可用只会让邮件步骤显示警告，不会撤销已经完成的检索、提交或附件；修复邮箱配置后可单独运行 `email-test` 补发。
 
 若工作流成功但无法推送提交，请在 `Settings` → `Actions` → `General` → `Workflow permissions` 选择 `Read and write permissions`，并确认目标分支没有阻止 GitHub Actions 直接推送的保护规则。若仓库长期没有活动，GitHub 也可能暂停定时工作流；在 Actions 页面重新启用即可。
 

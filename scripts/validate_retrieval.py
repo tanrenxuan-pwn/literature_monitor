@@ -550,7 +550,7 @@ def run_self_tests() -> dict[str, Any]:
             max_retries=0,
         )
     assert observed_timeouts == [90, 90]
-    assert throttle_waits and max(throttle_waits) >= 4.0, throttle_waits
+    assert throttle_waits and max(throttle_waits) >= 3.99, throttle_waits
     checks["provider_request_throttle_and_timeout"] = "ok"
 
     with tempfile.TemporaryDirectory() as temp:

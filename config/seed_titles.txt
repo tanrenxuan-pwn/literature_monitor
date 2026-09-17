@@ -1,0 +1,7 @@
+# 每行填写 1 篇你已经确认高度相关的种子论文标题。
+# 建议先放 3–5 篇，用于验证 Q1–Q7 是否能召回。
+Paper 1 APPATCH: Automated Adaptive Prompting Large Language Models for Real-World Software Vulnerability Patching
+Paper 2 Enhancing static vulnerability alert validation using large language models
+Paper 3 LLM-Driven Adaptive Source-Sink Identification and False Positive Mitigation for Static Analysis
+Paper 4 Sifting the Noise: A Comparative Study of LLM Agents in Vulnerability False Positive Filtering
+Ppaer 5 VULSOLVER: Vulnerability Detection via LLM-Driven Constraint Solving

@@ -1,0 +1,108 @@
+{
+  "project_name": "C-C++ Static Vulnerability Evidence Screening",
+  "timezone": "Asia/Shanghai",
+  "incremental_lookback_days": 14,
+  "main_backfill_start": "2014-01-01",
+  "foundational_backfill_start_Q6": "2000-01-01",
+  "max_results_per_short_query": 100,
+  "year_only_date_window_days": 120,
+  "include_current_year_only_dates": false,
+  "http_max_retries": 4,
+  "http_timeout_seconds": 45,
+  "between_query_delay_seconds": 0.15,
+  "request_policies": {
+    "openalex": {
+      "min_interval_seconds": 0.2,
+      "initial_delay_seconds": 0.2,
+      "timeout_seconds": 60,
+      "max_retries": 4,
+      "rate_limit_backoff_seconds": 5,
+      "max_backoff_seconds": 120,
+      "circuit_breaker_threshold": 4,
+      "circuit_cooldown_seconds": 120
+    },
+    "semantic_scholar": {
+      "min_interval_seconds": 1.25,
+      "initial_delay_seconds": 1.25,
+      "timeout_seconds": 75,
+      "max_retries": 5,
+      "rate_limit_backoff_seconds": 30,
+      "max_backoff_seconds": 300,
+      "circuit_breaker_threshold": 4,
+      "circuit_cooldown_seconds": 300
+    },
+    "arxiv": {
+      "api_url": "https://arxiv.org/api/query",
+      "min_interval_seconds": 4.0,
+      "initial_delay_seconds": 4.0,
+      "timeout_seconds": 90,
+      "max_retries": 5,
+      "rate_limit_backoff_seconds": 30,
+      "max_backoff_seconds": 600,
+      "circuit_breaker_threshold": 4,
+      "circuit_cooldown_seconds": 600
+    },
+    "arxiv_oai": {
+      "api_url": "https://oaipmh.arxiv.org/oai",
+      "min_interval_seconds": 3.0,
+      "initial_delay_seconds": 0.0,
+      "timeout_seconds": 180,
+      "max_retries": 8,
+      "rate_limit_backoff_seconds": 60,
+      "max_backoff_seconds": 1800,
+      "circuit_breaker_threshold": 4,
+      "circuit_cooldown_seconds": 900,
+      "wait_through_circuit": true
+    },
+    "ieee": {
+      "min_interval_seconds": 0.6,
+      "initial_delay_seconds": 0.6,
+      "timeout_seconds": 90,
+      "max_retries": 4,
+      "rate_limit_backoff_seconds": 10,
+      "max_backoff_seconds": 180,
+      "circuit_breaker_threshold": 3,
+      "circuit_cooldown_seconds": 180
+    },
+    "dblp": {
+      "min_interval_seconds": 2.0,
+      "initial_delay_seconds": 2.0,
+      "timeout_seconds": 75,
+      "max_retries": 4,
+      "rate_limit_backoff_seconds": 10,
+      "invalid_response_backoff_seconds": 5,
+      "max_backoff_seconds": 180,
+      "circuit_breaker_threshold": 3,
+      "circuit_cooldown_seconds": 180
+    }
+  },
+  "sources": {
+    "openalex": {
+      "enabled": true,
+      "require_api_key": true
+    },
+    "semantic_scholar": {
+      "enabled": true,
+      "require_api_key": true
+    },
+    "arxiv": {
+      "enabled": true,
+      "categories": [
+        "cs.CR",
+        "cs.SE",
+        "cs.AI"
+      ]
+    },
+    "ieee": {
+      "enabled": true,
+      "require_api_key": true
+    },
+    "dblp": {
+      "enabled": false
+    },
+    "acm": {
+      "enabled": false,
+      "mode": "manual_export"
+    }
+  }
+}

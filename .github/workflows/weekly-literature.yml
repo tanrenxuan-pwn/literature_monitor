@@ -1,18 +1,13 @@
 name: Weekly Literature Monitor
 
+
 on:
-
-  schedule:
-    # Every Monday 00:23 UTC
-    # = Monday 08:23 Beijing time
-    - cron: '23 0 * * 1'
-
   workflow_dispatch:
     inputs:
-      mode:
-        description: 'Run mode for a manual test or live update'
+      run_mode:
+        description: "Run mode"
         required: true
-        default: preflight
+        default: "probe"
         type: choice
         options:
           - preflight
@@ -20,349 +15,132 @@ on:
           - dry-run
           - live
 
+  schedule:
+    # 每周一北京时间 08:00
+    # UTC 00:00
+    - cron: "0 0 * * 1"
+
 
 permissions:
   contents: write
 
 
-concurrency:
-  group: literature-monitor-${{ github.ref }}
-  cancel-in-progress: false
-
-
-env:
-
-  PYTHONUNBUFFERED: '1'
-  PIP_DISABLE_PIP_VERSION_CHECK: '1'
-
-  SOURCES:
-    openalex,semantic_scholar,arxiv,ieee
-
-  RUN_MODE:
-    ${{ github.event.inputs.mode || 'live' }}
-
-  RUN_ID:
-    weekly-${{ github.run_id }}
-
-
 jobs:
 
+  literature-monitor:
 
-  search:
-
-
-    runs-on:
-      self-hosted
+    runs-on: self-hosted
 
 
-    timeout-minutes:
-      90
+    env:
+      PYTHONUNBUFFERED: 1
+      PIP_DISABLE_PIP_VERSION_CHECK: 1
+
+      SOURCES: openalex,semantic_scholar,arxiv,ieee
+
+      RUN_MODE: ${{ github.event.inputs.run_mode || 'live' }}
+
 
 
     steps:
 
 
-      - name:
-          Check out repository
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
-        uses:
-          actions/checkout@v4
 
-        with:
 
-          fetch-depth:
-            0
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
 
 
 
-      - name:
-          Set up Python
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install -r requirements.txt
 
-        uses:
-          actions/setup-python@v5
 
-        with:
 
-          python-version:
-            '3.12'
+    - name: Validate retrieval invariants
+      run: |
+        python scripts/validate_retrieval.py
 
-          cache:
-            pip
 
 
+    - name: Run selected retrieval mode
+      run: |
+        python scripts/run_incremental.py \
+          --mode "${RUN_MODE}"
 
-      - name:
-          Install dependencies
 
-        run: |
 
-          python -m pip install --disable-pip-version-check -r requirements.txt
+    - name: Generate weekly report
+      if: success()
+      run: |
+        python scripts/generate_weekly_report.py
 
 
 
-      - name:
-          Validate retrieval invariants
+    - name: Send email notification
+      if: success()
+      env:
+        SMTP_HOST: smtp.qq.com
+        SMTP_PORT: 465
+        SMTP_USER: ${{ secrets.SMTP_USER }}
+        SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        MAIL_TO: ${{ secrets.MAIL_TO }}
 
-        run:
+      run: |
+        python scripts/send_email.py
 
-          python scripts/validate_retrieval.py --self-test
 
 
+    - name: Commit incremental state and outputs
+      if: success() && env.RUN_MODE == 'live'
+      run: |
 
-      - name:
-          Run selected retrieval mode
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-        env:
 
-          OPENALEX_API_KEY:
-            ${{ secrets.OPENALEX_API_KEY }}
-
-          OPENALEX_POLITE_EMAIL:
-            ${{ secrets.OPENALEX_POLITE_EMAIL }}
-
-          S2_API_KEY:
-            ${{ secrets.S2_API_KEY }}
-
-          IEEE_API_KEY:
-            ${{ secrets.IEEE_API_KEY }}
-
-
-        run: |
-
-          set -Eeuo pipefail
-
-
-          case "${RUN_MODE}" in
-
-
-            preflight)
-
-              python scripts/run_incremental.py \
-              --sources "${SOURCES}" \
-              --preflight-only
-
-              ;;
-
-
-            probe)
-
-              python scripts/run_incremental.py \
-              --sources "${SOURCES}" \
-              --live-probe-only
-
-              ;;
-
-
-            dry-run)
-
-              python scripts/run_incremental.py \
-              --sources "${SOURCES}" \
-              --dry-run \
-              --run-id "${RUN_ID}"
-
-              ;;
-
-
-            live)
-
-
-              python scripts/run_incremental.py \
-              --sources "${SOURCES}" \
-              --run-id "${RUN_ID}"
-
-
-              python scripts/export_ris.py \
-              --input exports/latest_new.csv \
-              --output exports/latest_new.ris
-
-
-              ;;
-
-
-            *)
-
-              echo "Unsupported RUN_MODE"
-              exit 2
-
-              ;;
-
-          esac
-
-
-
-
-      # ==========================
-      # Generate weekly report
-      # ==========================
-
-      - name:
-          Generate weekly report
-
-
-        if:
-
-          success() && env.RUN_MODE == 'live'
-
-
-        run: |
-
-          python scripts/generate_weekly_report.py
-
-
-
-
-      # ==========================
-      # Send email
-      # ==========================
-
-      - name:
-          Send email notification
-
-
-        if:
-
-          success() && env.RUN_MODE == 'live'
-
-
-        env:
-
-          SMTP_SERVER:
-            ${{ secrets.SMTP_SERVER }}
-
-          SMTP_PORT:
-            ${{ secrets.SMTP_PORT }}
-
-          SMTP_USER:
-            ${{ secrets.SMTP_USER }}
-
-          SMTP_PASSWORD:
-            ${{ secrets.SMTP_PASSWORD }}
-
-          MAIL_TO:
-            ${{ secrets.MAIL_TO }}
-
-
-        run: |
-
-
-          export REPORT_FILE=$(ls reports/weekly_report_*.md | tail -1)
-
-
-          python scripts/send_email.py
-
-
-
-
-
-      # ==========================
-      # Commit results
-      # ==========================
-
-
-      - name:
-          Commit incremental state and outputs
-
-
-        if:
-
-          success() && env.RUN_MODE == 'live'
-
-
-        run: |
-
-
-          set -Eeuo pipefail
-
-
-          git config user.name \
-          'github-actions[bot]'
-
-
-          git config user.email \
-          '41898282+github-actions[bot]@users.noreply.github.com'
-
-
-
-          git add -f -- \
-
-          data/state/seen_keys.txt \
-          "data/state/runs/${RUN_ID}.json" \
+        git add \
+          data/state \
           data/normalized \
-          exports/latest_new.csv \
-          exports/latest_new.ris \
+          exports \
           reports
 
 
 
-          if git diff --cached --quiet;
+        if git diff --cached --quiet
+        then
+          echo "No changes."
+        else
 
-          then
+          git commit -m "weekly literature update [skip ci]"
 
-            echo "No changes"
+          git push origin HEAD:${GITHUB_REF_NAME}
 
-          else
-
-
-            git diff --cached --check
-
-
-            git commit \
-            -m "weekly literature update [skip ci]"
-
-
-            git push origin \
-            "HEAD:${GITHUB_REF_NAME}"
-
-
-          fi
+        fi
 
 
 
+    - name: Upload artifacts
 
+      if: always()
 
+      uses: actions/upload-artifact@v4
 
-      # ==========================
-      # Save artifacts
-      # ==========================
+      with:
 
+        name: weekly-literature-output
 
-      - name:
+        path: |
 
-          Upload run artifacts
+          exports
 
-
-        if:
-
-          always()
-
-
-        uses:
-
-          actions/upload-artifact@v4
-
-
-        with:
-
-
-          name:
-
-            literature-monitor-${{ github.run_id }}
-
-
-          if-no-files-found:
-
-            ignore
-
-
-          path: |
-
-
-            exports/latest_new.csv
-
-            exports/latest_new.ris
-
-            reports/
-
-            data/state/runs/${{ env.RUN_ID }}.json
-
-            data/normalized/*${{ env.RUN_ID }}.csv
+          reports

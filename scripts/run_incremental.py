@@ -704,15 +704,9 @@ def _get_with_retry(
                 response, provider, retry_after_seconds=delay
             )
             if state["consecutive_429"] >= circuit_threshold:
-               cooldown = max(circuit_cooldown, delay)
-
-   		if provider == "semantic_scholar":
-        		time.sleep(cooldown)
-        		state["consecutive_429"] = 0
-        		continue
-
-   	 	state["circuit_open_until"] = time.monotonic() + cooldown
-    		state["circuit_trips"] += 1
+                cooldown = max(circuit_cooldown, delay)
+                state["circuit_open_until"] = time.monotonic() + cooldown
+                state["circuit_trips"] += 1
                 raise ProviderCircuitOpenError(provider, cooldown) from last_error
         else:
             state["consecutive_429"] = 0

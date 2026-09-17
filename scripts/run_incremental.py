@@ -1722,11 +1722,15 @@ def ieee(
                 "start_record": offset,
             }
             response = _get_with_retry(
-                "https://ieeexploreapi.ieee.org/api/v1/search/articles",
-                params=params,
-                timeout=_timeout("ieee", 90),
-                provider="ieee",
-                expected_format="json",
+               "https://ieeexploreapi.ieee.org/api/v1/search/articles",
+    params=params,
+    headers={
+        "User-Agent": "Mozilla/5.0 literature-monitor/1.0",
+        "Accept": "application/json",
+    },
+    timeout=timeout("ieee", 90),
+    provider="ieee",
+    expected_format="json",
             )
             data = response.json()
             call["pages"] += 1

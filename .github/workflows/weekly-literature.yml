@@ -65,17 +65,17 @@ jobs:
 
           case "${RUN_MODE}" in
             preflight)
-              python run_incremental.py \
+              python scripts/run_incremental.py \
                 --sources "${SOURCES}" \
                 --preflight-only
               ;;
             probe)
-              python run_incremental.py \
+              python scripts/run_incremental.py \
                 --sources "${SOURCES}" \
                 --live-probe-only
               ;;
             dry-run)
-              python run_incremental.py \
+              python scripts/run_incremental.py \
                 --sources "${SOURCES}" \
                 --dry-run \
                 --run-id "${RUN_ID}"
@@ -85,15 +85,15 @@ jobs:
                 echo 'No dry-run candidate CSV was produced.' >&2
                 exit 1
               fi
-              python export_ris.py \
+              python scripts/export_ris.py \
                 --input "${new_csv}" \
                 --output "${validation_dir}/new_candidates.ris"
               ;;
             live)
-              python run_incremental.py \
+              python scripts/run_incremental.py \
                 --sources "${SOURCES}" \
                 --run-id "${RUN_ID}"
-              python export_ris.py \
+              python scripts/export_ris.py \
                 --input exports/latest_new.csv \
                 --output exports/latest_new.ris
 

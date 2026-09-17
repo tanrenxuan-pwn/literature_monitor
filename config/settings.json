@@ -24,11 +24,11 @@
     "semantic_scholar": {
       "min_interval_seconds": 1.25,
       "initial_delay_seconds": 1.25,
-      "timeout_seconds": 75,
+      "timeout_seconds": 90,
       "max_retries": 5,
       "rate_limit_backoff_seconds": 30,
       "max_backoff_seconds": 300,
-      "circuit_breaker_threshold": 4,
+      "circuit_breaker_threshold": 5,
       "circuit_cooldown_seconds": 300
     },
     "arxiv": {

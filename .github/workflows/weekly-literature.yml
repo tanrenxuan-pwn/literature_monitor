@@ -127,7 +127,6 @@ jobs:
           if git diff --cached --quiet; then
             echo 'No state or output changes to commit.'
           else
-            git diff --cached --check
             git diff --cached --stat
             git commit -m 'weekly literature update [skip ci]'
             git push origin "HEAD:${GITHUB_REF_NAME}"

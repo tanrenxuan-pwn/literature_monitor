@@ -61,6 +61,7 @@
       "max_retries": 4,
       "rate_limit_backoff_seconds": 10,
       "max_backoff_seconds": 180,
+      "daily_quota_cooldown_seconds": 86400,
       "circuit_breaker_threshold": 3,
       "circuit_cooldown_seconds": 180
     },

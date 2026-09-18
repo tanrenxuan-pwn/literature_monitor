@@ -184,10 +184,12 @@ class ProviderHTTPStatusError(RuntimeError):
         *,
         detail: str = "",
         retry_after_seconds: float | None = None,
+        rate_limited: bool = False,
     ):
         self.provider = provider
         self.status_code = status_code
         self.retry_after_seconds = retry_after_seconds
+        self.rate_limited = rate_limited
         label = SOURCE_LABELS.get(provider, provider)
         message = f"{label} returned HTTP {status_code}"
         if detail:
@@ -558,12 +560,31 @@ def _http_status_error(
     provider: str,
     *,
     retry_after_seconds: float | None = None,
+    rate_limited: bool = False,
 ) -> ProviderHTTPStatusError:
     return ProviderHTTPStatusError(
         provider,
         int(response.status_code),
         detail=_response_detail(response),
         retry_after_seconds=retry_after_seconds,
+        rate_limited=rate_limited,
+    )
+
+
+def _is_ieee_quota_response(response: requests.Response) -> bool:
+    """IEEE reports exhausted daily developer quota as HTTP 403 HTML."""
+    if int(response.status_code) != 403:
+        return False
+    detail = _response_detail(response).casefold()
+    return any(
+        marker in detail
+        for marker in (
+            "developer over rate",
+            "over rate",
+            "rate limit",
+            "rate-limit",
+            "quota",
+        )
     )
 
 
@@ -640,6 +661,9 @@ def _get_with_retry(
         max_retries = max(0, int(policy["max_retries"]))
     max_backoff = max(1.0, float(policy["max_backoff_seconds"]))
     rate_backoff = max(1.0, float(policy["rate_limit_backoff_seconds"]))
+    daily_quota_cooldown = max(
+        60.0, float(policy.get("daily_quota_cooldown_seconds", 86400.0))
+    )
     invalid_backoff = max(
         1.0, float(policy.get("invalid_response_backoff_seconds", 2.0))
     )
@@ -673,7 +697,10 @@ def _get_with_retry(
             _sleep_delay(delay)
             continue
 
-        if response.status_code not in RETRYABLE_STATUS:
+        ieee_quota_exhausted = (
+            provider == "ieee" and _is_ieee_quota_response(response)
+        )
+        if response.status_code not in RETRYABLE_STATUS and not ieee_quota_exhausted:
             state["consecutive_429"] = 0
             if response.status_code >= 400:
                 if response.status_code in {401, 403}:
@@ -694,6 +721,25 @@ def _get_with_retry(
                     _sleep_delay(delay)
                     continue
             return response
+
+        if ieee_quota_exhausted:
+            # IEEE's developer plan returns 403 for a daily quota exhaustion.
+            # Retrying a few seconds later only spends more requests and cannot
+            # recover the quota, so fail fast with an actionable 24-hour hint.
+            state["rate_limit_events"] += 1
+            state["consecutive_429"] += 1
+            delay = _retry_after(
+                response,
+                daily_quota_cooldown,
+                max(daily_quota_cooldown, 7 * 86400.0),
+            )
+            last_error = _http_status_error(
+                response,
+                provider,
+                retry_after_seconds=delay,
+                rate_limited=True,
+            )
+            raise last_error
 
         if response.status_code == 429:
             state["rate_limit_events"] += 1
@@ -738,7 +784,7 @@ def _call_start(
         "query": query,
         "start": start.isoformat(),
         "end": end.isoformat(),
-        "started_at": datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+        "started_at": now_iso(),
         "status": "started",
         "pages": 0,
         "returned": 0,
@@ -753,19 +799,19 @@ def _call_ok(call: dict[str, Any], returned: int, *, total: int | None = None) -
     call["returned"] = returned
     if total is not None:
         call["provider_total"] = total
-    call["finished_at"] = datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+    call["finished_at"] = now_iso()
 
 
 def _call_error(call: dict[str, Any], exc: Exception) -> None:
     call["status"] = "error"
     call["error"] = _safe_error_message(exc)
-    call["finished_at"] = datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+    call["finished_at"] = now_iso()
 
 
 def _call_disabled(call: dict[str, Any], reason: str) -> None:
     call["status"] = "disabled"
     call["reason"] = reason
-    call["finished_at"] = datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+    call["finished_at"] = now_iso()
 
 
 def _sleep_delay(seconds: float) -> None:
@@ -902,7 +948,7 @@ def openalex(
                         "source_database": "OpenAlex",
                         "query_id": query_id,
                         "original_record_id": provider_id,
-                        "retrieved_at": datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+                        "retrieved_at": now_iso(),
                         "is_preprint": _is_preprint(item.get("type", ""), venue, doi),
                         "arxiv_id": arxiv_id,
                         "formal_doi": "" if is_arxiv_doi(doi) else doi,
@@ -1024,7 +1070,7 @@ def semantic_scholar(
                         "source_database": "Semantic Scholar",
                         "query_id": query_id,
                         "original_record_id": paper_id,
-                        "retrieved_at": datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+                        "retrieved_at": now_iso(),
                         "is_preprint": _is_preprint(item.get("publicationTypes", []), venue, doi),
                         "arxiv_id": arxiv_id,
                         "formal_doi": "" if is_arxiv_doi(doi) else doi,
@@ -1520,7 +1566,7 @@ def _arxiv_from_oai_cache(
             ).fetchall()
         ]
     matches = [record for record in candidates if _arxiv_query_matches(search, record)]
-    retrieved_at = datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+    retrieved_at = now_iso()
     rows: list[dict[str, Any]] = []
     for record in matches[:limit]:
         doi = norm_doi(record.get("doi", ""))
@@ -1655,7 +1701,7 @@ def arxiv(
                         "source_database": "arXiv",
                         "query_id": query_id,
                         "original_record_id": arxiv_id,
-                        "retrieved_at": datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+                        "retrieved_at": now_iso(),
                         "is_preprint": "1",
                         "arxiv_id": embedded_arxiv or arxiv_id,
                         "formal_doi": "" if is_arxiv_doi(doi) else doi,
@@ -1788,7 +1834,7 @@ def ieee(
                         "source_database": "IEEE Xplore",
                         "query_id": query_id,
                         "original_record_id": article_id,
-                        "retrieved_at": datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+                        "retrieved_at": now_iso(),
                         "is_preprint": "0",
                         "arxiv_id": "",
                         "formal_doi": doi,
@@ -1906,7 +1952,7 @@ def dblp(
                         "source_database": "DBLP",
                         "query_id": query_id,
                         "original_record_id": identifier,
-                        "retrieved_at": datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+                        "retrieved_at": now_iso(),
                         "is_preprint": "0",
                         "arxiv_id": "",
                         "formal_doi": doi,
@@ -2212,15 +2258,15 @@ def _failure_metadata(exc: Exception) -> dict[str, Any]:
         )
     elif isinstance(cause, ProviderHTTPStatusError):
         result["http_status"] = cause.status_code
-        if cause.status_code in {401, 403}:
-            result.update(code="API_ACCESS_DENIED", block_source=True)
-        elif cause.status_code == 429:
+        if cause.rate_limited or cause.status_code == 429:
             result.update(code="RATE_LIMITED", block_source=True)
             if cause.retry_after_seconds is not None:
                 result["retry_not_before"] = (
                     datetime.now(timezone.utc)
                     + timedelta(seconds=cause.retry_after_seconds)
                 ).replace(microsecond=0).isoformat()
+        elif cause.status_code in {401, 403}:
+            result.update(code="API_ACCESS_DENIED", block_source=True)
         elif cause.status_code >= 500:
             result.update(code="TRANSIENT_HTTP", block_source=True)
     elif isinstance(cause, requests.exceptions.Timeout):
@@ -2767,7 +2813,7 @@ def run_incremental(
         "start": start.isoformat(),
         "end": end.isoformat(),
         "limit_per_variant": limit,
-        "created_at": datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+        "created_at": now_iso(),
         "raw_rows": len(allrows),
         "unique_rows": len(merged),
         "new_rows": len(new),

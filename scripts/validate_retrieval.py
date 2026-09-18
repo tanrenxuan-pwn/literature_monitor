@@ -29,6 +29,7 @@ import import_acm
 import run_backfill as backfill
 import run_incremental as monitor
 import export_ris
+import weekly_recovery_gate as recovery_gate
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -606,6 +607,43 @@ def run_self_tests() -> dict[str, Any]:
         else:
             os.environ["IEEE_API_KEY"] = old_ieee_key_for_error
     checks["access_denied_fails_fast"] = "ok"
+
+    monitor.reset_provider_runtime_state()
+    quota_denied = _FakeResponse(
+        content=b"<h1>Developer Over Rate</h1>",
+        status_code=403,
+        headers={"Content-Type": "text/html"},
+    )
+    old_ieee_key_for_quota = os.environ.get("IEEE_API_KEY")
+    os.environ["IEEE_API_KEY"] = "secret-self-test-key"
+    try:
+        with patch.object(monitor.requests, "get", return_value=quota_denied) as quota_get, patch.object(
+            monitor, "_sleep_delay", return_value=None
+        ):
+            try:
+                monitor._get_with_retry(
+                    "https://ieeexploreapi.ieee.org/api/v1/search/articles",
+                    params={"apikey": "secret-self-test-key"},
+                    provider="ieee",
+                    expected_format="json",
+                )
+            except monitor.ProviderHTTPStatusError as exc:
+                assert exc.status_code == 403
+                assert exc.rate_limited is True
+                assert (monitor._failure_metadata(exc))["code"] == "RATE_LIMITED"
+                assert (exc.retry_after_seconds or 0) >= 86400
+            else:
+                raise AssertionError("IEEE daily quota response was not surfaced")
+        assert quota_get.call_count == 1
+        runtime = monitor.provider_runtime_snapshot()["IEEE Xplore"]
+        assert runtime["rate_limit_events"] == 1
+        assert runtime["access_denied_events"] == 0
+    finally:
+        if old_ieee_key_for_quota is None:
+            os.environ.pop("IEEE_API_KEY", None)
+        else:
+            os.environ["IEEE_API_KEY"] = old_ieee_key_for_quota
+    checks["ieee_daily_quota_is_classified"] = "ok"
 
     monitor.reset_provider_runtime_state()
     malformed = _FakeResponse(content=b"<html>temporary gateway page</html>")
@@ -1570,6 +1608,44 @@ def run_self_tests() -> dict[str, Any]:
         assert resumed["remaining_tasks"] == 0
         assert resumed["source_failures"] == []
     checks["backfill_defer_failed_source"] = "ok"
+
+    with tempfile.TemporaryDirectory() as temp:
+        runs_dir = Path(temp)
+        target_end = date(2026, 9, 21)
+        successful = {
+            "mode": "incremental",
+            "run_status": "ok",
+            "state_committed": True,
+            "end": target_end.isoformat(),
+        }
+        (runs_dir / "successful.json").write_text(
+            json.dumps(successful), encoding="utf-8"
+        )
+        skipped = recovery_gate.decide(
+            "schedule",
+            recovery_gate.RECOVERY_CRON,
+            today=date(2026, 9, 22),
+            runs_dir=runs_dir,
+            settings={"incremental_lookback_days": 14},
+        )
+        assert skipped["should_run"] is False
+        (runs_dir / "successful.json").unlink()
+        old_success = dict(successful, end="2026-09-14")
+        (runs_dir / "old.json").write_text(
+            json.dumps(old_success), encoding="utf-8"
+        )
+        retry = recovery_gate.decide(
+            "schedule",
+            recovery_gate.RECOVERY_CRON,
+            today=date(2026, 9, 22),
+            runs_dir=runs_dir,
+            settings={"incremental_lookback_days": 14},
+        )
+        assert retry["should_run"] is True
+        assert retry["start"] == "2026-09-07" and retry["end"] == "2026-09-21"
+        manual = recovery_gate.decide("workflow_dispatch", "", today=date(2026, 9, 22), runs_dir=runs_dir)
+        assert manual["should_run"] is True and manual["recovery"] is False
+    checks["weekly_recovery_gate"] = "ok"
     return {"status": "pass", "checks": checks}
 
 

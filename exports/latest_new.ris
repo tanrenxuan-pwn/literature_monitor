@@ -1,96 +1,175 @@
+TY  - JOUR
+TI  - BERTRAG as a BERT-enhanced retrieval-augmented generation framework for preserving Awori and Ogu indigenous knowledge
+AU  - Olusola Olabanjo
+AU  - Ashiribo Wusu
+AU  - Oseni Afisi
+T2  - Scientific Reports
+PY  - 2026
+DA  - 2026-09-16
+DO  - 10.1038/s41598-026-69728-4
+UR  - https://doi.org/10.1038/s41598-026-69728-4
+AB  - Indigenous cultural knowledge is frequently distributed across heterogeneous and low-resource sources, including oral histories, archival records, ritual texts, community narratives, and locally produced documents. Such knowledge is often context-dependent and governed by community protocols, making it susceptible to distortion, hallucination, and loss of contextual meaning when processed using generic large language models (LLMs). This study presents BERTRAG, a BERT-enhanced Retrieval-Augmented Generation (RAG) framework for supporting the preservation and responsible use of indigenous knowledge, evaluated through a case study of the Awori and Ogu communities of Lagos, Nigeria. BERTRAG integrates a community-curated, governance-aware corpus, domain-adapted BERT embeddings for culturally informed semantic retrieval, and retrieval-conditioned generation with explicit provenance and abstention constraints to promote evidence-grounded responses and reduce hallucination. Empirical evaluation demonstrates that domain-adapted retrieval improves Recall@10 from 0.61 for BM25, 0.68 for generic BERT, and 0.72 for the contemporary E5-base-v2 dense embedding baseline to 0.77 for BERTRAG. Retrieval-grounded generation achieves a faithfulness score of 91.3% and reduces the hallucination rate from 35.8% for the LLM-only baseline to 8.7% for BERTRAG. Expert evaluation further demonstrates improved cultural fidelity, with mean overall fidelity scores of 3.0 for the LLM-only baseline and 3.9 for the Retrieval + Extractive QA baseline, compared with 4.6 for BERTRAG on a five-point Likert scale. The framework also exhibits calibrated abstention behavior under low-evidence conditions, supporting cautious responses when reliable supporting evidence is unavailable. Within the scope of the Awori and Ogu case study, these findings indicate that combining domain-adapted retrieval, provenance-aware generation, explicit abstention, and culturally informed evaluation can improve the reliability and cultural appropriateness of RAG for indigenous knowledge question answering. The proposed framework offers a candidate methodological approach for culturally governed, low-resource knowledge domains, although its applicability beyond the communities studied remains to be established through future empirical evaluation.
+N1  - record_key=doi:10.1038/s41598-026-69728-4
+N1  - source_database=OpenAlex
+N1  - query_id=Q3.v2
+N1  - original_record_id=https://openalex.org/W7213342260
+N1  - retrieved_at=2026-09-18T01:14:42+00:00
+N1  - formal_doi=10.1038/s41598-026-69728-4
+ER  - 
+
 TY  - EPRINT
-TI  - Adversarial Testing of Automated Program Repair Agents for Security Vulnerabilities
-AU  - Fares Trad
-AU  - Simin Chen
-AU  - Hung Viet Pham
-AU  - Gias Uddin
-AU  - Baishakhi Ray
+TI  - Same Name, Different Server: A Security Census of Silent Drift in the Model Context Protocol Ecosystem
+AU  - Obada Kraishan
+T2  - arXiv (Cornell University)
+PY  - 2026
+DA  - 2026-09-12
+UR  - https://arxiv.org/abs/2609.14119
+AB  - The Model Context Protocol (MCP) has become the common interface through which large language model applications reach external tools, and its public registry now distributes thousands of community-built servers with little of the vetting infrastructure that mature package ecosystems have accumulated. This paper reports a census of that ecosystem. We harvested the full public MCP registry (21,643 servers, 72,606 version records, August 2026 snapshot), fetched source code for 14,353 servers, and applied a pattern-based scanner covering an eight-class threat catalogue whose accuracy we measured against 414 hand-labeled findings. Observed prevalence is dominated by unauthenticated network exposure (9.57% of scanned servers); after correcting each class by its measured precision, 11.14% observed high-severity prevalence reduces to roughly 7.6%. The central finding concerns instability rather than any single weakness: 51.1% of multi-version servers changed what they advertise between versions, 40.6% did so silently, and 4.2% redirected their remote endpoint to a different host while keeping their registry identity, a change the protocol never surfaces to installed clients. Silent drift is associated with nearly threefold higher odds of a high-severity finding (OR = 2.96, 95% CI [2.56, 3.42]). Popularity offers only weak protection (OR = 0.78 per unit of log stars), so star counts are a poor proxy for safety. We derive concrete recommendations for registry design, client-side pinning, and scanner triage, and release an anonymized artifact.
+N1  - record_key=title:0472ce763d6ce9a2241de06670367343a74c6851
+N1  - source_database=OpenAlex
+N1  - query_id=Q3.v3
+N1  - original_record_id=https://openalex.org/W7213373457
+N1  - retrieved_at=2026-09-18T01:14:45+00:00
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - An Empirical Security Analysis of Open-Source Software Used in Onboard Satellite Systems
+AU  - Roee Idan
+AU  - Tomer Cohen Galor
+AU  - Asaf Shabtai
+AU  - Yuval Elovici
 T2  - arXiv (Cornell University)
 PY  - 2026
 DA  - 2026-09-14
-UR  - https://arxiv.org/abs/2609.15963
-AB  - Software agents with Large Language Models (LLMs) are designed for Automated Program Repair (APR) tasks, raising the possibility that, in the near future, APR agents will fix bugs automatically without much human intervention. Can we trust an APR agent to produce both functionally correct and secure code in such situations? What if attackers target production APR agents with adversarial issues that seem benign but may influence the agents to produce correct but insecure code? In this paper, we took a first step towards answering these questions by conducting an empirical study. First, we created SWEADV, a benchmark of 750 adversarial issue descriptions constructed from 150 repair tasks in SWE-bench Verified. For each repair task, we created five adversarial issue descriptions, one for each attack type: command execution, deserialization, path traversal, denial of service, and weak hashing. Second, we evaluated mini_swe APR agents from three LLM backends on SWEADV: GPT-5-Mini, MiniMax-M2.5, and DeepSeek-R. We found that on average, adversarial issue descriptions can induce malicious behaviors with successful repair in 51.7% of cases. Third, we investigated whether typical detection mechanisms are sufficient to prevent such malicious patches from being accepted. Pre-repair detection with LLM-as-judge on the adversarial issue descriptions resulted in an average detection accuracy of only 62.3%. Post-repair detection on adversarial APR patches using static analysis tools and LLM-as-judge achieved average detection accuracies of only 39.4% and 55.4%, respectively. We conclude that autonomous APR agents cannot be trusted yet in production deployment, given their susceptibility to adversarial attacks.
-N1  - record_key=title:d5dce89fb6221d9d53bb1a982152e9453e7da5e1
+UR  - https://arxiv.org/abs/2609.15425
+AB  - The use of open-source software (OSS) in satellite flight systems is increasing as missions adopt reusable frameworks, shared libraries, and community-maintained components. While this accelerates development, it also introduces software-security risks into systems where patching is costly and failures may affect mission operations. This paper presents an empirical security study of OSS used in onboard satellite systems. We analyze 126 public repositories using a pipeline that combines software bill of materials generation, software composition analysis, static application security testing, infrastructure-as-code analysis, and secret scanning. After rule-based cleaning, onboard-scope filtering, and fingerprint-based deduplication, the pipeline produced a final dataset of 2,827 findings. The results show that security findings are widespread but unevenly distributed. Medium-severity findings account for 49% of the dataset, and 72% are classified as medium severity or higher. A Common Weakness Enumeration (CWE)-based taxonomy assigns all findings to eight weakness families. Memory Safety and Code Quality dominate the dataset, followed by Input Validation and Injection. Most findings occur in project-developed code, accounting for 81.4% of the dataset, while external dependency code remains a relevant source of findings. While these findings do not establish mission-specific exploitability, they provide an empirical characterization of recurring security patterns across the open-source onboard satellite software ecosystem, helping quantify their prevalence and prioritize areas that warrant the greatest security attention.
+N1  - record_key=title:d213ed083aa6392aac6f43b21d050f2e30055235
 N1  - source_database=OpenAlex
-N1  - query_id=Q3.v1;Q3.v3
-N1  - original_record_id=https://openalex.org/W7213372911
-N1  - retrieved_at=2026-09-17T09:07:34Z
+N1  - query_id=Q4.v1
+N1  - original_record_id=https://openalex.org/W7213371107
+N1  - retrieved_at=2026-09-18T01:15:19+00:00
 KW  - source-preprint
-ER  -
+ER  - 
 
 TY  - EPRINT
-TI  - The Deception Delta: Adversarial Evaluation of LLM-Based Smart Contract Bytecode Forensics
-AU  - Timo Schefold
+TI  - Vulnerability Localization Benchmark: Measuring Agentic Security Analysis at Repository Scale
+AU  - Aman Priyanshu
+AU  - Supriti Vijay
+AU  - Kimia Majd
+AU  - Xuhong He
+AU  - Fraser Burch
+AU  - Takahiro Matsumoto
+AU  - Jianliang He
+AU  - Baturay Sağlam
+AU  - Arthur Goldblatt
+AU  - Zhuoran Yang
+AU  - Amin Karbasi
 T2  - arXiv (Cornell University)
 PY  - 2026
-DA  - 2026-09-12
-DO  - 10.1145/3830454.3846626
-UR  - https://arxiv.org/abs/2609.14098
-AB  - Large language models are increasingly used in blockchain forensic investigations to interpret unverified smart contract bytecode. Their robustness has not been systematically tested against contracts adversarially designed to mislead analysis. We evaluate 22 frontier models on 13 purpose-built contracts (9 deception vectors, 4 controls) across six prompt strategies, yielding 8,528 analyzable non-refusal runs against contracts with EVM-verified ground truth. A calibrated LLM-as-judge pipeline, supported by two judge-independent metrics and 50 human gold-standard labels, shows that adversarial deception reduces drain detection by 20.0 percentage points (95% CI: [17.2, 22.8]) relative to functionally matched controls. Structural camouflage via multi-hop call chains, XOR-masked selectors, and storage-loaded drain parameters resists detection across nearly all models. Beyond non-detection, we identify rationalization: models correctly describe the hidden drain mechanism but accept the contract's deceptive framing and dismiss it as benign, yielding positive but incorrect evidence of safety. Simple guard instructions provide no aggregate benefit and destabilize individual models in both directions. Structural deception is largely insensitive across the six tested prompt strategies, more consistent with a capability limitation than with a simple prompting problem. Only five models from two providers exceed 50% detection. Under our single-shot, raw-bytecode-only protocol, current LLMs are not reliable standalone forensic tools. Our central claim does not extend to multi-turn, tool-augmented, source-aware, or decompiler-in-the-loop workflows; a source-code boundary check is reported as an explicit subset analysis rather than as part of the main evaluation.
-N1  - record_key=doi:10.1145/3830454.3846626
+DA  - 2026-09-14
+UR  - https://arxiv.org/abs/2609.15939
+AB  - Language-model agents increasingly operate over complete software repositories, yet cybersecurity evaluations primarily measure whether they can detect, reproduce, or repair vulnerabilities rather than whether they can locate the relevant code. We study vulnerability localization: given a weakness class and an unfamiliar repository, identify the implementation files associated with that weakness. We introduce the Vulnerability Localization Benchmark (VLoc Bench), comprising 500 real world vulnerabilities from 290 repositories across six package ecosystems and 147 CWE categories. Each task pairs repository snapshots immediately before and after a security fix. On the vulnerable snapshot, an agent receives only the CWE description and read-only terminal access and must return the affected files; on the patched snapshot, it must determine that the recorded vulnerability is no longer present. We evaluate 27 language models and four static-analysis tools under a common agent interface. Repository-scale vulnerability localization remains difficult: the strongest system achieves 0.229 File F1, and 38.4% of tasks receive no correct localization from any evaluated model. We further find that stronger localization does not imply reliable behavior after remediation: systems that identify vulnerable files effectively can still report unsupported locations on patched repositories. These results establish vulnerability localization as a distinct repository-scale capability and provide a setting for studying both how security agents search for vulnerable code and when they should refrain from reporting it.
+N1  - record_key=title:d3537687a3c4dba684309e939f5bdb4286b9ad72
 N1  - source_database=OpenAlex
-N1  - query_id=Q3.v1;Q3.v3
-N1  - original_record_id=https://openalex.org/W7213288795
-N1  - retrieved_at=2026-09-17T09:07:34Z
-N1  - formal_doi=10.1145/3830454.3846626
-ER  -
+N1  - query_id=Q6.v2
+N1  - original_record_id=https://openalex.org/W7213373415
+N1  - retrieved_at=2026-09-18T01:17:42+00:00
+KW  - source-preprint
+ER  - 
 
 TY  - EPRINT
-TI  - TyPatch: Transforming Patches into Typestate Rules for Kernel Bug Detection
-AU  - Ruoyu Wang
-AU  - Tuo Li
-AU  - Jia Li
-T2  - arXiv (Cornell University)
+TI  - Delphi Scanner: efficient and interpretable static malware detection via API sequence modeling
+AU  - Bijied Brahimi
+AU  - Vincent Cohadon
+AU  - Gabriel Glazman
+AU  - Rayan Al Mohaize
+AU  - Omran Berjawi
+AU  - Rida Khatoun
+T2  - arXiv
 PY  - 2026
-DA  - 2026-09-12
-UR  - https://arxiv.org/abs/2609.13728
-AB  - Historical Linux kernel patches capture defect knowledge that applies beyond their original repair sites. Recent work has shown that large language models (LLMs) can generate static-analysis checkers from historical patches and use them to uncover new kernel bugs. However, complete-checker generation requires the model both to recover the defect semantics expressed by a patch and to implement sophisticated program-analysis machinery, including object tracking, alias analysis, path-state maintenance, and interprocedural propagation. Coupling these responsibilities in a single end-to-end code-generation task can turn a simple defect rule into an unstable and expensive analyzer-implementation problem. To address this problem, we present TyPatch, which decouples patch-specific defect semantics from analyzer implementation. An LLM translates each patch into a typestate rule specifying its tracked object, actions, guards, transitions, and violations. A shared backend then executes these rules, binding their actions to program events, tracking object identity across aliases, propagating typestate along program paths, and producing reports for all rules. On Linux v6.16, TyPatch finds 559 distinct bugs, 121 of which have been confirmed by kernel developers. In a matched 38-patch comparison with the state-of-the-art complete-checker construction workflow, TyPatch uses 88.3-90.1% fewer generation tokens, while its initial report pools achieve 3.42-14.95$\times$ the precision of those produced by that workflow.
-N1  - record_key=title:73f9ea1be2a03e29c08d56aa65585761b1acf5e2
-N1  - source_database=OpenAlex
-N1  - query_id=Q3.v1;Q3.v3;Q6.v2
-N1  - original_record_id=https://openalex.org/W7213371449
-N1  - retrieved_at=2026-09-17T09:07:34Z
+DA  - 2026-09-17
+UR  - http://arxiv.org/abs/2609.19900v1
+AB  - Static malware detection for Windows Portable Executable files demands a careful balance between detection effectiveness, computational efficiency, and analytical interpretability. This paper introduces Delphi Scanner, a static malware detection system for Windows PE files that balances efficiency with behavioral interpretation. It uses a convolutional neural network (CNN) to model Windows API sequences to classify PE and a decoupled interpretation layer based on a rule-based layer to categorize APIs into high-level malicious capabilities. Evaluated on over 190,000 Windows PE files, the system achieves 95.35% accuracy with a 1.53~MB model footprint. Robustness experiments on 5,647 out-of-distribution MalwareBazaar samples, paired packed and unpacked executables, and three adversarial manipulation strategies confirm generalization beyond the training distribution and resistance to functionality-preserving evasion techniques. Overall, these results demonstrate that API sequence-based static analysis offers a practical, interpretable, and efficient foundation for malware triage in local deployment scenarios.
+N1  - record_key=arxiv:2609.19900
+N1  - source_database=arXiv
+N1  - query_id=Q1.A1
+N1  - original_record_id=2609.19900
+N1  - retrieved_at=2026-09-18T01:26:37+00:00
+N1  - arxiv_id=2609.19900
 KW  - source-preprint
-ER  -
+ER  - 
 
 TY  - EPRINT
-TI  - Confuse the Model, Control the Flow: Understanding and Mitigating Privacy Leakage from LLM Agents with Information Flow Control
-AU  - Minsun Shim
-AU  - Ramisha Raida Karim
-AU  - Ruthwik Jakkula
-AU  - Kaiwen Zhou
-AU  - Xin Liu
-AU  - Xin Eric Wang
-AU  - Zhou Li
-T2  - arXiv (Cornell University)
+TI  - Contagion on the Trading Floor: How Adversarial Signals Spread in Multi-Agent Trading Systems
+AU  - Qi Rong Sua
+AU  - Junhao Dong
+AU  - Nguyen Duc Thai
+AU  - Yuqing Wen
+AU  - Cheston Tan
+AU  - Yew-Soon Ong
+T2  - arXiv
 PY  - 2026
-DA  - 2026-09-12
-UR  - https://arxiv.org/abs/2609.14003
-AB  - Personal AI agents built on large language models (LLMs) are increasingly given access to a user's private data and communications in order to provide personalized assistance. This access creates a persistent privacy risk: the agent must decide whether a given sensitive information should be disclosed to a particular party. Existing defenses address this by making the agent's backend LLM more privacy-preserving through stronger system prompts, training, or explicit consent-checking procedures, but this approach has a structural challenge: whenever enforcement is a judgment the LLM makes over the same conversational context an adversary controls, the enforcement mechanism and the attack surface coincide. We demonstrate this against existing defenses with three new attacks that require only ordinary agent interaction and no prompt injection: Collaborative Workspace Lure reframes an extraction attempt as collaborative work; Semantic Obfuscation Attack induces disclosure through omission rather than through anything the agent writes; and Channel Decoupling Attack splits the extraction request and the disclosure across independent channels. All three achieve substantially higher leak rates than the attacks these defenses were originally designed to withstand. Guided by this observation, we present FLOWSEAL, a defense that enforces confidentiality through a tool-level interceptor outside the LLM's context, grounded in data provenance and an information-flow-control lattice with controlled declassification. Evaluated across three benchmarks, five prompt-based baselines, and eight attacks, including a real agent executing live tool calls through MCP, FLOWSEAL reduces leak rates to near zero (e.g., 52.2% to 0.5% against Collaborative Workspace Lure) while preserving task utility, regardless of the underlying LLM backend.
-N1  - record_key=title:849d2c6ba2e3c3e363a09bab2dba878f12e45226
-N1  - source_database=OpenAlex
-N1  - query_id=Q3.v1
-N1  - original_record_id=https://openalex.org/W7213371706
-N1  - retrieved_at=2026-09-17T09:07:34Z
-KW  - source-preprint
-ER  -
+DA  - 2026-09-17
+DO  - 10.1007/978-3-032-37673-2_12
+UR  - http://arxiv.org/abs/2609.19789v1
+AB  - Multi-agent trading systems built on large language models (LLMs) are beginning to appear in quantitative finance, yet their robustness to adversarial inputs is largely unknown. We study the vulnerability of LLM trading stacks to black-box, input-only attacks that enter solely via admissible social-media feeds. We introduce the Generic Multi-Agent Trading System (GMATS), a framework that captures modern multiagent trading architectures and instantiate a class of black-box poisoning attackers that treat an LLM as a post generator and inject budget-constrained, plausibly benign social-media content into the analyst's evidence stream. We define contagion metrics that trace how adversarial content propagates through the stack, including belief-shift scores at analyst and coordinator layers and attack-clean deltas on standard backtest metrics. Experiments on a safe offline benchmark with historical market and social data show that even simple input-only attackers can materially degrade risk-return profiles, sharply reducing Sharpe ratios. At the same time, we find that suitably designed multi-agent topologies and coordinator prompts can dampen adversarial shocks and improve average robustness under identical poisoning budgets.
+N1  - record_key=doi:10.1007/978-3-032-37673-2_12
+N1  - source_database=arXiv
+N1  - query_id=Q3.A1
+N1  - original_record_id=2609.19789
+N1  - retrieved_at=2026-09-18T01:26:53+00:00
+N1  - arxiv_id=2609.19789
+N1  - formal_doi=10.1007/978-3-032-37673-2_12
+ER  - 
 
 TY  - EPRINT
-TI  - Exploring Automated Vulnerability Identification in JavaScript Code Using Large Language Models
-AU  - Manit Kaushik
-AU  - Ishir Bhardwaj
-AU  - Pranav Gupta
-AU  - Pankaj Jalote
-AU  - Arun Balaji Buduru
-T2  - arXiv (Cornell University)
+TI  - Closed-World Resolution Against Tool Hallucination in LLM Agents
+AU  - Laxmipriya Ganesh Iyer
+T2  - arXiv
 PY  - 2026
-DA  - 2026-09-12
-UR  - https://arxiv.org/abs/2609.13816
-AB  - JavaScript powers approximately 98.8% of all websites, making vulnerabilities in its code a significant security risk, yet existing detection approaches such as Static Application Security Testing (SAST) tools often fail to identify many real-world vulnerabilities when applied to isolated code snippets. This paper presents an empirical study of Large Language Model (LLM)-based vulnerability identification for JavaScript programs, evaluating three LLM families (Gemini 1.5 Flash, GPT-4o Mini, DeepSeek-R1-Distill-Llama-8B) across multiple prompting strategies (zero-shot, chain-of-thought, few-shot) and fine-tuning approaches on a dataset of 1,125 JavaScript code snippets spanning five Common Weakness Enumeration (CWE) categories: Injection (CWE-74), OS Command Injection (CWE-78), Cross-Site Scripting (CWE-79), SQL Injection (CWE-89), and Uncontrolled Resource Consumption (CWE-400). Our experiments show that LLMs substantially outperform traditional SAST tools on snippet-level vulnerability identification, with a fine-tuned Gemini 1.5 Flash model achieving 60% detection accuracy compared to near-zero performance from rule-based analyzers. We find that fine-tuning improves accuracy from 29% to 60%, Chain-of-Thought prompting benefits reasoning-capable models such as GPT-4o Mini, few-shot prompting is effective for polymorphic vulnerabilities such as Cross-Site Scripting, and performance varies across vulnerability categories, reaching up to 84% accuracy for structured vulnerabilities such as SQL Injection. These results indicate that LLMs provide a practical approach for automated vulnerability identification in JavaScript code, particularly when combined with task-aligned supervision, though they should complement rather than replace existing security analysis workflows due to limited recall and uneven performance across vulnerability types.
-N1  - record_key=title:80fb97c4f9229bc8a59e6d26be5f1ee640dcd353
-N1  - source_database=OpenAlex
-N1  - query_id=Q3.v3
-N1  - original_record_id=https://openalex.org/W7213373141
-N1  - retrieved_at=2026-09-17T09:08:12Z
+DA  - 2026-09-16
+UR  - http://arxiv.org/abs/2609.19425v1
+AB  - Tool-augmented large language model (LLM) agents fail in a way no tool-selection or tool-security method addresses: they call tools that do not exist and pass arguments no schema declares. Existing defenses either pick the right tool (selection) or constrain what an agent may do with real tools (gating), both of which presuppose the emitted call refers to a real tool at all. We show this is a structural blind spot: a hallucinated call is by construction not a decision any gate made, so no gate can reject it. This paper is primarily a measurement and benchmark study. We give a five-class taxonomy of tool hallucination (H1-H5) and, as a reference point, the Resolution Rung: a training-free, closed-world resolver (registry membership plus a signature check) whose interest is where it must sit, not what it computes. We prove hallucination defense must precede any causal gate, and characterize the one irreducible residue (borrowed arguments schema-indistinguishable from a valid call). Across ten hosted models under two invocation surfaces we measure 322 genuine hallucinations; fabricated-tool calls concentrate on the unconstrained raw-JSON surface (34 vs. 3), and model scale does not help (a 675B model matches a 7-8B one). We then extend to the Model Context Protocol, where merging several servers into one namespace creates hallucination surfaces a single registry cannot express (a second taxonomy, M1-M5); on the live MCP surface we measure 154 hallucinations, including from frontier models that were clean on the single-registry surface, because collisions and shadowing are structural to the merge. We release the versioned Hallucinated-Tools Benchmark (HTB) so any resolver is comparable across submissions.
+N1  - record_key=arxiv:2609.19425
+N1  - source_database=arXiv
+N1  - query_id=Q3.A2
+N1  - original_record_id=2609.19425
+N1  - retrieved_at=2026-09-18T01:26:57+00:00
+N1  - arxiv_id=2609.19425
 KW  - source-preprint
-ER  -
+ER  - 
+
+TY  - EPRINT
+TI  - BioPhys-Bridge: A Benchmark for Interdisciplinary Scientific Reasoning in Physics-Grounded Biological Research
+AU  - Qingyang Xu
+T2  - arXiv
+PY  - 2026
+DA  - 2026-09-15
+UR  - http://arxiv.org/abs/2609.19180v1
+AB  - Language models face unique challenges in analyzing interdisciplinary scientific research literature. In biophysics research, faithful answers require grounding observed data in source evidence, interpreting it through a quantitative physics model, and linking it to a biological mechanism. To address this challenge, we introduce BioPhys-Bridge, a novel benchmark dataset for evidence-grounded scientific reasoning over biophysical literature. Each case contains evidence blocks, stable evidence IDs, quantitative values, units, equations, assumptions, mechanisms, and next decisions as grounding targets for question answering (QA) and retrieval-augmented generation (RAG). The initial release contains 500 cases, 1,517 agent-facing tasks, and covers six biological domains and nine physical model families, including three sparse families reserved for future expansion. We enforce strict quality gates for all cases in schema, evidence-integrity, quantitative-grounding, source-license, duplicate, unit-normalization, with domain expert review and annotation for 81 cases. Preliminary evaluations show that DeepSeek-V4-Flash obtain the highest evidence-ID $F_1$ score (0.360), followed by Qwen3.7-Max (0.316) and GPT-4o-mini (0.294). BioPhys-Bridge is an interdisciplinary benchmark for evaluating attribution, faithfulness, hallucination reduction, and biological experiment design with complex, multi-step scientific reasoning. Future works will increase the size and complexity of the dataset and perform comprehensive evaluations. Code and data are available in the GitHub repository and on Hugging Face.
+N1  - record_key=arxiv:2609.19180
+N1  - source_database=arXiv
+N1  - query_id=Q3.A2
+N1  - original_record_id=2609.19180
+N1  - retrieved_at=2026-09-18T01:26:57+00:00
+N1  - arxiv_id=2609.19180
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - Reachability, Not Observation: Containing Systems Whose Wiring Changes
+AU  - Yoshiaki Takashita
+T2  - arXiv
+PY  - 2026
+DA  - 2026-09-17
+UR  - http://arxiv.org/abs/2609.19720v1
+AB  - Containment decisions -- where to put a firewall, which links to monitor, what a program may reach -- are computed from an observed structure, and observation is a snapshot. We ask what a snapshot misses when the wiring changes over time. On a hypercube whose active dimension rotates, a balanced split shows zero crossing edges at 93% of instants, yet 8,192 edges must be blocked permanently; adding one always-on ring, a defender sees 2 where 8,194 must be blocked, a factor of 4,097. A time-aware defender holds 585 blocks on average, but one step of clock lag drops its containment to 0%. On the real Internet the same gap is only x1.8-2.0 (1997-2000) and x1.5-1.6 (2024-2026) once growth is removed, so the blind spot is introduced by design, not inherited from the world -- and it has been designed: the round-robin schedules of optical datacentre fabrics have a gap equal to their period. A declared capability map, checked by static reachability over a real application's call graph, catches all 8 planted holes; the string deny-list previously in place catches 2. One calculation generates every number from one parameter, the period, and reads three boundaries not usually called schedules: frequency hopping, whose standard results are these closed forms with channels in place of edges; the air gap, whose always-on crossing set is empty and whose known breach came at the one phase a snapshot misses; and the tool surface of a coding agent, inventoried from the inside. Turning the cuts on that agent: idle, its instantaneous state cut is zero, while 6 channels carry it across a context reset, none of them the network, so severing the network removes 0. The channel that spawns copies is a branching process with a sharp threshold at approval rate 1/b, below which denial is unnecessary and above which denial is insufficient. Contain by the paths that exist, not by the behaviour that was seen.
+N1  - record_key=arxiv:2609.19720
+N1  - source_database=arXiv
+N1  - query_id=Q6.A1
+N1  - original_record_id=2609.19720
+N1  - retrieved_at=2026-09-18T01:27:25+00:00
+N1  - arxiv_id=2609.19720
+KW  - source-preprint
+ER  - 

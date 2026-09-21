@@ -10,7 +10,7 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 RUNS_DIR = ROOT / "data" / "state" / "runs"
-RECOVERY_CRON = "23 0 * * 2"
+RECOVERY_CRON = "20 1 * * 2"
 
 
 def load_settings() -> dict[str, Any]:

@@ -1,11 +1,11 @@
 name: Weekly Literature Monitor
 
 on:
-  # GitHub cron uses UTC: Monday 00:23 UTC = Monday 08:23 Asia/Shanghai.
+  # GitHub cron uses UTC: Monday 01:20 UTC = Monday 09:20 Asia/Shanghai.
   schedule:
-    - cron: '23 0 * * 1'
+    - cron: '20 1 * * 1'
     # Tuesday is a recovery pass only when Monday did not commit a result.
-    - cron: '23 0 * * 2'
+    - cron: '20 1 * * 2'
   workflow_dispatch:
     inputs:
       mode:

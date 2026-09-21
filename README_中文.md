@@ -292,8 +292,8 @@ seen_keys 自动去掉 B/C
 
 项目已经包含 `.github/workflows/weekly-literature.yml`。其中：
 
-- `cron: '23 0 * * 1'` 是每周一 UTC 00:23，即北京时间周一 08:23；GitHub 的定时任务可能因平台负载延迟几分钟。
-- `cron: '23 0 * * 2'` 是备用恢复检查。只有周一没有成功提交结果时，周二才会用周一的同一时间窗口重试；周一成功时周二不会调用任何来源。
+- `cron: '20 1 * * 1'` 是每周一 UTC 01:20，即北京时间周一 09:20；GitHub 的定时任务可能因平台负载延迟几分钟。
+- `cron: '20 1 * * 2'` 是备用恢复检查（北京时间周二 09:20）。只有周一没有成功提交结果时，周二才会用周一的同一时间窗口重试；周一成功时周二不会调用任何来源。
 - 自动任务固定使用 OpenAlex、Semantic Scholar、arXiv 和 IEEE Xplore，DBLP 不会被隐式启用。
 - `concurrency` 会阻止同一分支的手动运行与定时运行重叠。
 - 只有完整成功的增量运行才会提交 `seen_keys`、运行 manifest、增量 CSV 和 `latest_new` CSV/RIS；历史回溯 checkpoint 与 arXiv OAI 缓存不会加入每周提交。

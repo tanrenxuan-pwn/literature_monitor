@@ -22,8 +22,8 @@
       "circuit_cooldown_seconds": 120
     },
     "semantic_scholar": {
-      "min_interval_seconds": 1.25,
-      "initial_delay_seconds": 1.25,
+      "min_interval_seconds": 2.0,
+      "initial_delay_seconds": 2.0,
       "timeout_seconds": 90,
       "max_retries": 5,
       "rate_limit_backoff_seconds": 30,
@@ -55,8 +55,8 @@
       "wait_through_circuit": true
     },
     "ieee": {
-      "min_interval_seconds": 0.6,
-      "initial_delay_seconds": 0.6,
+      "min_interval_seconds": 2.0,
+      "initial_delay_seconds": 2.0,
       "timeout_seconds": 90,
       "max_retries": 4,
       "rate_limit_backoff_seconds": 10,

@@ -554,6 +554,12 @@ def run_self_tests() -> dict[str, Any]:
     assert throttle_waits and max(throttle_waits) >= 3.99, throttle_waits
     checks["provider_request_throttle_and_timeout"] = "ok"
 
+    assert float(
+        monitor._provider_policy("semantic_scholar")["min_interval_seconds"]
+    ) >= 2.0
+    assert float(monitor._provider_policy("ieee")["min_interval_seconds"]) >= 2.0
+    checks["rate_limited_provider_pacing"] = "ok"
+
     with tempfile.TemporaryDirectory() as temp:
         previous_lock_dir = os.environ.get("LIT_MONITOR_RATE_LOCK_DIR")
         os.environ["LIT_MONITOR_RATE_LOCK_DIR"] = temp
@@ -644,6 +650,41 @@ def run_self_tests() -> dict[str, Any]:
         else:
             os.environ["IEEE_API_KEY"] = old_ieee_key_for_quota
     checks["ieee_daily_quota_is_classified"] = "ok"
+
+    monitor.reset_provider_runtime_state()
+    qps_denied = _FakeResponse(
+        content=b"<h1>Service Over Qps</h1>",
+        status_code=403,
+        headers={"Content-Type": "text/html"},
+    )
+    qps_recovered = _FakeResponse(
+        {},
+        status_code=200,
+        headers={"Content-Type": "application/json"},
+    )
+    qps_waits: list[float] = []
+    with patch.object(
+        monitor.requests,
+        "get",
+        side_effect=[qps_denied, qps_recovered],
+    ) as qps_get, patch.object(
+        monitor, "_sleep_delay", side_effect=qps_waits.append
+    ):
+        recovered = monitor._get_with_retry(
+            "https://ieeexploreapi.ieee.org/api/v1/search/articles",
+            params={"apikey": "secret-self-test-key"},
+            provider="ieee",
+            expected_format="json",
+            max_retries=1,
+        )
+    assert recovered.status_code == 200
+    assert qps_get.call_count == 2
+    assert qps_waits and max(qps_waits) >= 10.0, qps_waits
+    runtime = monitor.provider_runtime_snapshot()["IEEE Xplore"]
+    assert runtime["rate_limit_events"] == 1
+    assert runtime["access_denied_events"] == 0
+    assert runtime["retries"] == 1
+    checks["ieee_qps_limit_is_retried"] = "ok"
 
     monitor.reset_provider_runtime_state()
     malformed = _FakeResponse(content=b"<html>temporary gateway page</html>")

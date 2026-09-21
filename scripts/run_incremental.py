@@ -588,6 +588,21 @@ def _is_ieee_quota_response(response: requests.Response) -> bool:
     )
 
 
+def _is_ieee_qps_response(response: requests.Response) -> bool:
+    """IEEE reports short-term request-rate limits as HTTP 403 HTML."""
+    if int(response.status_code) != 403:
+        return False
+    detail = _response_detail(response).casefold()
+    return any(
+        marker in detail
+        for marker in (
+            "service over qps",
+            "over qps",
+            "queries per second",
+        )
+    )
+
+
 @contextmanager
 def _rotated_dns_resolution(
     url: str,
@@ -700,7 +715,14 @@ def _get_with_retry(
         ieee_quota_exhausted = (
             provider == "ieee" and _is_ieee_quota_response(response)
         )
-        if response.status_code not in RETRYABLE_STATUS and not ieee_quota_exhausted:
+        ieee_qps_limited = (
+            provider == "ieee" and _is_ieee_qps_response(response)
+        )
+        if (
+            response.status_code not in RETRYABLE_STATUS
+            and not ieee_quota_exhausted
+            and not ieee_qps_limited
+        ):
             state["consecutive_429"] = 0
             if response.status_code >= 400:
                 if response.status_code in {401, 403}:
@@ -741,13 +763,16 @@ def _get_with_retry(
             )
             raise last_error
 
-        if response.status_code == 429:
+        if response.status_code == 429 or ieee_qps_limited:
             state["rate_limit_events"] += 1
             state["consecutive_429"] += 1
             fallback = min(max_backoff, rate_backoff * (2**attempt))
             delay = _retry_after(response, fallback, max_backoff)
             last_error = _http_status_error(
-                response, provider, retry_after_seconds=delay
+                response,
+                provider,
+                retry_after_seconds=delay,
+                rate_limited=True,
             )
             if state["consecutive_429"] >= circuit_threshold:
                 cooldown = max(circuit_cooldown, delay)

@@ -106,7 +106,7 @@ python scripts/run_backfill.py `
   --live-probe-only
 ```
 
-probe 只执行每个来源的最小请求，不写 CSV、不写 `seen_keys`。Semantic Scholar 当前配置为每次请求至少间隔 1.25 秒，并通过操作系统临时目录中的锁文件在多个本地进程间协调请求时间；仍建议一次只运行一个检索命令。锁文件不会写入仓库或提交到 Git。IEEE 激活后单独验证：
+probe 只执行每个来源的最小请求，不写 CSV、不写 `seen_keys`。Semantic Scholar 当前配置为每次请求至少间隔 2 秒，并通过操作系统临时目录中的锁文件在多个本地进程间协调请求时间；仍建议一次只运行一个检索命令。锁文件不会写入仓库或提交到 Git。IEEE 激活后单独验证：
 
 ```powershell
 python scripts/run_backfill.py --sources ieee --live-probe-only
@@ -292,7 +292,7 @@ seen_keys 自动去掉 B/C
 
 项目已经包含 `.github/workflows/weekly-literature.yml`。其中：
 
-- `cron: '20 1 * * 1'` 是每周一 UTC 01:20，即北京时间周一 09:20；GitHub 的定时任务可能因平台负载延迟几分钟。
+- `cron: '20 1 * * 1'` 是每周一 UTC 01:20，即北京时间周一 09:20；GitHub 的定时任务不是严格实时调度，可能延迟，首次新增或修改触发器后的运行尤其应以 Actions 中实际出现的 `schedule` 事件为准。
 - `cron: '20 1 * * 2'` 是备用恢复检查（北京时间周二 09:20）。只有周一没有成功提交结果时，周二才会用周一的同一时间窗口重试；周一成功时周二不会调用任何来源。
 - 自动任务固定使用 OpenAlex、Semantic Scholar、arXiv 和 IEEE Xplore，DBLP 不会被隐式启用。
 - `concurrency` 会阻止同一分支的手动运行与定时运行重叠。
@@ -343,7 +343,7 @@ MAIL_TO=接收周报的邮箱地址
 
 每次定时 `live` 成功后，工作流会自动发送中文周报，正文包含检索窗口、运行状态、原始/去重/新增/失败数量和最多 25 条新增论文，并附带完整的 `latest_new.csv` 与可直接导入 Zotero 的 `latest_new.ris`。SMTP 暂时不可用只会让邮件步骤显示警告，不会撤销已经完成的检索、提交或附件；修复邮箱配置后可单独运行 `email-test` 补发。
 
-IEEE Xplore 的开发者 Key 有每日请求额度。一次完整的增量运行通常会为 IEEE 发起约 20 余个分页请求；不要在同一天反复运行 `dry-run` 或 `live`。若日志出现 `Developer Over Rate`，本次不会提交不完整状态，等待至少 24 小时后再运行一次 `probe`，确认 IEEE 恢复后再运行 `live`。备用的周二恢复检查也会自动重试周一失败的窗口。
+IEEE Xplore 的开发者 Key 有每秒请求限制和每日请求额度。IEEE 与 Semantic Scholar 均按至少 2 秒的请求间隔运行。若 IEEE 返回 `Service Over Qps`，脚本会把它识别为短时限流并退避重试；若返回 `Developer Over Rate`，则表示每日额度耗尽，本次不会提交不完整状态。一次完整的增量运行通常会为 IEEE 发起约 20 余个分页请求，因此不要在同一天反复运行 `dry-run` 或 `live`。每日额度耗尽时等待至少 24 小时后再运行一次 `probe`，确认 IEEE 恢复后再运行 `live`。备用的周二恢复检查也会自动重试周一失败的窗口。
 
 若工作流成功但无法推送提交，请在 `Settings` → `Actions` → `General` → `Workflow permissions` 选择 `Read and write permissions`，并确认目标分支没有阻止 GitHub Actions 直接推送的保护规则。若仓库长期没有活动，GitHub 也可能暂停定时工作流；在 Actions 页面重新启用即可。
 

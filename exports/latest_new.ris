@@ -1,283 +1,971 @@
-TY  - JOUR
-TI  - Program Graph Learning for Software Vulnerability Analysis: A Survey
-AU  - Junjie Wang
-AU  - Tong Yu
-AU  - Ming Li
-AU  - Yuhang Hu
-AU  - Junwei Hu
-AU  - Xiantao Cai
-AU  - Wenbin Hu
-AU  - Alessio Borgi
-T2  - Transactions on Graph Intelligence and Network Applications
+TY  - GEN
+TI  - Continuous Static Assurance and Symbolic Execution for Secure Software Supply Chains
+AU  - Konstantinos Giapantzis
+AU  - Apostolis Zarras
+AU  - Katerina Psychogyiou
+AU  - Christos Xenakis
+T2  - IntechOpen eBooks
 PY  - 2026
-DA  - 2026-09-09
-DO  - 10.53941/tgina.2026.100005
-UR  - https://doi.org/10.53941/tgina.2026.100005
-AB  - Software vulnerabilities represent an enduring threat to modern cyberspace. Effective vulnerability detection increasingly relies on reasoning about complex program semantics, structural dependencies, and execution behaviors. Consequently, extracting vulnerability-relevant features from code efficiently has become a pressing research issue. In recent years, advances in graph representation learning and large language models have reframed vulnerability analysis as a graph learning problem over program entities. By building on and extending traditional methods including static analysis, dynamic analysis, symbolic execution, and fuzzing, this perspective enables more effective vulnerability detection, fine-grained localization, multi-class classification, and repair. We review recent progress in graph-driven vulnerability intelligence, structuring the survey around these tasks and then providing a structured overview of representative graph-based methods, graph-based multimodal methods, LLM-assisted methods, and vulnerability repair methods, together with widely adopted datasets, program graph construction tools, and computing frameworks. We then highlight several persistent challenges: interpretability, cross-language generalization, data quality and label noise, the lack of benchmark standardization, and agent-oriented vulnerability analysis. These challenges are often intertwined, complicating piecemeal solutions. Addressing them will be critical for developing reliable, transferable, and explainable vulnerability intelligence systems.
-N1  - record_key=doi:10.53941/tgina.2026.100005
+DA  - 2026-09-22
+DO  - 10.5772/intechopen.1015225
+UR  - https://doi.org/10.5772/intechopen.1015225
+AB  - Software supply chains increasingly depend on third-party and open-source components, yet these dependencies are often propagated without continuous, verifiable security evidence. To address this assurance gap, this work enhances supply-chain cybersecurity by integrating continuous static code security testing as a core component of a Trusted Bill of Materials (TBOM). Third-party and open-source components are treated as managed assets that must be accompanied by verifiable security evidence before they can be trusted and propagated through the chain. To operationalize this principle, the proposed Static Application Security Tester (SASTER) pipeline orchestrates multiple open-source static vulnerability analyzers. By combining complementary rule-based and pattern-matching techniques, SASTER enhances detection accuracy while substantially reducing false positives, a key obstacle to the adoption of static analysis in practice. The pipeline further integrates sensitive-data classification, ensuring that privacy risks and the misuse of confidential information are addressed as top-priority security findings early in development. To complement automated scanning, this work proposes the Intelligent Vulnerabilities Exposure Engine, a symbolic-execution-driven framework that can prove or refute embedded program properties and produce counterexamples when violations occur. Each assessment yields a Static Supply Chain Component Guarantee, which is required as a TBOM element and is regenerated whenever a component changes, enabling evidence-based lifecycle assurance.
+N1  - record_key=doi:10.5772/intechopen.1015225
 N1  - source_database=OpenAlex
-N1  - query_id=Q2.v2;Q3.v1;Q6.v1;Q6.v2;Q6.v3;Q7.v2
-N1  - original_record_id=https://openalex.org/W7213445259
-N1  - retrieved_at=2026-09-22T06:30:21+00:00
-N1  - formal_doi=10.53941/tgina.2026.100005
+N1  - query_id=Q1.v1;Q1.v3;Q2.v2;Q3.v1;Q4.v2;Q4.v3;Q6.v2
+N1  - original_record_id=https://openalex.org/W7214242921
+N1  - retrieved_at=2026-09-28T07:16:20+00:00
+N1  - formal_doi=10.5772/intechopen.1015225
 ER  - 
 
 TY  - JOUR
-TI  - Guiding AI to Fix Its Own Flaws: An Empirical Study on LLM-Driven Secure Code Generation
-AU  - Hao Yan
-AU  - Swapneel Suhas Vaidya
-AU  - Xiaokuan Zhang
-AU  - Ziyu Yao
-T2  - ACM Transactions on Software Engineering and Methodology
+TI  - SemVul: Semantic-enhanced graph neural networks for code property graph-based vulnerability detection
+AU  - Younas Affan
+AU  - Leonardo Regano
+AU  - Giorgio Giacinto
+T2  - Journal of Systems and Software
 PY  - 2026
 DA  - 2026-09-17
-DO  - 10.1145/3848030
-UR  - https://doi.org/10.1145/3848030
-AB  - Large Language Models have become powerful tools for programming. However, they often overlook essential security practices, producing code with vulnerabilities. Despite this risk, existing work offers limited guidance on steering LLMs toward secure code generation and lacks systematic analysis of how effectively LLMs repair vulnerable code. In this work, we investigate how LLMs can be guided to prevent and repair code vulnerabilities. Specifically, we examine whether self-generated vulnerability hints help models avoid insecure code, and evaluate how different feedback levels influence vulnerability repair . Our study considers proprietary and open-weight models across multiple scales and uses established benchmarks covering diverse vulnerability types. Our results show that self-generated vulnerability hints meaningfully reduce insecure code, with effectiveness depending strongly on relevance and preciseness. We further find that more directive hints, which explain how it could arise in the task and specify how to avoid it, more effectively prevent vulnerable code. For post-hoc vulnerability repair, raw detection-tool feedback improves security across all models, while detailed, actionable explanations provide further gains on two of the three benchmarks, especially for models with stronger instruction-following capabilities. Yet, this explained feedback does not consistently outperform the raw feedback for the benchmark containing real-world tasks triggering multiple weaknesses.
-N1  - record_key=doi:10.1145/3848030
+DO  - 10.1016/j.jss.2026.113104
+UR  - https://doi.org/10.1016/j.jss.2026.113104
+AB  - Vulnerabilities in source code are often the root cause of cyberattacks worldwide, as attackers exploit weaknesses in software to gain unauthorized access, steal data, or disrupt services. In this study, we evaluated existing research approaches and propose SemVul, a vulnerability detection pipeline that demonstrates better generalization and higher accuracy in learning vulnerable code patterns. We propose a Code Property Graph-based vulnerability-detection approach combined with semantic-level enhancement, enabling the model to capture both the program's structural flow and the semantic meaning of the code. Our approach integrates both node-level and edge-level semantic embeddings using pre-trained code embedding techniques. We systematically evaluate multiple GNN architectures on publicly available benchmark datasets. SemVul is generic with respect to the programming language and supports multiple architectures. By integrating structural and semantic information, the proposed approach improves vulnerability detection performance. Our results show that SemVul outperforms existing approaches and provides better generalization.
+N1  - record_key=doi:10.1016/j.jss.2026.113104
 N1  - source_database=OpenAlex
-N1  - query_id=Q3.v1;Q3.v3
-N1  - original_record_id=https://openalex.org/W4416510191
-N1  - retrieved_at=2026-09-22T06:32:29+00:00
-N1  - formal_doi=10.1145/3848030
+N1  - query_id=Q2.v1;Q5.v2
+N1  - original_record_id=https://openalex.org/W7212027573
+N1  - retrieved_at=2026-09-28T07:20:04+00:00
+N1  - formal_doi=10.1016/j.jss.2026.113104
 ER  - 
 
 TY  - EPRINT
-TI  - CASHEWS: Source Preprocessor for LLM-based Malicious Package Detection
-AU  - Jean-Charles Noirot Ferrand
-AU  - David Adei
-AU  - Anders Møller
-AU  - Alexandros Kapravelos
+TI  - From Component Snapshots to Lifecycle Traces: Agent-Based Software Composition Analysis
+AU  - Chaofan Li
+AU  - Xue, Zhengduo
+AU  - Chengxiang Li
+AU  - Yutao Hu
+AU  - Yueming Wu
+AU  - Deqing Zou
 T2  - arXiv (Cornell University)
 PY  - 2026
 DA  - 2026-09-16
-DO  - 10.48550/arxiv.2609.18862
-UR  - https://arxiv.org/abs/2609.18862
-AB  - Malicious npm package detection tools now leverage LLMs' semantic understanding of source code to detect malicious intent at scale. This capability has proven invaluable in identifying packages involved in recent supply-chain attacks such as Shai-Hulud. However, threat actors exploit the limited context windows of LLMs through JavaScript techniques such as code obfuscation that yields high token density and bundling malicious code with benign packages, causing detectors to skip large files or miss malicious behavior. This creates an attack surface for evading detection. In this paper, we present CASHEWS, a JavaScript preprocessor that reduces file size by rewriting source code to remove code that is irrelevant to analysis or likely to mislead the model. Given a package source file, CASHEWS deobfuscates it through iterative decoding, extracts bundled modules and dynamically executed code, identifies malicious sinks and computes backward slices that reach them, and abbreviates long literals and identifiers to produce a compact representation for the detector. Across 512 large package files, two scanner types, and three LLMs, CASHEWS increases analysis coverage from 69.1--85.7% to 98.8--100% and reduces the false-negative rate by up to 18.6 percentage points. CASHEWS also has a median preprocessing time of 30 seconds while reducing net analysis cost by 34.6%, making registry-wide LLM-based analysis more practical. By preprocessing source code before analysis, CASHEWS enables researchers and industry practitioners to use more powerful models for malicious package detection at the same or lower analysis cost as less powerful models.
-N1  - record_key=arxiv:2609.18862
+DO  - 10.48550/arxiv.2609.18391
+UR  - https://arxiv.org/abs/2609.18391
+AB  - Software supply-chain security requires accurate identification of third-party components and an understanding of how they evolve from development to execution. Existing software composition analysis (SCA) approaches examine manifests, build environments, release artifacts, containers, or runtime states, but typically produce only stage-specific views of software composition. As dependencies are resolved, removed, repackaged, and transformed across lifecycle stages, a single snapshot cannot capture both where a component originates and where it ultimately ends up. Combining snapshots from multiple stages still leaves their cross-stage relationships unresolved. We present SCA-Agent, an agent-based approach to lifecycle-aware SCA that reconstructs evidence-backed component lifecycle traces across Code, Build, Release, Deploy, and Runtime. SCA-Agent adaptively explores project-specific analysis paths, gathers stage-specific evidence, and correlates observations across stages to recover component identities, versions, introduction paths, propagation relationships, and final lifecycle states. We evaluate SCA-Agent on 105 real-world projects from the Java, JavaScript, and Python ecosystems. SCA-Agent achieves the highest component detection F1 across all lifecycle stages and ecosystems. For vulnerability exposure assessment, it reaches an F1 score of 96.69%, exceeding the best traditional SCA tool by 18.76 percentage points. These results show that lifecycle-aware SCA supports traceable component provenance and more accurate software supply-chain risk assessment.
+N1  - record_key=arxiv:2609.18391
 N1  - source_database=OpenAlex
-N1  - query_id=Q3.v3
-N1  - original_record_id=https://openalex.org/W7213504452
-N1  - retrieved_at=2026-09-22T06:32:36+00:00
-N1  - arxiv_id=2609.18862
+N1  - query_id=Q2.v2
+N1  - original_record_id=https://openalex.org/W7213513545
+N1  - retrieved_at=2026-09-28T07:20:39+00:00
+N1  - arxiv_id=2609.18391
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - Metrics Failure in LLM-Based Code Vulnerability Repair: An Empirical Study and a Change-Aware Screen
+AU  - Om Nepal
+AU  - Sushant Aryal
+AU  - Oluseyi Olukola
+AU  - Nick Rahimi
+T2  - arXiv (Cornell University)
+PY  - 2026
+DA  - 2026-09-22
+DO  - 10.48550/arxiv.2609.26749
+UR  - https://arxiv.org/abs/2609.26749
+AB  - Large language models (LLMs) are increasingly applied to the automated repair of C/C++ security vulnerabilities, and compile rate is a commonly reported proxy for progress: whether the generated patch compiles. We argue that compile rate is a scientifically unreliable metric for single-function vulnerability repair, and we support this with five controlled experiments over 203 vulnerable functions from Big-Vul, three open-source code LLMs (350M to 6.7B parameters), and three prompting strategies. Compile rate (i) barely responds to an intervention that substantially improves the generated code; (ii) is dominated by evaluation-harness and dataset artifacts rather than model quality, with about 64% of compile failures not attributable to the model, a share that is nearly invariant across models; (iii) shifts by 1.8 to 2.7 times on identical patches under a single compiler-standard flag, with zero regressions; (iv) ranks the three models in the opposite order to reference-similarity metrics; and (v) rewards non-repairs when used as an optimization target, since a compiler-feedback loop raises compile rate while similarity to the human fix falls, with manual inspection finding deletion- and placeholder-style non-repairs among the newly compiling outputs. The natural fallback, whole-function CodeBLEU, also fails: an unchanged copy of the vulnerable input outscores every model. We also examine diff_F1, a change-aware screen that scores only the edited region. It gives exactly zero credit to a no-op and near-zero credit to some, though not all, of the deletion-based gaming patches we observed, while still crediting genuine partial edits, so it may serve as a cheap screen before deeper, execution-based analysis. It is not a repair-quality metric, and we report where it falls short. Our findings argue for change-aware, execution-grounded evaluation of LLM-based vulnerability repair.
+N1  - record_key=arxiv:2609.26749
+N1  - source_database=OpenAlex;arXiv
+N1  - query_id=Q3.A1;Q3.v1;Q3.v3
+N1  - original_record_id=https://openalex.org/W7214122302
+N1  - retrieved_at=2026-09-28T07:21:26+00:00
+N1  - arxiv_id=2609.26749
 KW  - source-preprint
 ER  - 
 
 TY  - JOUR
-TI  - On-Premise CodeBERT-Driven Model for Vulnerability Detection in Source Code
-AU  - D.J.S. Sako
-T2  - INTERNATIONAL JOURNAL OF COMPUTER SCIENCE AND MATHEMATICAL THEORY E-ISSN
+TI  - A Critical Review of Critical Thinking in HCI Research About AI
+AU  - Nanna Inie
+AU  - Anne Marie Kristensen
+AU  - Morten Misfeldt
+AU  - Peter Dalsgaard
+T2  - International Journal of Human-Computer Interaction
 PY  - 2026
-DA  - 2026-09-17
-DO  - 10.56201/ijcsmt.vol.12.no2.2026.pg205.216
-UR  - https://doi.org/10.56201/ijcsmt.vol.12.no2.2026.pg205.216
-AB  - Security vulnerabilities in software systems remain a major concern in modern computing, especially as applications grow in complexity and are increasingly integrated into critical infrastructures. Traditional vulnerability detection methods such as static code analysis tools and manual inspection face limitations in accuracy, scalability, and privacy preservation, since they often rely on cloud-based solutions that expose sensitive source code. This paper presents an on premise Artificial Intelligence (AI)-based model for vulnerability detection in source code, designed to ensure there is efficiency in identifying potential weaknesses. The system employs a fine-tuned CodeBERT model, which leverages transformer-based natural language processing techniques to learn semantic patterns in source code. By deploying the model locally within a Dockerized environment, the solution ensures that source code remains entirely under organizational control, eliminating reliance on external servers. The methodology integrates real time scanning for multiple programming languages (Python, Java, and JavaScript), a web-based upload interface, and a core detection algorithm capable of classifying vulnerabilities based on learned patterns. Evaluation results demonstrate strong detection performance, with an average score of 92% for accuracy, precision, recall and F1-score respectively. The findings highlight the potential of on-premise AI-based systems to revolutionize vulnerability detection by combining accuracy and scalability.
-N1  - record_key=doi:10.56201/ijcsmt.vol.12.no2.2026.pg205.216
+DA  - 2026-09-21
+DO  - 10.1080/10447318.2026.2722522
+UR  - https://doi.org/10.1080/10447318.2026.2722522
+AB  - The importance of critical thinking when using generative AI in personal, professional, and educational contexts is widely acknowledged by scholars, educators, and politicians. There are contradictory hypotheses regarding the influence of AI on critical thinking, and research thus far has produced mixed results. In this paper, we present a critical scoping review of 80 research papers from Human-Computer Interaction (HCI) that study critical thinking with or about AI, focusing on how “critical thinking” is defined, measured, and how the papers claim critical thinking to be influenced by AI, according to current HCI research. Our findings demonstrate that critical thinking is rarely defined in HCI research about AI, and there are fundamental construct and criterion validity challenges in this line of research. We present a research agenda for more theory-grounded empirical research in critical thinking with or about AI, based on cognitive-psychological, philosophical, or educational research traditions.
+N1  - record_key=doi:10.1080/10447318.2026.2722522
 N1  - source_database=OpenAlex
-N1  - query_id=Q5.v2;Q7.v3
-N1  - original_record_id=https://openalex.org/W7213450587
-N1  - retrieved_at=2026-09-22T06:33:53+00:00
-N1  - formal_doi=10.56201/ijcsmt.vol.12.no2.2026.pg205.216
+N1  - query_id=Q3.v1
+N1  - original_record_id=https://openalex.org/W7213883839
+N1  - retrieved_at=2026-09-28T07:21:26+00:00
+N1  - formal_doi=10.1080/10447318.2026.2722522
 ER  - 
 
 TY  - EPRINT
-TI  - SoK: From Finding to Deployment: Systematizing the OS Kernel Bug Lifecycle
-AU  - Luyao bai
-AU  - Gengda She
-AU  - Kenan Alghythee
-AU  - Hang Zhang
-AU  - Xiaoguang Wang
-T2  - arXiv
+TI  - Forgeable Confirmation in Automated Computer Security Testing: Deterministic Rules versus AI Judges
+AU  - Akihisha Fujiyama
+AU  - Niwase Shamim
+T2  - arXiv (Cornell University)
 PY  - 2026
-DA  - 2026-09-19
-UR  - http://arxiv.org/abs/2609.23218v1
-AB  - Automated kernel bug discovery has advanced rapidly. Continuous fuzzing and static analysis systems, such as syzbot, now expose Linux kernel bugs at a scale that downstream processes struggle to absorb. Yet a crash report is only the beginning. Before a bug is eliminated, it must be triaged, understood, patched, validated, reviewed, integrated, and often backported. These later stages remain far less automated, creating a persistent gap between bug discovery and patch deployment. This SoK systematizes the Linux kernel bug lifecycle from discovery to deployment. We organize prior work and production systems into five stages: discovery, triage, patch generation, patch validation, and integration. We explain the resulting automation gradient through kernel-specific challenges such as concurrency, implicit invariants, cross-syscall state, hardware dependence, lack of fault isolation, and architecture/configuration multiplicity. We further ground the analysis in a measurement of real syzbot-fixed bugs. The data shows that the crash-to-patch gap is not merely a backlog of unfixed reports but a structural failure mode of the repair pipeline: even after being fixed, bugs often remain open for weeks, require review-driven patch revisions, or lack reproducers that current repair and validation systems assume. This exposes a mismatch between where kernel-security automation is mature and where bug closure actually breaks down. These findings expose a deeper mismatch: today's repair and validation techniques often assume reliable reproducers, localized root causes, and checkable correctness oracles, yet these are precisely the artifacts missing from many real kernel bug reports. Closing the crash-to-patch gap, therefore, requires treating such artifacts as outputs to be produced, not prerequisites to be assumed.
-N1  - record_key=arxiv:2609.23218
-N1  - source_database=arXiv
-N1  - query_id=Q1.A1
-N1  - original_record_id=2609.23218
-N1  - retrieved_at=2026-09-22T06:40:20+00:00
-N1  - arxiv_id=2609.23218
+DA  - 2026-09-21
+DO  - 10.48550/arxiv.2609.24200
+UR  - https://arxiv.org/abs/2609.24200
+AB  - AI is increasingly used to automate computer security testing, and the tools must decide for themselves whether an attack succeeded. A finding that a deterministic rule confirms by observation is reported as fact, whereas one that an LLM judges exploitable is treated as an opinion. We ask whether the system under test can forge that confirmation. In offline security testing of a four-stage AI-assisted pipeline, nine of its fifteen confirmation mechanisms are forgeable, and forgeability is predicted entirely by whether the decision reads attacker-controlled data. We formalise this as an auditable attack surface and test it prospectively: on sixteen held-out mechanisms, predictions fixed before any attack separated forgeable from unforgeable mechanisms exactly, and across 12,203 mechanisms in public scanner templates the prediction was 99.9% accurate. Deterministic rules proved cheaper to forge than eight open-weight LLM judges, failing at 2% of attacker-controlled response content against a median of 50%. No implementation of one check was both robust and precise, and routing between a rule and an AI judge raised forgery to 99%. Moving the decisive evidence to a channel the attacker cannot write cuts attack success from 97% to 0%, and an escalate verdict recovers the sensitivity this costs. The protection fails when the scanned host is itself the adversary. The results bear on AI security agents and on benchmarks that score success by string matching.
+N1  - record_key=arxiv:2609.24200
+N1  - source_database=OpenAlex
+N1  - query_id=Q3.v1;Q3.v3
+N1  - original_record_id=https://openalex.org/W7214030910
+N1  - retrieved_at=2026-09-28T07:21:26+00:00
+N1  - arxiv_id=2609.24200
 KW  - source-preprint
 ER  - 
 
 TY  - EPRINT
-TI  - Fingerprinting Multimodal Large Language Models
-AU  - Chao Huang
-AU  - Meng Tong
-AU  - Kejiang Chen
-T2  - arXiv
+TI  - Detecting Logic Vulnerabilities Across the Contract and Device Layers of Blockchain-Enabled IoT With Multi-Agent Heterogeneous Graph Attention
+AU  - Minfeng Qi
+AU  - Jialin Li
+AU  - Tianqing Zhu
+AU  - Lefeng Zhang
+AU  - Zhe Sun
+T2  - arXiv (Cornell University)
+PY  - 2026
+DA  - 2026-09-16
+DO  - 10.48550/arxiv.2609.18344
+UR  - https://arxiv.org/abs/2609.18344
+AB  - Blockchain-enabled Internet of Things (IoT) systems integrate smart contracts with embedded devices to support decentralized device management and access control. Their security therefore depends jointly on the logic of on-chain contracts and off-chain device firmware. Logic flaws in either layer can violate the same system invariants, such as unauthorized access, improper state changes, or unguarded privileged operations. Existing approaches rely on contract analysis, firmware analysis, and graph-based vulnerability detection. However, these methods typically focus on a single layer or artifact and often depend on predefined vulnerability patterns, emulation fidelity, or homogeneous representations that obscure security-relevant component roles. They also lack a unified architecture that supports different security tasks while remaining deployable on resource-constrained gateways. To address these limitations, we extend MA-HGAT into a cross-layer multi-agent heterogeneous graph attention framework that models contracts, firmware artifacts, device fleets, and transaction streams with a unified four-role, nine-relation schema. Role-aligned agents exchange heterogeneous evidence through cross-attention, while graph-, link-, and node-level heads support multiple detection tasks and a role-based gateway--cloud partition enables lightweight edge inference. MA-HGAT thus provides a unified and deployable framework for detecting logic vulnerabilities across the contract and device layers of blockchain-enabled IoT systems.
+N1  - record_key=arxiv:2609.18344
+N1  - source_database=OpenAlex
+N1  - query_id=Q3.v1
+N1  - original_record_id=https://openalex.org/W7213503697
+N1  - retrieved_at=2026-09-28T07:21:26+00:00
+N1  - arxiv_id=2609.18344
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - Adversarial Testing of Automated Program Repair Agents for Security Vulnerabilities
+AU  - Fares Trad
+AU  - Simin Chen
+AU  - Hung Viet Pham
+AU  - Gias Uddin
+AU  - Baishakhi Ray
+T2  - arXiv (Cornell University)
+PY  - 2026
+DA  - 2026-09-14
+DO  - 10.48550/arxiv.2609.15963
+UR  - https://arxiv.org/abs/2609.15963
+AB  - Software agents with Large Language Models (LLMs) are designed for Automated Program Repair (APR) tasks, raising the possibility that, in the near future, APR agents will fix bugs automatically without much human intervention. Can we trust an APR agent to produce both functionally correct and secure code in such situations? What if attackers target production APR agents with adversarial issues that seem benign but may influence the agents to produce correct but insecure code? In this paper, we took a first step towards answering these questions by conducting an empirical study. First, we created SWEADV, a benchmark of 750 adversarial issue descriptions constructed from 150 repair tasks in SWE-bench Verified. For each repair task, we created five adversarial issue descriptions, one for each attack type: command execution, deserialization, path traversal, denial of service, and weak hashing. Second, we evaluated mini_swe APR agents from three LLM backends on SWEADV: GPT-5-Mini, MiniMax-M2.5, and DeepSeek-R. We found that on average, adversarial issue descriptions can induce malicious behaviors with successful repair in 51.7% of cases. Third, we investigated whether typical detection mechanisms are sufficient to prevent such malicious patches from being accepted. Pre-repair detection with LLM-as-judge on the adversarial issue descriptions resulted in an average detection accuracy of only 62.3%. Post-repair detection on adversarial APR patches using static analysis tools and LLM-as-judge achieved average detection accuracies of only 39.4% and 55.4%, respectively. We conclude that autonomous APR agents cannot be trusted yet in production deployment, given their susceptibility to adversarial attacks.
+N1  - record_key=arxiv:2609.15963
+N1  - source_database=OpenAlex
+N1  - query_id=Q3.v1
+N1  - original_record_id=https://openalex.org/W7213224664
+N1  - retrieved_at=2026-09-28T07:21:26+00:00
+N1  - arxiv_id=2609.15963
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - RuleAutoPilot: Synthesizing Deployable Suricata Rules from Network Traffic
+AU  - Mughees Ur Rehman
+AU  - Aritran Piplai
+AU  - Murat Kantarcioglu
+T2  - arXiv (Cornell University)
+PY  - 2026
+DA  - 2026-09-14
+DO  - 10.48550/arxiv.2609.16231
+UR  - https://arxiv.org/abs/2609.16231
+AB  - Rule-based Intrusion Detection Systems (IDS) such as Suricata are central to network security, yet crafting effective detection rules demands deep expert knowledge and cannot keep pace with emerging threats. Existing LLM-based approaches can reduce analyst effort, but they either rely on curated threat intelligence that is produced only after the underlying traffic artifacts already exist, or they require costly LLM use without sufficient quality control. We present RuleAutoPilot, an end-to-end agentic framework that generates deployable Suricata rules directly from malware network traffic, with no prior threat intelligence required. A key challenge is noise: network traffic captures often contain a small amount of security-relevant traffic mixed with large volumes of background traffic, which reduces LLM reasoning quality and increases cost. RuleAutoPilot addresses this challenge with a Benign Traffic Fingerprinting stage that removes known benign background flows before LLM processing. Rules that fail syntax checks, do not trigger on the source traffic, or generate false positives on a benign corpus are automatically repaired using structured feedback. Across 1,296 malware PCAPs, execution-grounded verification raises rule quality (F1) from 0.443 to 0.539. On a stratified 200-PCAP subset, RuleAutoPilot on the open-weight gpt-oss-120b reaches near-frontier quality, 0.524 F1 against Claude Opus 5 under Claude Code's 0.623, at 52x lower billed-token cost. Swapping only the backbone to Claude Opus 5, RuleAutoPilot surpasses Claude Code outright, 0.656 F1 against 0.623, at 40x fewer tokens. A stronger backbone raises RuleAutoPilot's own ceiling, but at the same backbone, our scaffold still outperforms Claude Code's, showing the scaffold contributes independently of the backbone.
+N1  - record_key=arxiv:2609.16231
+N1  - source_database=OpenAlex
+N1  - query_id=Q3.v1
+N1  - original_record_id=https://openalex.org/W7213413017
+N1  - retrieved_at=2026-09-28T07:21:26+00:00
+N1  - arxiv_id=2609.16231
+KW  - source-preprint
+ER  - 
+
+TY  - JOUR
+TI  - Personality-Adaptive Conversational AI for Emotional Support: A Simulation Study Integrating Big Five Detection with Zurich Model-Inspired Regulation
+AU  - Duojie Jiahua
+AU  - Samuel Devdas
+AU  - Mirjam Stieger
+AU  - Alexandre de Spindler
+AU  - Guang Lu
+T2  - Electronics
 PY  - 2026
 DA  - 2026-09-17
-UR  - http://arxiv.org/abs/2609.20457v1
-AB  - While multimodal large language models (MLLMs) enable a wide range of image-text reasoning tasks, recent incidents indicate that they are vulnerable to illicit deployment and unauthorized distillation. Existing solutions for model provenance are typically confounded by shared language backbones in MLLMs and struggle to detect violations of distillation. To bridge this gap and safeguard model ownership, we present the first study on multimodal model fingerprinting. Inspired by recent findings that self-attention acts as a low-pass filter and that its low-frequency components are informative, we develop AttnPrint for white-box provenance. Specifically, we extract cross-modal attention distributions and isolate their low-frequency components to serve as model fingerprints. To facilitate black-box auditing, we further introduce DistillTrace, which employs hypothesis testing of MLLM outputs to identify potential model infringement. We conduct extensive experiments on 154 model instances across 19 multimodal architectures. Notably, AttnPrint achieves strong derivative-model detection performance while remaining robust to five downstream modification techniques. DistillTrace also provides evidence of distillation relationships under three parameter-independent techniques.
-N1  - record_key=arxiv:2609.20457
+DO  - 10.3390/electronics15184241
+UR  - https://doi.org/10.3390/electronics15184241
+AB  - LLM-based conversational agents generate fluent responses but remain limited in adapting their supportive style to individual personality and emotional needs. We present a Detect–Regulate–Evaluate (D–R–E) architecture that performs turn-by-turn Big Five detection and applies Zurich Model-inspired behavioural regulation, orchestrated with PROMISE. The novelty is this integrated, reproducible detection→regulation→evaluation architecture for controlled simulation—not a claim of clinical effectiveness. In a GPT-4 simulation comparing personality-adapted (regulated) and standard (non-adaptive) assistants, scored by a structured LLM-based evaluator with author review retained as an internal audit, the main finding is the mixed-personality comparison with identical user text (input replay; outcome-scoring protocol not independently archived in full): dimension-level accuracy fell to 58.1%, yet three cross-family LLM judges retained a Personality Needs advantage, locating the extreme-profile result as an upper bound. Under extreme boundary-condition profiles, strict all-five-trait recovery was 21/60 (35.0%) and dimension-level accuracy was 83.3%; regulation adherence was 100%, and the Personality Needs Yes rate rose from 8.3% (5/60) to 100% (60/60) as an upper-bound selective-enhancement check. A two-rater verify-and-revise audit on an n=66 overlap showed substantial agreement on detection labels (mean linear κ=0.731) but covered detection labels only; outcome rubrics remain LLM-rated. Safety behaviours (crisis handling, unsafe advice, hallucination, escalation) were not evaluated. The Zurich mapping is implemented as a design choice rather than validated as psychological theory; the system is not evaluated as a therapeutic or clinical intervention.
+N1  - record_key=doi:10.3390/electronics15184241
+N1  - source_database=OpenAlex
+N1  - query_id=Q3.v2
+N1  - original_record_id=https://openalex.org/W7213955543
+N1  - retrieved_at=2026-09-28T07:22:00+00:00
+N1  - formal_doi=10.3390/electronics15184241
+ER  - 
+
+TY  - CONF
+TI  - Attacking and Defending Multi-Agent Collaborative Filtering Systems Through Connectivity
+AU  - Anjun Hu
+AU  - Hanting Xie
+AU  - Saranya Govindan
+AU  - Jas Kandola
+AU  - Kurt Cutajar
+PY  - 2026
+DA  - 2026-09-25
+DO  - 10.1145/3773078.3831748
+UR  - https://doi.org/10.1145/3773078.3831748
+AB  - Multi-agent collaborative filtering systems coordinate autonomous LLM-powered user and item agents through natural-language interaction to refine preferences and generate recommendations. These systems inherit vulnerabilities from both their data-driven nature and multi-agent interactions, which manifest in distinct ways. Understanding how connectivity modulates vulnerability in these systems could facilitate the development of more robust recommendation pipelines. In this work, we adapt attacks and defenses from the general multi-agent systems (MAS) literature to the agent-based CF setting, evaluating them under systematically varied connectivity in the AgentCF framework, where CF connectivity is characterized along two axes: (i) candidate count (the number of item candidates per turn per user, measuring user-side interaction density) and (ii) catalog concentration (the degree of item catalog overlap across users). Our contributions include: (1) Adaptation: we reproduce MAS-inspired attacks and defenses in the agentic CF domain, confirming partial transferability of original observations. (2) Characterization: we characterize how the two aspects of connectivity shape attack and defense outcomes, revealing role asymmetries between user and item agents, non-monotonic temporal dynamics in attack efficacy, and divergent patterns across dissemination and extraction attack goals. Additionally, as an exploratory extension, we assess the applicability of epidemic-inspired static metrics in ranking CF configurations by expected attack outcome, potentially enabling cost-efficient robustness assessment. Implementation is available at https://github.com/anjunhu/ConnACF.
+N1  - record_key=doi:10.1145/3773078.3831748
+N1  - source_database=OpenAlex
+N1  - query_id=Q3.v3
+N1  - original_record_id=https://openalex.org/W7197053042
+N1  - retrieved_at=2026-09-28T07:22:35+00:00
+N1  - formal_doi=10.1145/3773078.3831748
+ER  - 
+
+TY  - JOUR
+TI  - CODE REVIEW ASSISTANT (SPOTS BUGS, SUGGESTS FIXES)
+AU  - M Mohan rao
+AU  - M Viswa Simha
+AU  - B Naveen
+AU  - A Ashwith kumar
+AU  - P Pranay
+T2  - International Journal of Engineering Research and Science & Technology
+PY  - 2026
+DA  - 2026-09-24
+DO  - 10.62643/ijerst.2026.v22.n3.4665
+UR  - https://doi.org/10.62643/ijerst.2026.v22.n3.4665
+AB  - The Code Review Assistant is an AI-powered software tool designed to analyze source code, identify potential bugs, and suggest suitable fixes. Code review is an important part of software development because it helps developers identify errors, security issues, performance problems, and coding-quality concerns before software is deployed. However, manually reviewing large amounts of code can be time-consuming and may cause developers to overlook certain issues. The proposed system uses Artificial Intelligence, Natural Language Processing, Static Code Analysis, and Large Language Models to examine source code. Users can upload or paste code into the system and select the programming language being used. The system analyzes the code and identifies syntax errors, logical problems, inefficient code patterns, possible security vulnerabilities, and maintainability issues. After detecting potential problems, the system provides explanations for the identified issues. An AI-based recommendation module suggests possible corrections and can generate improved code snippets. The assistant explains why an issue may occur and provides guidance on how the developer can resolve it. This makes the system useful not only for debugging but also for learning better programming practices. The system can also classify detected issues based on categories such as Bug, Security, Performance, Code Quality, and Best Practice. Developers can review the detected issues through an interactive interface and compare the original code with the suggested corrected version. The user remains responsible for reviewing and testing any AIgenerated changes before applying them. Overall, the Code Review Assistant aims to improve software quality while reducing the manual effort involved in code review. It can support individual developers, students, software teams, and organizations by providing faster and more consistent code analysis. Future enhancements can include repository integration, pull-request review, multi-language support, automated testing, security scanning, and continuous code-quality monitoring.
+N1  - record_key=doi:10.62643/ijerst.2026.v22.n3.4665
+N1  - source_database=OpenAlex
+N1  - query_id=Q3.v3
+N1  - original_record_id=https://openalex.org/W7214198088
+N1  - retrieved_at=2026-09-28T07:22:35+00:00
+N1  - formal_doi=10.62643/ijerst.2026.v22.n3.4665
+ER  - 
+
+TY  - JOUR
+TI  - Class-based Obfuscation with Multi-objective Evolutionary Algorithms on Source Code
+AU  - Guan-Yan Yang
+AU  - T. C. Liu
+AU  - Farn Wang
+AU  - Kuo‐Hui Yeh
+T2  - International Journal of Information Security
+PY  - 2026
+DA  - 2026-09-23
+DO  - 10.1007/s10207-026-01297-z
+UR  - https://doi.org/10.1007/s10207-026-01297-z
+AB  - Abstract With the proliferation of software, protecting intellectual property from reverse engineering has become a paramount concern. Malicious actors who successfully decipher program logic can replicate applications, inject malicious code, and compromise user security. Code obfuscation serves as a critical defense mechanism by transforming a program’s structure to impede analysis while preserving its original functionality. This process inherently involves a trade-off between maximizing the confusion introduced (potency) and minimizing performance degradation (cost), which defines a multi-objective optimization problem. In this study, we propose MOCCO (Multi-Objective Class-based Code Obfuscation), a novel framework that leverages Multi-Objective Evolutionary Algorithms (MOEAs) to automate and optimize the source code obfuscation process. Our primary contribution is the introduction and integration of class-based obfuscation techniques, which manipulate object-oriented constructs—an aspect often neglected by existing tools. We model obfuscation as a search for optimal solutions on a Pareto front, balancing metrics such as cyclomatic complexity, nesting level, code similarity, and execution time. We implement and compare three distinct MOEAs within our framework, including a global-update adaptation of MOEA/D. Our experimental evaluation, conducted on a set of benchmark programs, demonstrates that our approach, particularly when incorporating class-based techniques, generates code that scores substantially higher on structural-complexity (potency) proxies, with comparable or, in most cases, substantially lower performance overhead, relative to code produced by existing open-source obfuscators under comparable conditions.
+N1  - record_key=doi:10.1007/s10207-026-01297-z
+N1  - source_database=OpenAlex
+N1  - query_id=Q3.v3
+N1  - original_record_id=https://openalex.org/W7214079151
+N1  - retrieved_at=2026-09-28T07:22:35+00:00
+N1  - formal_doi=10.1007/s10207-026-01297-z
+ER  - 
+
+TY  - JOUR
+TI  - Memory Safety in Kernel Development: An AI-Assisted Comparative Study of Rust- and C-Based Approaches to Preventing Memory Corruption
+AU  - Asma Mustafa Alhadi
+AU  - Nuha Omran Abokhdair
+T2  - Comprehensive Journal of Science
+PY  - 2026
+DA  - 2026-09-22
+DO  - 10.65405/zhcpaq10
+UR  - https://doi.org/10.65405/zhcpaq10
+AB  - Memory corruption remains a major source of security vulnerabilities in low-level and kernel-oriented software, particularly in systems implemented in C, where manual memory management exposes developers to errors such as buffer overflows, use-after-free, double-free, null-pointer dereferences, and memory leaks. This paper presents KernelMemSafe-AI, an AI-assisted comparative framework for evaluating memory-safety behavior in C- and Rust-based approaches within a kernel-development context. The proposed framework integrates two complementary components: an AI-assisted vulnerability-pattern classifier and a practical experimental comparison of C and Rust implementations. A controlled and balanced dataset of 520 C/C++ and kernel-style code snippets was constructed and labeled as vulnerable or safe across multiple memory-corruption categories. The final hybrid classifier combines token and bigram analysis, Naive Bayes learning, rule-based memory-safety indicators, confidence scoring, and five-fold cross-validation. The classifier achieved 95.58% accuracy, 96.11% precision, 95.00% recall, and a 95.55% F1-score. In addition, five representative memory-safety experiments were implemented to compare language behavior in buffer-overflow, use-after-free, double-free, null-pointer-dereference, and memory-leak scenarios. The experimental results show that C code often compiles successfully yet exhibits runtime failures, undefined behavior, allocator-level aborts, garbage values, or unreleased memory. In contrast, Rust prevents or mitigates several unsafe memory operations through ownership and move semantics, bounds checking, Option , and automatic cleanup using Drop. The findings indicate that Rust provides stronger language-level protection against common memory-corruption patterns, while AI-assisted analysis can support the early identification of unsafe C code patterns. Overall, the study shows that combining memory-safe programming mechanisms with AI-assisted vulnerability analysis can improve the reliability and security of kernel-oriented software.
+N1  - record_key=doi:10.65405/zhcpaq10
+N1  - source_database=OpenAlex
+N1  - query_id=Q3.v3
+N1  - original_record_id=https://openalex.org/W7213921998
+N1  - retrieved_at=2026-09-28T07:22:35+00:00
+N1  - formal_doi=10.65405/zhcpaq10
+ER  - 
+
+TY  - JOUR
+TI  - Security smell detection in Dockerfiles
+AU  - Wenbo Zhang
+AU  - Inah Omoronyia
+T2  - Bristol Research (University of Bristol)
+PY  - 2026
+DA  - 2026-09-22
+DO  - 10.1007/s10515-026-00684-z
+UR  - https://research-information.bris.ac.uk/en/publications/d1ff626a-fabc-43b4-a114-a658f200165f
+AB  - Abstract Dockerfiles are a widely adopted format for specifying Infrastructure-as-Code (IaC). However, insecure or misconfigured Dockerfiles frequently introduce critical security smells, including improper privilege use, unpinned dependencies, and secret leakage. State-of-practice tools such as Hadolint, Checkov, and KICS rely on static rules and regular expressions, leading to high false-negative rates and limited explanations for developers—particularly when security smells are semantically interwoven into configuration logic. We present an LLM-based framework that integrates (i) a fine-tuned multi-label risk detector trained on 4,000 manually annotated Dockerfiles across ten high-impact categories, and (ii) a retrieval-augmented interpretation-and-repair module that outputs both human-readable rationales and corrected code. The system is deployed via a VSCode plugin for real-time support. Experiments on a curated test set show that the detector achieves a macro-averaged precision of 0.97 and recall of 0.94, improving recall by 9–28 percentage points over static baselines. A user study further confirms the usability of our approach, demonstrating significant improvements in risk comprehension, identification accuracy, and remediation effort. Our findings highlight the feasibility of LLM-assisted IaC security and provide practical early mitigation for Dockerfile misconfigurations.
+N1  - record_key=doi:10.1007/s10515-026-00684-z
+N1  - source_database=OpenAlex
+N1  - query_id=Q3.v3
+N1  - original_record_id=https://openalex.org/W7213990129
+N1  - retrieved_at=2026-09-28T07:22:35+00:00
+N1  - formal_doi=10.1007/s10515-026-00684-z
+ER  - 
+
+TY  - EPRINT
+TI  - TraceVIC: Causal Reasoning over Code Evolution for Identifying Vulnerability-Inducing Commits
+AU  - FNU Tanish
+AU  - Samiha Shimmi
+AU  - Samikshya Chapagain
+AU  - Hamed Okhravi
+AU  - Mona Rahimi
+AU  - Lei Zhang
+T2  - arXiv (Cornell University)
+PY  - 2026
+DA  - 2026-09-22
+DO  - 10.48550/arxiv.2609.26711
+UR  - https://arxiv.org/abs/2609.26711
+AB  - Software vulnerabilities are often discovered long after they are introduced, making it difficult to identify the vulnerability-inducing commit (VIC) responsible for introducing the underlying vulnerable condition. Existing VIC identification techniques largely rely on git blame to trace vulnerable code through revision history and use positional heuristics, such as selecting its earliest or most recent modification. However, the true VIC may occur anywhere within this history, and vulnerable behavior may depend on code that evolves across multiple revisions. We therefore argue that VIC identification requires reasoning about how vulnerability-relevant code evolves, rather than simply where a candidate commit appears in the revision history. We present TraceVIC, a temporal graph-based approach for identifying and ranking VICs by reasoning over code evolution. TraceVIC first localizes likely root-cause lines and traces their histories across revisions, constructing graph representations that capture program structure within each revision and the evolution of vulnerability-relevant code across the history. It reasons over the resulting revision history, using temporal edges to preserve correspondences between program elements across consecutive revisions, and directly ranks candidate commits according to their contribution to the vulnerable condition. Ablation results show that modeling the full revision history improves F2 from 0.637 to 0.814. TraceVIC improves F2 by up to 28.7% over state-of-the-art methods and identifies a valid VIC for 78 of 79 vulnerabilities across four unseen C/C++ projects.
+N1  - record_key=arxiv:2609.26711
+N1  - source_database=OpenAlex
+N1  - query_id=Q3.v3
+N1  - original_record_id=https://openalex.org/W7214085182
+N1  - retrieved_at=2026-09-28T07:22:35+00:00
+N1  - arxiv_id=2609.26711
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - The Like Trap: Multi-Stage Poisoning against Agents in Similarity-based Recommendation Systems
+AU  - Yue Xing
+AU  - Pengfei He
+AU  - Zitao Li
+T2  - arXiv (Cornell University)
+PY  - 2026
+DA  - 2026-09-22
+DO  - 10.48550/arxiv.2609.27155
+UR  - https://arxiv.org/abs/2609.27155
+AB  - With recent advancements in large language models (LLMs) and LLM-based agents, these agents are becoming increasingly autonomous and gaining broader access to act on users' behalf on the internet. However, the vulnerability of automated agents deployed on social media platforms (e.g., for managing a user's personal account) remains underexplored. Existing studies on agent poisoning typically assume that the adversary can expose poisoned content to the agent. Although such an attack is direct and effective, it is more easily detected and mitigated. In the context of social media platforms, this leaves open whether the recommendation system itself would surface such content to the agent in a more subtle manner. Through theoretical analysis, we show that the like-score mechanism used in OASIS can be exploited, and we characterize the conditions under which a multi-stage chain of poisoned posts can steer the agent's feed. Based on these insights, we further develop an algorithm that crafts realistic poisoned posts. Experiments support our theoretical findings and demonstrate the effectiveness of the proposed algorithm. Notably, by exploiting the like-score feedback loop, the attack causes the recommendation system to select poisoned posts even when their user-post similarity falls below the retrieval threshold.
+N1  - record_key=arxiv:2609.27155
+N1  - source_database=OpenAlex
+N1  - query_id=Q3.v3
+N1  - original_record_id=https://openalex.org/W7214197642
+N1  - retrieved_at=2026-09-28T07:22:35+00:00
+N1  - arxiv_id=2609.27155
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - C-to-Rust Fallacy: Automatic Refactoring != Memory Security
+AU  - Hung-Mao Chen
+AU  - Xu He
+AU  - Bo Lu
+AU  - Xiaokuan Zhang
+AU  - Kun Sun
+T2  - arXiv (Cornell University)
+PY  - 2026
+DA  - 2026-09-22
+UR  - https://arxiv.org/abs/2609.25682
+AB  - Rust has emerged as the leading system programming language, offering strong memory and type safety guarantees without compromising performance. This positions it as a compelling alternative to traditional languages like C and C++, which are susceptible to memory security bugs. However, manually transforming C to Rust requires in-depth domain knowledge of the Rust language features, which requires significant effort for developers. To address this, tools for automatic C-to-Rust refactoring aim to generate safe Rust code leveraging static analysis and Large Language Models (LLMs). While these tools claim to achieve safety by reducing the unsafe Rust, the correlation with improving security is not clear. In this paper, we conduct a comprehensive empirical study on the reliability, safety, and correctness of various C-to-Rust refactoring methods. Specifically, we evaluate C2Rust-analyze, CROWN, C2SaferRust, and FLOURINE using a dataset of 116 C programs with memory security bugs from the NIST Juliet Test Suite. Based on 464 Rust programs generated by these tools, our evaluation focuses on three key aspects: the compilation correctness of the refactored programs, the effectiveness in mitigating original C bugs, and the tendency to introduce additional Rust bugs. The results indicate that 342 Rust programs fail to compile, 177 Rust programs inherit memory security bugs from the original C programs, and 77 new Rust bugs are introduced. We examine the rationale behind tool design and analyze the root cause of errors across various refactoring methods. Our findings indicate that current automated refactoring tools deliver memory safety as they define it, but not the broader memory security when adopting them.
+N1  - record_key=arxiv:2609.25682
+N1  - source_database=OpenAlex;arXiv
+N1  - query_id=Q3.v3;Q7.A1;Q7.v1
+N1  - original_record_id=https://openalex.org/W7214245937
+N1  - retrieved_at=2026-09-28T07:22:35+00:00
+N1  - arxiv_id=2609.25682
+KW  - source-preprint
+ER  - 
+
+TY  - JOUR
+TI  - Closing the Interpretability Gap: Explainable ML-Based Malware Detection for Defensive Cyberspace Operations
+AU  - Tashi Stirewalt
+AU  - Sean Hodgson
+AU  - Puumaaya Tahiru
+AU  - Assefaw Gebremedhin
+T2  - Digital Commons - University of South Florida (University of South Florida)
+PY  - 2026
+DA  - 2026-09-21
+DO  - 10.5038/2378-0789.9.1.1153
+UR  - https://digitalcommons.usf.edu/mca/vol9/iss1/4
+AB  - This paper presents an end-to-end, explainable malware triage pipeline designed for defense-oriented cyber operations. It combines high-performance static detection methods with analyst-centered interpretability. Utilizing the EMBER 2024 Windows PE subset, we train and evaluate four classifiers and select LightGBM as the production model based on its predictive performance, inference efficiency, and compatibility with exact tree-based attribution. The deployed system consists of four sequential components: PE feature extraction, malware probability scoring, dual explainability (using SHAP and LIME), and large language model (LLM) report generation, all integrated within a Flask web interface. On a temporal test set of 1,080,000 samples, LightGBM achieves an accuracy of 96.17% and an ROC-AUC of 0.9943, outperforming baseline models such as Random Forest, Logistic Regression, and Linear SVM. Additionally, on a 6,315-sample evasive challenge set, it maintains a 71.77% detection rate against binaries that previously evaded detection by many commercial antivirus engines. To enhance analyst trust, the framework introduces a dual explainable AI (XAI) consensus strategy. This strategy interprets agreement between SHAP and LIME outputs as a confidence signal, while disagreement indicates uncertainty that requires further investigation. The LLM translates the structured attribution outputs into concise, evidence-based incident narratives, reducing the interpretation burden on analysts while maintaining traceability to the model features. The resulting prototype demonstrates that explainability and operational utility can be effectively optimized together. Decisions remain auditable, confidence levels are better calibrated, and outputs become more actionable for security analysts.
+N1  - record_key=doi:10.5038/2378-0789.9.1.1153
+N1  - source_database=OpenAlex
+N1  - query_id=Q3.v3
+N1  - original_record_id=https://openalex.org/W7213982561
+N1  - retrieved_at=2026-09-28T07:22:35+00:00
+N1  - formal_doi=10.5038/2378-0789.9.1.1153
+ER  - 
+
+TY  - EPRINT
+TI  - MobileCybench: Evaluating Agent Vulnerability Discovery via Executable Probes
+AU  - Andy K. Zhang
+AU  - Ava Huang
+AU  - Joey Ji
+AU  - Wai Han 盧惠嫻
+AU  - Thomas Qin
+AU  - Nardos Demilew
+AU  - Michael Tian-Yue Liu
+AU  - Brian Song
+AU  - Riya Dulepet
+AU  - Brian Wang
+AU  - Kyleen Liao
+AU  - C.L. Chen
+AU  - Nishka Kacheria
+AU  - Andrew Wu
+AU  - Pratham Rangwala
+AU  - Wang, Xinjie
+AU  - Laura Gomezjurado Gonzalez
+AU  - Anita Ding
+AU  - Benjamin Yi
+AU  - Daniel E. Ho
+AU  - Dan Boneh
+AU  - Dawn Song
+AU  - Ion Gabriel Stoica
+AU  - Percy Liang
+T2  - arXiv (Cornell University)
+PY  - 2026
+DA  - 2026-09-21
+DO  - 10.48550/arxiv.2609.23980
+UR  - https://arxiv.org/abs/2609.23980
+AB  - AI agents now report vulnerabilities faster than maintainers can review them. Reports often depend on security properties specific to the application, and require considerable human labor to process. To mitigate this, we introduce a framework for evaluating vulnerability reports via probes, executable checks of security properties. A reported exploit is evaluated by replaying it against the application and running the probes: a triggered probe indicates both that the exploit succeeded and which security property it violated. As a probe encodes a security property rather than a known vulnerability, it can detect vulnerabilities that were not known when the probe was written. We instantiate the framework as MobileCybench, a benchmark for vulnerability discovery by AI agents in 13 Android applications, with 495 probes written and reviewed by the authors. We evaluate 5 coding agents (OpenCode with GPT-5.5, GPT-5.6-Sol, and GLM-5.2; Claude Code with Opus 4.8 and Opus 5) under 4 settings: as a malicious app on the victim's device or as a remote attacker with a low-privilege account, each with either only an obfuscated APK or access to the application's source code. Given only the obfuscated APK, the top agent, OpenCode with GPT-5.6-Sol, triggers probes in 53.8% of applications in the malicious-app setting and 16.7% in the remote-attacker setting. With source code, the trigger rate across all agents and both attack settings increases from 28.8% to 32.8%. Building and running the benchmark surfaced 23 previously unreported vulnerabilities, the majority of which have been confirmed by maintainers.
+N1  - record_key=arxiv:2609.23980
+N1  - source_database=OpenAlex
+N1  - query_id=Q3.v3
+N1  - original_record_id=https://openalex.org/W7214007232
+N1  - retrieved_at=2026-09-28T07:22:35+00:00
+N1  - arxiv_id=2609.23980
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - State-Aware Fuzzing of JavaScript Engines with LLM-Guided Instrumentation
+AU  - Wai Kin Wong
+AU  - Dongwei Xiao
+AU  - Anthony Cheuk Tung Lai
+AU  - Ping Fan Ke
+AU  - Shuai Wang
+T2  - arXiv (Cornell University)
+PY  - 2026
+DA  - 2026-09-21
+DO  - 10.48550/arxiv.2609.24550
+UR  - https://arxiv.org/abs/2609.24550
+AB  - The security of the modern web depends on the correctness of JavaScript (JS) engines, yet these complex systems remain vulnerable to high-impact bugs. A critical limitation of state-of-the-art fuzzers is the coverage plateau: once a fuzzer saturates the control-flow graph, edge coverage loses its ability to guide discovery. Because complex engine behaviors, such as JIT optimization tiers and hidden class transitions, often share identical edge coverage, standard coverage metrics are blind to the distinct internal states required to trigger deep errors. To bridge this gap, we present StateLens, a framework that employs Large Language Models (LLM) to automate the discovery of deep internal states. Blindly placing instrumentation probes at all states is infeasible due to the vast state space and the high runtime overhead. StateLens introduces a novel agent-based reasoning pipeline that emulates the intuition of a security researcher. By iteratively traversing code and developer comments, our agents intelligently select high-value instrumentation targets, effectively separating logic-driving state variables from irrelevant data. This results in synthesizable, high-signal feedback probes that map the engine's hidden configurations. This instrumentation feeds a dual-feedback mechanism, effectively guiding the fuzzer toward unexplored engine semantics. Our evaluation confirms that StateLens significantly outperforms state-of-the-art fuzzers and uncovering 68 new bugs.
+N1  - record_key=arxiv:2609.24550
+N1  - source_database=OpenAlex
+N1  - query_id=Q3.v3
+N1  - original_record_id=https://openalex.org/W7214031606
+N1  - retrieved_at=2026-09-28T07:22:35+00:00
+N1  - arxiv_id=2609.24550
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - RAG-NAROK: Retrieval-Aware Knowledge Corpus Poisoning in RAG with Source-specific Refutation
+AU  - Abdullahil Kafi
+AU  - Alvi Ataur Khalil
+T2  - arXiv (Cornell University)
+PY  - 2026
+DA  - 2026-09-21
+DO  - 10.48550/arxiv.2609.25469
+UR  - https://arxiv.org/abs/2609.25469
+AB  - Retrieval augmented generation (RAG) systems have emerged as the dominant architecture for grounding large language model (LLM) outputs in verifiable external knowledge, yet their structural reliance on a dynamic retrieval pipeline introduces a largely unexplored class of adversarial vulnerability. Existing knowledge-base poisoning attacks are fundamentally static. Adversarial documents are pre-computed and injected without any awareness of what the victim system will actually retrieve for a given query, leaving the attack blind to the competitive documentary landscape that surrounds its payload in the generator's context window. Unlike traditional static poisoning attacks that are blind to the retrieved context, we introduce RAG-NAROK (Retrieval-Anchored Generation Negation And Response Quality Collapse), a RAG attack framework that adapts to the query text. RAG-NAROK exploits the transparency inherent in RAG pipeline to first extract the legitimate source identities, then generate Anchor-Specific Refutation documents that explicitly name and devalue retrieved sources while leveraging recency and authority biases to steer the text generation toward a target answer. Our results demonstrate that RAG-NAROK significantly outperforms static baselines across diverse domains, revealing a fundamental tension between RAG transparency and AI security.
+N1  - record_key=arxiv:2609.25469
+N1  - source_database=OpenAlex;arXiv
+N1  - query_id=Q3.A1;Q3.v3
+N1  - original_record_id=https://openalex.org/W7214069661
+N1  - retrieved_at=2026-09-28T07:22:35+00:00
+N1  - arxiv_id=2609.25469
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - Indirect tipping: a social attack surface in AI agent populations
+AU  - Ariel Flint
+AU  - Luca Maria Aiello
+AU  - Sara Madureira Constantino
+AU  - Romualdo Pastor‐Satorras
+AU  - Andrea Baronchelli
+T2  - arXiv (Cornell University)
+PY  - 2026
+DA  - 2026-09-21
+DO  - 10.48550/arxiv.2609.25194
+UR  - https://arxiv.org/abs/2609.25194
+AB  - As generative AI agents are deployed at scale, safety will depend not only on technical safeguards and individual model design, but also on collective equilibria that determine how agent populations process information, prioritize actions, and respond to uncertainty. Yet the same equilibria that enable agents to coordinate also create a social attack surface. The standard framework to assess this vulnerability is critical mass dynamics: the minimum fraction of adversarial agents required to overturn an equilibrium through direct competition. Here, we show that this approach risks underestimating system vulnerability by reducing the problem to the identification of singular tipping points, and ignoring indirect but potentially more efficient routes through which collective behavior can be redirected. Through experiments with populations of LLM agents and an analytic framework that captures their collective dynamics at scale, we map critical-mass thresholds that define a directed, weighted topology over the space of coordination equilibria, and treat this topology as a navigable landscape. We show that indirect tipping through intermediate stepping-stone equilibria can reduce the committed minority required to reach an alternative state, bypass majority requirements, and make possible transitions inaccessible through direct challenges. The diversity of available alternatives and timing of the attack further reshape this landscape, creating opportunities for control as well as risks of unintended destabilization. These results show that an equilibrium's resistance to committed intervention is not an intrinsic property but a structural feature of its competitive relations with alternative states. Securing populations of interacting AI agents therefore requires mapping this social landscape alongside individual agent capabilities and the technical channels through which they interact.
+N1  - record_key=arxiv:2609.25194
+N1  - source_database=OpenAlex;arXiv
+N1  - query_id=Q3.A1;Q3.A2;Q3.v3
+N1  - original_record_id=https://openalex.org/W7214083700
+N1  - retrieved_at=2026-09-28T07:22:35+00:00
+N1  - arxiv_id=2609.25194
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - When the Agent Becomes the Kernel: A Systematization of Security on the Path to AI-Native Operating Systems
+AU  - Li Zhang
+AU  - Yang Sun
+AU  - Jie Shi
+T2  - arXiv (Cornell University)
+PY  - 2026
+DA  - 2026-09-20
+DO  - 10.48550/arxiv.2609.23700
+UR  - https://arxiv.org/abs/2609.23700
+AB  - Large language model agents are now privileged principals that take consequential actions: editing code repositories, operating inboxes, completing purchases. Their authority is kernel-grade, but it comes without what classical systems security requires: a trusted mediator interposed on every access. Operating-system vendors are now rebuilding the platform around this de-facto agent kernel, inheriting complete mediation as a design problem. We systematize the security of such systems around a single distinction: a crossing mediated over provenance admits a deterministic check, while one over content semantics does not. A trust-boundary taxonomy locates where mediation must occur and isolates the central mediation gap at two kinds of semantic judgment: distinguishing data from instruction in untrusted input, and an authorized action from an unauthorized one. We argue that this gap leaves an irreducible residual of undetected attacks wherever inputs and actions are not restricted in advance to an enumerated set. The same distinction makes attack-success statistics actionable, placing each number on a spectrum from deployment debt (a sound deterministic mediator left unused) to a structural gap (no such mediator known). We systematize defenses across runtime monitoring, architectural separation, and authorization, and show that current evaluations tend to overstate deployed security through evaluation-validity failures. Finally, we carry that analysis forward beyond the de-facto kernel, to an architecture in which the model itself becomes the arbitration core, and derive the design constraints, open challenges, and research agenda for a security-first AI-native OS.
+N1  - record_key=arxiv:2609.23700
+N1  - source_database=OpenAlex
+N1  - query_id=Q3.v3
+N1  - original_record_id=https://openalex.org/W7214038069
+N1  - retrieved_at=2026-09-28T07:22:35+00:00
+N1  - arxiv_id=2609.23700
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - An Empirical Security Analysis of Open-Source Software Used in Onboard Satellite Systems
+AU  - Roee Idan
+AU  - Tomer Galor
+AU  - Asaf Shabtai
+AU  - Yuval Elovici
+T2  - arXiv (Cornell University)
+PY  - 2026
+DA  - 2026-09-14
+DO  - 10.48550/arxiv.2609.15425
+UR  - https://arxiv.org/abs/2609.15425
+AB  - The use of open-source software (OSS) in satellite flight systems is increasing as missions adopt reusable frameworks, shared libraries, and community-maintained components. While this accelerates development, it also introduces software-security risks into systems where patching is costly and failures may affect mission operations. This paper presents an empirical security study of OSS used in onboard satellite systems. We analyze 126 public repositories using a pipeline that combines software bill of materials generation, software composition analysis, static application security testing, infrastructure-as-code analysis, and secret scanning. After rule-based cleaning, onboard-scope filtering, and fingerprint-based deduplication, the pipeline produced a final dataset of 2,827 findings. The results show that security findings are widespread but unevenly distributed. Medium-severity findings account for 49% of the dataset, and 72% are classified as medium severity or higher. A Common Weakness Enumeration (CWE)-based taxonomy assigns all findings to eight weakness families. Memory Safety and Code Quality dominate the dataset, followed by Input Validation and Injection. Most findings occur in project-developed code, accounting for 81.4% of the dataset, while external dependency code remains a relevant source of findings. While these findings do not establish mission-specific exploitability, they provide an empirical characterization of recurring security patterns across the open-source onboard satellite software ecosystem, helping quantify their prevalence and prioritize areas that warrant the greatest security attention.
+N1  - record_key=arxiv:2609.15425
+N1  - source_database=OpenAlex
+N1  - query_id=Q4.v1
+N1  - original_record_id=https://openalex.org/W7213279234
+N1  - retrieved_at=2026-09-28T07:22:38+00:00
+N1  - arxiv_id=2609.15425
+KW  - source-preprint
+ER  - 
+
+TY  - CONF
+TI  - Assessing Static Analysis Tools for Security Vulnerability Detection: An Empirical Study
+AU  - Artur Santos de Farias
+AU  - Rodrigo Rocha
+AU  - Jamilson Ramalho Dantas
+T2  - Annals of Computer Science and Information Systems
+PY  - 2026
+DA  - 2026-09-25
+DO  - 10.15439/2026f8556
+UR  - https://doi.org/10.15439/2026f8556
+AB  - Static analysis tools are widely adopted to support security vulnerability detection in modern software development, particularly when integrated into continuous integration (CI) pipelines.However, the increasing number of available tools and the operational constraints imposed by CI environments complicate tool selection, while empirical evidence supporting informed adoption decisions in realistic CI settings remains limited.This study addresses this gap by empirically assessing static analysis tools for security vulnerability detection in Java projects executed within GitHub Actions pipelines.The evaluation considers a selected set of representative open-source tools and analyzes their behavior across repositories containing documented, real-world vulnerabilities.The assessment focuses on detection effectiveness, coverage of vulnerability categories, consistency and complementarity across tools, and operational behavior in CI, including execution overhead and stability.The results reveal substantial variability among the evaluated tools, demonstrating that no single solution simultaneously optimizes detection capability, execution efficiency, and CI robustness.These findings expose explicit trade-offs that directly affect the practical adoption of static analysis in CI-driven development workflows.By providing CI-grounded empirical evidence, this study supports more informed tool selection and configuration decisions, benefiting researchers, practitioners, and organizations seeking to strengthen security-oriented practices in continuous integration environments.
+N1  - record_key=doi:10.15439/2026f8556
+N1  - source_database=OpenAlex
+N1  - query_id=Q4.v3
+N1  - original_record_id=https://openalex.org/W7214291778
+N1  - retrieved_at=2026-09-28T07:24:17+00:00
+N1  - formal_doi=10.15439/2026f8556
+ER  - 
+
+TY  - JOUR
+TI  - A Sound Semantics Approximation of Solidity for Enhanced Vulnerability Detection
+AU  - Maitri Kushwaha
+AU  - Raju Halder
+AU  - Agostino Cortesi
+T2  - Distributed Ledger Technologies Research and Practice
+PY  - 2026
+DA  - 2026-09-24
+DO  - 10.1145/3849490
+UR  - https://doi.org/10.1145/3849490
+AB  - As Solidity smart contracts become central to decentralized finance and governance, the exploitation of critical vulnerabilities has repeatedly resulted in severe financial losses. Existing state-of-the-art methods that rely on symbolic execution or syntactic patterns are unable to model the language semantics accurately. This limits their ability to reason about all possible runtime behaviors and, hence, often produces numerous false alarms under adversarial blockchain environment. To address these challenges, in this paper, we propose a semantics-driven static analysis framework for detecting vulnerabilities in Solidity. Our proposed framework is grounded in Abstract Interpretation theory, enabling safe approximation of program semantics to formally capture dynamic behavioral properties of Solidity smart contracts at different levels of abstraction. While it performs fixpoint semantics computations on an augmented control flow graph guided by adversarial contexts, it applies semantic dependences refinement through numerical abstractions as well. This facilitates more precise reasoning regarding semantic properties indicating the presence of possible Solidity vulnerabilities. Our prototype, developed using the APRON library, supports various numerical abstract domains, such as Intervals, Octagons, and Polyhedra, thereby optimizing the trade-off between precision and computational cost. Empirical results on four benchmark datasets (SBC, Qian, RSD, and SolidiFI) show that the Interval domain works well for integer overflow and underflow and for reentrancy, while the Polyhedra domain captures the linear relations among variables needed for timestamp and transaction-ordering dependencies. Furthermore, the semantics-aware analysis enables our tool to achieve the highest F1-score in seven of the nine evaluated dataset-vulnerability combinations, with average F1-score improvements over the strongest existing baselines of about 5.3, 15.0, 13.6, and 5.5 percentage points for Reentrancy, Integer Overflow and Underflow, Timestamp Dependency, and Transaction Ordering Dependency, respectively, together with AUC improvements of up to 0.41.
+N1  - record_key=doi:10.1145/3849490
+N1  - source_database=OpenAlex
+N1  - query_id=Q6.v2;Q6.v3
+N1  - original_record_id=https://openalex.org/W7214199461
+N1  - retrieved_at=2026-09-28T07:25:08+00:00
+N1  - formal_doi=10.1145/3849490
+ER  - 
+
+TY  - EPRINT
+TI  - CPyGraph: A Version-Aware Static Analysis Framework for Native CPython Bytecode
+AU  - Baihong Chen
+AU  - Wen Li
+T2  - arXiv (Cornell University)
+PY  - 2026
+DA  - 2026-09-18
+DO  - 10.48550/arxiv.2609.25083
+UR  - https://arxiv.org/abs/2609.25083
+AB  - Static analysis of Python packages must recover both program structure and object flow across first-class functions, dynamic dispatch, implicit protocol calls, exceptions, closures, and module execution. Native CPython bytecode provides the executable lowering of these behaviors, but its instruction, call, stack, and exception representations change across releases. This creates a need for a version-aware analysis foundation whose graph products share the same bytecode identities and semantics. We present CPyGraph, a C++ framework for package-level analysis of native CPython bytecode. Version- specific adapters expose stack, control, call, lexical, protocol, and exception semantics through a shared interface while preserving code-object identities and native bytecode offsets. An operand-stack-aware Andersen points- to analysis and call graph grow together to a fixed point. Their shared state supports exception-aware CFGs, block-level CDGs, and interprocedural DDGs, with optional function-level flow, context, and bounded path sensitivity. The framework also records unresolved dynamic behavior through typed coverage summaries. We evaluate CPyGraph with PYGBench, 201 package-level programs and 1,733 fixed candidates. On CPython 3.10, the default analysis reaches 91.40% candidate precision and 100% recall; complete sensitivity reaches 94.97% precision with the same recall. Across CPython 3.10-3.14, 1,328 of 1,334 version-invariant queries agree, and CPyGraph matches PyCG on its 112-program call-graph benchmark.
+N1  - record_key=arxiv:2609.25083
+N1  - source_database=OpenAlex;arXiv
+N1  - query_id=Q6.A1;Q6.v2
+N1  - original_record_id=https://openalex.org/W7214092548
+N1  - retrieved_at=2026-09-28T07:25:08+00:00
+N1  - arxiv_id=2609.25083
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - Vulnerability Localization Benchmark: Measuring Agentic Security Analysis at Repository Scale
+AU  - Aman Priyanshu
+AU  - Supriti Vijay
+AU  - Kimia Majd
+AU  - Xuhong He
+AU  - Fraser Burch
+AU  - Matsumoto, Takahiro
+AU  - Jianliang He
+AU  - Baturay Sağlam
+AU  - Arthur Goldblatt
+AU  - Zhuoran Yang
+AU  - Amin Karbasi
+T2  - arXiv (Cornell University)
+PY  - 2026
+DA  - 2026-09-14
+DO  - 10.48550/arxiv.2609.15939
+UR  - https://arxiv.org/abs/2609.15939
+AB  - Language-model agents increasingly operate over complete software repositories, yet cybersecurity evaluations primarily measure whether they can detect, reproduce, or repair vulnerabilities rather than whether they can locate the relevant code. We study vulnerability localization: given a weakness class and an unfamiliar repository, identify the implementation files associated with that weakness. We introduce the Vulnerability Localization Benchmark (VLoc Bench), comprising 500 real world vulnerabilities from 290 repositories across six package ecosystems and 147 CWE categories. Each task pairs repository snapshots immediately before and after a security fix. On the vulnerable snapshot, an agent receives only the CWE description and read-only terminal access and must return the affected files; on the patched snapshot, it must determine that the recorded vulnerability is no longer present. We evaluate 27 language models and four static-analysis tools under a common agent interface. Repository-scale vulnerability localization remains difficult: the strongest system achieves 0.229 File F1, and 38.4% of tasks receive no correct localization from any evaluated model. We further find that stronger localization does not imply reliable behavior after remediation: systems that identify vulnerable files effectively can still report unsupported locations on patched repositories. These results establish vulnerability localization as a distinct repository-scale capability and provide a setting for studying both how security agents search for vulnerable code and when they should refrain from reporting it.
+N1  - record_key=arxiv:2609.15939
+N1  - source_database=OpenAlex
+N1  - query_id=Q6.v2
+N1  - original_record_id=https://openalex.org/W7213272176
+N1  - retrieved_at=2026-09-28T07:25:08+00:00
+N1  - arxiv_id=2609.15939
+KW  - source-preprint
+ER  - 
+
+TY  - JOUR
+TI  - Global research architecture of RNA-binding proteins in neurodegenerative diseases: a web of science bibliometric study with PubMed record verification, 2001–2025
+AU  - Ranran Zhu
+AU  - Hongyan Li
+T2  - Frontiers in Aging Neuroscience
+PY  - 2026
+DA  - 2026-09-21
+DO  - 10.3389/fnagi.2026.1967205
+UR  - https://doi.org/10.3389/fnagi.2026.1967205
+AB  - Background RNA-binding proteins (RBPs) connect RNA homeostasis to proteostasis and selective neuronal vulnerability, but the organization and evolution of this cross-disease research field remain unclear. Methods We analyzed Web of Science Core Collection (WoSCC) records published through 2025. PubMed was used only to verify records by normalized DOI or exact normalized title; PubMed metadata were not pooled with WoS data, and all bibliometric analyses used WoS fields. Publication growth, contributors, collaboration, co-citation, bibliographic coupling, and conceptual evolution were examined using bibliometrix, VOSviewer, and CiteSpace-compatible workflows. A prespecified 43-concept dictionary preserved multiword biological entities in title/abstract networks. The study characterizes a query-defined and PubMed-verified literature corpus rather than estimating the relative biological importance of individual RBPs. Results Of 2,454 records reported by the WoS search interface, 2,450 were available in the supplied exports and 2,309 met the year criterion. PubMed record verification retained 2,160 records (93.55%) in the analysis corpus; 149 records (6.45%) were not matched. Output increased from one publication in 2001 to 213 in 2025. Within this query-defined corpus, the mapped literature was concentrated around TDP-43 pathology, TARDBP/FUS genetics, and loss of RNA-processing function. The controlled concept network resolved three macro-communities, while recent temporal signals involved LATE, cryptic exons, and RNA transport. These findings describe the retrieved and verified corpus and are not presented as a search-independent ranking of the broader RBP field. Conclusion The maps document a WoS-derived and PubMed-verified literature corpus concentrated on TDP-43 and ALS/FTD and increasingly connected with cryptic RNA processing, condensate biology, nuclear transport, neuroimmune responses, and aging-related mixed proteinopathies. Because the corpus was conditioned by a title-level query containing named RBPs and by PubMed record verification, these patterns should not be interpreted as an unbiased ranking of RBP biology or as evidence of shared causality across diseases. Cross-disease translation should proceed through neuropathologically defined, age-stratified, and cell-type-resolved human cohorts, followed by causal perturbation and rescue in human disease models and multicenter longitudinal validation.
+N1  - record_key=doi:10.3389/fnagi.2026.1967205
+N1  - source_database=OpenAlex
+N1  - query_id=Q6.v3
+N1  - original_record_id=https://openalex.org/W7213881981
+N1  - retrieved_at=2026-09-28T07:32:44+00:00
+N1  - formal_doi=10.3389/fnagi.2026.1967205
+ER  - 
+
+TY  - EPRINT
+TI  - GAUGE: A Formal Framework for Measuring Cryptographic Security under Heterogeneous Adversary Cost Models
+AU  - Bhanwar Gupta
+AU  - Sanjeev Rana
+T2  - arXiv (Cornell University)
+PY  - 2026
+DA  - 2026-09-15
+DO  - 10.48550/arxiv.2609.17281
+UR  - https://arxiv.org/abs/2609.17281
+AB  - Standards bodies report cryptographic security as a single number of bits, but this value depends on the adversary cost model used to price time, memory, and quantum resources. Different conventions can therefore produce different rankings of cryptographic schemes. GAUGE represents security as a function over admissible cost models, called a security profile. Comparisons then become comparisons between profiles, and ranking reversals become an explicit structural property rather than a measurement error. We formalize price functionals over a cone of adversary cost models, show that security profiles are piecewise-linear and concave, and prove a rating trilemma: when two profiles cross, no rating can simultaneously be faithful to underlying costs, total over comparable pairs, and independent of the chosen cost model. We provide a polynomial-time linear-programming procedure that certifies whether the ranking of two schemes is robust, reverses under admissible models, or is genuinely incomparable. We extend GAUGE with a two-layer risk measure combining stochastic cryptanalytic decay with uncertainty over the appropriate cost model. We evaluate the framework on NIST post-quantum standards, classical anchors, and a 25-year chronology of cryptanalytic breaks. The analysis certifies a ranking reversal for ML-KEM-512 versus AES-128 from a 4-5% shift in memory pricing, and measures a lattice-sieving cost drift of 9.79 bits per year over eight years. A hybrid X25519 + ML-KEM-768 handshake reduces combined-break probability twenty-fold at a 2.3 kilobyte cost. The artifact reproduces all tables and figures in under seven seconds. GAUGE provides an explicit and auditable framework for reporting cryptographic security under competing cost models.
+N1  - record_key=arxiv:2609.17281
+N1  - source_database=OpenAlex
+N1  - query_id=Q6.v3
+N1  - original_record_id=https://openalex.org/W7213425524
+N1  - retrieved_at=2026-09-28T07:32:44+00:00
+N1  - arxiv_id=2609.17281
+KW  - source-preprint
+ER  - 
+
+TY  - CONF
+TI  - Embedding-Level Pretraining for Assembly-Level Vulnerability Detection Using Transformer Models
+AU  - Dominik Ciesiołkiewicz
+AU  - Mirosław Łazoryszczak
+AU  - Piotr Dziurzański
+T2  - Annals of Computer Science and Information Systems
+PY  - 2026
+DA  - 2026-09-25
+DO  - 10.15439/2026f7378
+UR  - https://doi.org/10.15439/2026f7378
+AB  - This paper presents a deep learning framework for assembly-level vulnerability detection that operates directly on disassembled binary code, addressing scenarios where source code is unavailable.The approach combines pretrained PalmTree instruction embeddings with a RoBERTa-based transformer adapted to process continuous inputs.We introduce an embedding-level masked language modeling strategy that masks in the continuous embedding space using Gaussian noise.This enables the model to capture contextual relationships between assembly instructions without relying on discrete token representations.The method is evaluated on the ROMEO dataset across multiple Common Weakness Enumeration (CWE) classes and demonstrates strong performance on accuracy, precision, recall, F1-score and PR-AUCs.Ablation studies further confirm the effectiveness of embedding-level pretraining and PalmTree embeddings.These results suggest that embedding-aware transformer architectures are a promising direction for vulnerability detection in binary code.
+N1  - record_key=doi:10.15439/2026f7378
+N1  - source_database=OpenAlex
+N1  - query_id=Q7.v1;Q7.v3
+N1  - original_record_id=https://openalex.org/W7214370271
+N1  - retrieved_at=2026-09-28T07:32:48+00:00
+N1  - formal_doi=10.15439/2026f7378
+ER  - 
+
+TY  - EPRINT
+TI  - Soundness Checking of Taint Flow Models
+AU  - Samarth Kishor
+AU  - Victor Nicolet
+AU  - Joey Dodds
+T2  - arXiv
+PY  - 2026
+DA  - 2026-09-23
+UR  - http://arxiv.org/abs/2609.28750v1
+AB  - Existing state-of-the-art static taint flow analyses for imperative programming languages can scale to large applications by using precise user-provided taint flow models of library methods. However, manually and precisely modeling a method's taint flows is tedious and potentially unsound. Furthermore, automatically modeling the method via an inter- procedural taint analysis can be inefficient. To solve this problem, we propose a guess-and-check approach: (1) an LLM agent that generates a precise taint flow model of a method and (2) a symbolic algorithm to check the soundness of the model. The algorithm deduces which taint flows must not occur in the method for the LLM's taint flow model to be sound, and uses lightweight static analyses (e.g., type system and pointer analysis) to prove these must-not-flows. When these analyses are insufficient, the algorithm deduces maximally-general callee models and recursively verifies their soundness, avoiding a full inter-procedural taint analysis in most cases. Since a more precise model requires fewer must-not-flows to be verified, the precision of the LLM's model directly determines the efficiency of our approach. We evaluate our approach on 97 LLM-generated taint flow models for methods in 6 large Go codebases and prove the models sound for 93% of the methods they cover. The proven-sound LLM-generated models are also precise, resulting in no new false-positives when proving taint flow properties.
+N1  - record_key=arxiv:2609.28750
+N1  - source_database=arXiv
+N1  - query_id=Q1.A2
+N1  - original_record_id=2609.28750
+N1  - retrieved_at=2026-09-28T07:33:42+00:00
+N1  - arxiv_id=2609.28750
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - Solidity Meets LLMs: A Transformer-Based Approach to Smart Contract Vulnerability Detection
+AU  - Djamel Eddine Hakim Ghorab
+AU  - Farid Mokhati
+AU  - Mostafa Anouar Ghorab
+T2  - arXiv
+PY  - 2026
+DA  - 2026-09-22
+DO  - 10.1007/978-3-032-15632-7_17
+UR  - http://arxiv.org/abs/2609.27091v1
+AB  - The growing adoption of blockchain technologies, particularly the Ethereum platform, has amplified the critical role of smart contracts in decentralized applications. However, the increasing complexity and financial value of these contracts make them prime targets for cyber attacks. In this work, we present a transformer-based approach for the detection of vulnerabilities in smart contract fragments written in Solidity. Leveraging the representational power of pre-trained Large Language Models (LLMs), we construct a robust pipeline that includes the definition of a ground truth dataset, labeling code fragments as vulnerable or safe. We then fine-tune a BERT-based architecture on this dataset, enabling the model to capture the syntactic and semantic patterns specific to Solidity code. Our fine-tuned model demonstrates strong performance, achieving an F1 score of 92%, and highlighting the effectiveness of LLM adaptation in enhancing smart contract security through deep contextual understanding.
+N1  - record_key=doi:10.1007/978-3-032-15632-7_17
 N1  - source_database=arXiv
 N1  - query_id=Q3.A1
-N1  - original_record_id=2609.20457
-N1  - retrieved_at=2026-09-22T06:40:43+00:00
-N1  - arxiv_id=2609.20457
+N1  - original_record_id=2609.27091
+N1  - retrieved_at=2026-09-28T07:33:54+00:00
+N1  - arxiv_id=2609.27091
+N1  - formal_doi=10.1007/978-3-032-15632-7_17
+ER  - 
+
+TY  - EPRINT
+TI  - On the Lexical Superstition of Large Language Models for Code Comprehension: Re-evaluation on Code of Low Lexical Quality
+AU  - Xin Shen
+AU  - San-Zhuo Xi
+AU  - Yali Du
+AU  - Ming Li
+T2  - arXiv
+PY  - 2026
+DA  - 2026-09-22
+UR  - http://arxiv.org/abs/2609.26388v1
+AB  - Recent advances in large language models (LLMs) have made them widely used for code-related tasks. Identifier names are statistically informative in naturally occurring code, but their information is not always reliable. We investigate whether current LLMs assign disproportionate weight to lexical cues when renaming preserves program structure. We introduce Face/Off, a semantics-preserving identifier-renaming framework, and evaluate progressive naming conditions across multiple models and code-comprehension tasks. Within this framework, lexical overemphasis is pervasive across the evaluated models and primary tasks: performance generally decreases as identifier information is removed or made misleading, and outputs are often directed toward the meanings suggested by misleading names. The pattern persists under representative prompt- and fine-tuning-based interventions, suggesting that lexical overemphasis is an entrenched problem. A type-inference control confirms a boundary: naming effects are smaller when the answer is locally recoverable without the target name. These results do not imply that identifiers are unhelpful; rather, they reveal a systematic vulnerability in how current LLMs balance lexical cues against program structure. Our findings motivate evaluations and modeling methods that preserve the benefits of natural code regularities while keeping conclusions grounded in accurate, formalized code semantics.
+N1  - record_key=arxiv:2609.26388
+N1  - source_database=arXiv
+N1  - query_id=Q3.A1
+N1  - original_record_id=2609.26388
+N1  - retrieved_at=2026-09-28T07:33:54+00:00
+N1  - arxiv_id=2609.26388
 KW  - source-preprint
 ER  - 
 
 TY  - EPRINT
-TI  - SyzHarness: Patch-Based Kernel Bug Reproduction with LLM-Synthesized Fuzzing Harnesses
-AU  - Xingyu Li
-AU  - Juefei Pu
-AU  - Haonan Li
-AU  - Arrdya Srivastav
-AU  - Kareem Shehada
-AU  - Srikanth V. Krishnamurthy
-AU  - Zhiyun Qian
+TI  - Where LLM Graders Succeed and Break: Evidence from Two Computer-Science Exams
+AU  - Ali Habibullah
+AU  - Yazan Alshoibi
+AU  - Mohammad Alshiekh
+AU  - Salman Khan
+AU  - Naeemullah Khan
+T2  - arXiv
+PY  - 2026
+DA  - 2026-09-24
+UR  - http://arxiv.org/abs/2609.29333v1
+AB  - One long-form exam in a large course costs hundreds of grader-hours, and qualified graders are scarce; LLM graders are a tempting alternative. To show its pitfalls we grade a practical Computer Vision exam ($570$ dual-graded students) under $171$ configurations spanning closed and open-weights models; the best reaches mean absolute error $1.64/35$, below the $2.61/35$ two human graders achieve against each other. The catch is the prompt: a short ''strict grader'' preamble drives $14$ of $17$ open-weights models out of the graded band ($\text{MAE} \ge 8$), three stopping grading altogether. The damage traces to the preamble's two credit-withholding sentences, not to tone or model scale; one of them, ''never give partial credit'', alone makes two of three probed models stop grading. The closed flagships of three vendors shift calibration under it but stay in the band. In $162$ further configurations on a second, independent Machine Learning exam from another course ($1{,}038$ dual-graded students), the preamble worsens ten models, moving three out of the band into collapse and one into refusal, yet improves seven whose neutral prompts over-mark: the vulnerability replicates, but its direction is exam-specific. Light LoRA fine-tuning repairs it: one adapter on the two exams' pooled $\sim 3{,}900$ graded examples brings five small open models to parity or better with a human grader in agreement with the grader pair, and sensitivity to the three harsh personas nearly vanishes ($\le 0.32$ MAE). We release the anonymised dataset, full ablation grid, and grading, fine-tuning and analysis pipelines.
+N1  - record_key=arxiv:2609.29333
+N1  - source_database=arXiv
+N1  - query_id=Q3.A1
+N1  - original_record_id=2609.29333
+N1  - retrieved_at=2026-09-28T07:33:54+00:00
+N1  - arxiv_id=2609.29333
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - Clarification Is Not Correction: LLMs Fail to Let Go
+AU  - Jianzhe Lin
+AU  - Xiaolin Li
+AU  - Fei Wang
+AU  - Robert Douglas
+AU  - Rajeshkumar Golani
+AU  - Jubin Chheda
+T2  - arXiv
+PY  - 2026
+DA  - 2026-09-21
+UR  - http://arxiv.org/abs/2609.25337v1
+AB  - Dialogue failures in language models are usually framed as memory failures: context too long, summaries lossy, a constraint forgotten. We argue this misses a deeper problem: in many conversations the model does not forget, it commits too early. An ambiguous early turn collapses into a single hidden interpretation, and later clarification is filtered through that commitment. We call this early posterior collapse: unresolved user intent collapsing into a committed task state before ambiguity is resolved. We study it with controlled dialogue tasks in writing, planning, and coding using Gemini-2.5-Pro and Gemini-2.5-Flash. Across thousands of trials, the same information in different orders yields different outcomes, even when the final dialogue contains equivalent task-relevant information. This order effect suggests later clarification is treated as extra context rather than a corrective signal: it refines a stale task state without invalidating it. Coding tasks are especially vulnerable, suggesting early assumptions get embedded in structured artifacts such as interfaces and control flow. Standard prompting and memory strategies do not reliably help: summaries can collapse ambiguity, and chain-of-thought can reduce explicit wrong commitment in reasoning traces without improving final task success. These findings motivate uncertainty-preserving state management. If assistants cannot let go of early interpretations, robustness cannot rely on post hoc correction alone; it must keep ambiguous early turns from hardening into one task state. Assistants should hold tentative hypotheses while ambiguity remains, ask before executing when high-impact ambiguity persists, and rebuild from a revised state when later evidence invalidates an earlier reading. Rather than one prompting fix, we aim to redirect research for interactive LLMs from retaining more context toward preserving uncertainty.
+N1  - record_key=arxiv:2609.25337
+N1  - source_database=arXiv
+N1  - query_id=Q3.A1;Q3.A2
+N1  - original_record_id=2609.25337
+N1  - retrieved_at=2026-09-28T07:33:54+00:00
+N1  - arxiv_id=2609.25337
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - You Only Need 2/3 of the Chosen Experts: An Empirical Study of Dynamic Expert Pruning in Fine-Grained MoE LLMs
+AU  - Yuanteng Chen
+AU  - Qiwei Lai
+AU  - Chen Tianqi
+AU  - Peisong Wang
+AU  - Yuantian Shao
+AU  - Nanxin Zeng
+AU  - Zhilei Liu
+AU  - Chuangyi Li
+AU  - Jing Liu
+AU  - Jian Cheng
+T2  - arXiv
+PY  - 2026
+DA  - 2026-09-22
+UR  - http://arxiv.org/abs/2609.25809v1
+AB  - Fine-grained mixture-of-experts (MoE) architectures have become a mainstream design for open-weight LLMs, with hundreds of experts and increasingly many selected per token. This shift makes dynamic expert pruning an attractive route to cheaper inference. Yet existing evidence comes largely from coarser architectures and likelihood-scored multiple-choice benchmarks, leaving three central questions open in the fine-grained regime: how redundant per-token expert selection is, how effectively existing pruning methods exploit that redundancy, and what governs a model's sensitivity to pruning. We fill this gap with a systematic empirical study of twelve fine-grained MoE checkpoints spanning nine architecture families, with a core suite of eleven benchmarks covering knowledge QA, mathematics, code generation, and general reasoning. We find that expert selection is far more redundant than the field's operating points assume: uniformly retaining about two thirds of the selected experts preserves 98.8% of unpruned performance on average, requiring only a one-integer change and delivering 1.2-1.7x measured speedup across two serving backends. This simple baseline leaves little room for dynamic allocation at conservative budgets: even the best published rules differ from it by under 1% at matched expert budgets. Their value emerges under aggressive pruning, where the best rules recover up to 3.0% over uniform truncation, with gains concentrated in the generative tasks that suffer the sharpest degradation. Sensitivity to aggressive pruning also depends on the model: larger and thinking models are more resilient, whereas multimodal models are more vulnerable. Together, these findings reveal how much expert computation fine-grained MoEs can dispense with, and establish when dynamic allocation earns its complexity, informing both practical deployment and future pruning methods.
+N1  - record_key=arxiv:2609.25809
+N1  - source_database=arXiv
+N1  - query_id=Q3.A1
+N1  - original_record_id=2609.25809
+N1  - retrieved_at=2026-09-28T07:33:54+00:00
+N1  - arxiv_id=2609.25809
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - LLM Parkinsonism: Executive-Control Failure, Token-Inefficient Persistence, and an Uncertainty-Aware Global Executive Control Architecture for Autonomous Language-Model Agents
+AU  - Dongsheng Xiao
+AU  - Zeyuan Wang
+AU  - Xuzhe Xia
+AU  - Bo Zhao
+AU  - Yankai Cao
+T2  - arXiv
+PY  - 2026
+DA  - 2026-09-25
+UR  - http://arxiv.org/abs/2609.30662v1
+AB  - Large language models (LLMs) can plan, use tools, write code, and execute long-horizon workflows, yet strong local competence does not guarantee project-level executive control. Agents may continue acting after the original objective is satisfied, producing low-value refinements, repeated verification, and repairs to self-created complexity. We use LLM Parkinsonism as a narrowly defined, non-clinical metaphor for this pattern of persistent action despite diminishing task-level value. We argue that the problem is not explained by autoregressive next-token prediction alone, but more directly by concentrating proposal generation, scope interpretation, progress assessment, and stopping authority within the same self-conditioned loop. We therefore introduce Global Executive Control (GEC) v0.2, an uncertainty-aware governance architecture that separates action generation from project-level control. In a 24,000-episode matched-candidate benchmark under a common 40,000-token ceiling, a first-candidate baseline achieved 67.42% hard-goal success, a candidate-set local control achieved 96.53%, and GEC achieved 96.57%. The candidate-set control shows that access to multiple candidate actions explains most of the success gain; relative to that control, GEC preserved success while reducing mean token use from 19,782 to 12,574 (36.4%) and restricted mean tokens to completion at the 40,000-token ceiling from 16,136 to 13,114 (18.7%), while eliminating measured pre-completion drift and sharply reducing gross complexity. Governance-overhead sensitivity remained favorable through an additional 500 synthetic governance tokens per cycle. These mechanistic simulations support explicit governance of scope, evidence, resource use, and stopping, while live-model validation remains necessary.
+N1  - record_key=arxiv:2609.30662
+N1  - source_database=arXiv
+N1  - query_id=Q3.A2
+N1  - original_record_id=2609.30662
+N1  - retrieved_at=2026-09-28T07:33:57+00:00
+N1  - arxiv_id=2609.30662
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - NV-Reason-CT: 3D Visual Language Model for CT Analysis
+AU  - Andriy Myronenko
+AU  - Dong Yang
+AU  - Yucheng Tang
+AU  - Baris Turkbey
+AU  - Benjamin Simon
+AU  - Stephanie Harmon
+AU  - Rikhil Makwana
+AU  - Mariam Aboian
+AU  - Sena Azamat
+AU  - Ibrahim Ethem Hamamci
+AU  - Sezgin Er
+AU  - Bjoern Menze
+AU  - Zongwei Zhou
+AU  - Wenxuan Li
+AU  - Marc Edgar
+AU  - Yufan He
+AU  - Pengfei Guo
+AU  - Daguang Xu
+T2  - arXiv
+PY  - 2026
+DA  - 2026-09-23
+UR  - http://arxiv.org/abs/2609.27511v2
+AB  - We present NV-Reason-CT, a generative vision--language model for chest and abdominal CT combining native 3D visual encoding with radiologist-guided reasoning. The model couples a native 3D vision transformer with a language model, passing all visual tokens and their explicit 3D coordinates into language decoding without further spatial token merging. This retains volumetric spatial information within the vision encoder and through the language model's positional encoding during joint processing with text. We train on a curated corpus of approximately 550,000 multimodal instruction examples from 70,111 unique CT image inputs, combining standardized reports, abnormality-focused and anatomy-specific questions, multi-turn interactions, and radiologist-authored reasoning from recorded and transcribed expert CT interpretations. Expert annotations provide direct supervision and guide additional report-grounded synthetic reasoning. End-to-end supervised fine-tuning (SFT) is followed by Group Relative Policy Optimization (GRPO), with verifiable rewards over chest and abdominal abnormality sets. The model supports abnormality classification, report generation, and interactive reasoning with reviewable observations, differential diagnoses, and uncertainty. Evaluation spans public CT benchmarks and a held-out NIH cohort. On CT-RATE, NV-Reason-CT achieves a macro-F1 of 0.614 and macro-AUROC of 0.871 without a task-specific classification head; generated reports achieve a report-derived macro-F1 of 0.592. In a preliminary study with expert radiologists, AI-assisted review received favorable confidence ratings and was associated with a 50% reduction in average reported interpretation and reporting time. We release the model and training code to support reproducible research on explainable AI for volumetric medical imaging.
+N1  - record_key=arxiv:2609.27511
+N1  - source_database=arXiv
+N1  - query_id=Q3.A2
+N1  - original_record_id=2609.27511
+N1  - retrieved_at=2026-09-28T07:33:57+00:00
+N1  - arxiv_id=2609.27511
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - Just Ask Jev: Reinforcement Learning for Calibrated Decisions as a Zero-Shot Detector of AI Alignment Failures
+AU  - Ruoqi Guo
+AU  - Yi Liu
+AU  - Gelei Deng
+AU  - Yuekang Li
+AU  - Lida Zhao
+AU  - Yutao Wu
+AU  - Simin Chen
+AU  - Ying Zhang
+AU  - Leo Yu Zhang
+T2  - arXiv
+PY  - 2026
+DA  - 2026-09-24
+UR  - http://arxiv.org/abs/2609.29429v1
+AB  - Detectors of alignment failures screen deployed language models and score alignment benchmarks. Most are generative judges that spend a decoding pass on every criterion, and classifiers that read token probabilities, such as Llama Guard, still score one fixed label per call. Jev, a model trained with reinforcement learning for calibrated decisions (RLCD), answers many typed questions about one input with calibrated probabilities in a single call. Whether it detects alignment failures has not been measured. We present RLCDAlignBench, which benchmarks Jev on ten alignment failures: sycophancy, jailbreaks, deception, prompt injection, hallucination, privacy violation, social bias, reward hacking, concealing uncertainty, and power seeking. It spans 44 benchmarks and five target models, labelled by each benchmark's scorer and, on two, by humans. Many of these failures are relational, defined against a reference, such as the user's belief or an injected instruction, that the response alone does not reveal. Our key idea is therefore to vary what Jev is asked separately from what it sees: the question's wording and answer type on one side, the fields of the input on the other. A single generic question reaches a median AUROC of 0.886 zero-shot and beats supervised baselines on most benchmarks. Question wording matters little, while context matters more, mostly through fields that encode the label. Jev matches the reference scorer's agreement with human labels, surfaces label defects in existing benchmarks, and costs 63x less than LLM-judge scorers. Code and data: https://github.com/sumleo/RLCDAlignBench.
+N1  - record_key=arxiv:2609.29429
+N1  - source_database=arXiv
+N1  - query_id=Q3.A2
+N1  - original_record_id=2609.29429
+N1  - retrieved_at=2026-09-28T07:33:57+00:00
+N1  - arxiv_id=2609.29429
+KW  - source-preprint
+ER  - 
+
+TY  - EPRINT
+TI  - MAC-RRG: Iterative Multi-Agent Collaboration for X-ray Radiology Report Generation
+AU  - Futian Wang
+AU  - Yuhan Qiao
+AU  - Xiao Wang
+AU  - Dan Xu
+AU  - Yuehang Li
+AU  - Zhixiang Guo
+AU  - Yaowei Wang
+AU  - Jin Tang
 T2  - arXiv
 PY  - 2026
 DA  - 2026-09-20
-UR  - http://arxiv.org/abs/2609.23889v1
-AB  - Automated kernel vulnerability reproduction is essential for bug triage, patch validation, and regression testing, but still lacks an effective and efficient solution. The core challenge is twofold: a reproducer must first recover the trigger scaffold needed to reach the vulnerable state and determine the precise concrete values that actually trigger the bug. Existing directed fuzzing approaches are ineffective at recovering the necessary trigger scaffold, while LLM- only generation is brittle because it struggles with concrete-value discovery and runtime nondeterminism. We design SyzHarness, a framework that combines LLM reasoning with coverage-guided fuzzing for patch-based Linux kernel vulnerability reproduction. Given a patch, SyzHarness uses an LLM agent grounded by code navigation tools to synthesize a parameterized fuzzing harness that fixes the prerequisite setup logic while exposing only uncertain, bug- critical input parameters to be mutated by Syzkaller. SyzHarness then translates this harness into a Syzkaller- compatible interface and iteratively refines it using hierarchical reachability feedback. We evaluate SyzHarness on multiple datasets of triggerable real-world Linux kernel vulnerabilities. On 100 KernelCTF cases, SyzHarness achieves a 78% bug reproduction success rate. On the SyzDirect benchmark, SyzHarness achieves a 73% bug reproduction success rate, substantially outperforming prior directed greybox fuzzing. On 50 recent, known-triggerable syzbot bugs fixed after March 2026, SyzHarness reproduces 40/50 (80%) using only the fix commits as input.
-N1  - record_key=arxiv:2609.23889
+UR  - http://arxiv.org/abs/2609.26124v1
+AB  - Despite the remarkable progress of LLM-based and knowledge graph-augmented Radiology Report Generation (RRG) methods, existing techniques still suffer from inherent defects. Conventional LLM-only models lack structured medical prior knowledge, resulting in frequent medical hallucinations and low diagnostic interpretability. Current knowledge graph-enhanced schemes adopt static one-round knowledge fusion with single-source knowledge, incapable of dynamic knowledge updating according to generation feedback. This paper proposes a novel Multi-Agent Collaborative iterative framework for X-ray Radiology Report Generation, termed MAC-RRG. Inspired by multi-agent technology, our framework constructs a closed-loop optimization paradigm based on task decoupling and collaborative reasoning. Specifically, the framework first generates a preliminary radiology report from input X-ray images via a vision encoder and a basic LLM. Subsequently, a multimodal knowledge graph (MM-KG) agent mines structured disease correlation and anatomical knowledge from medical knowledge graphs, while an auxiliary knowledge agent extracts unstructured domain knowledge from public medical databases. The multi-source knowledge acquired by dual agents is fused and embedded to guide the LLM in iteratively refining the initial report. Extensive quantitative and qualitative experiments on mainstream X-ray RRG datasets, including IU X-ray, MIMIC, and CheXpert Plus, fully verify the superiority of our proposed method. The source code and pre-trained models have been released on https://github.com/Event-AHU/Medical_Image_Analysis
+N1  - record_key=arxiv:2609.26124
 N1  - source_database=arXiv
-N1  - query_id=Q3.A1
-N1  - original_record_id=2609.23889
-N1  - retrieved_at=2026-09-22T06:40:43+00:00
-N1  - arxiv_id=2609.23889
+N1  - query_id=Q3.A2
+N1  - original_record_id=2609.26124
+N1  - retrieved_at=2026-09-28T07:33:57+00:00
+N1  - arxiv_id=2609.26124
 KW  - source-preprint
 ER  - 
 
 TY  - EPRINT
-TI  - From Capability to Assurance in Autonomous Penetration-Testing Harnesses: A Framework and Reference Implementation
-AU  - Joas Antonio dos Santos Barbosa
-T2  - arXiv
-PY  - 2026
-DA  - 2026-09-19
-UR  - http://arxiv.org/abs/2609.22664v1
-AB  - Research on large language model agents for penetration testing is evaluated almost entirely by capability: whether the agent captures a flag or reproduces a proof of concept. That metric suits a benchmark but is silent on the properties that decide whether an autonomous agent can be used in an authorized engagement: whether a reported finding is true, whether the agent stayed inside its authorized scope, and whether an operator can audit what it did. We call these assurance properties and argue that they belong to the harness, the runtime wrapping the model, and can be enforced in code. This paper makes three contributions. First, we define a framework of five assurance properties (evidence grounding, non destructive claim reduction, computed severity, enforced authorization, and tamper evident accountability), each with a formal model and an explicit acceptance test, connected to prior work in capability based security, tamper evident logging, and software provenance. Second, we position representative systems (PentestGPT, the Cochise reference harness, MAPTA, and the trajectory judge PentestJudge) within the framework using published coding criteria, and identify a consistent assurance gap. Third, we study one open source implementation, NeuroSploit, pinned to an exact commit, reporting its architecture, its complexity cost, and a content addressed artifact bundle from a run against a public deliberately vulnerable target. We execute the deterministic authorization and audit acceptance tests directly and find and report a real enforcement gap, which we reflect by scoring both properties as partial. We therefore claim an initial existence argument that the properties are realizable together, not a comparative performance result, and we specify the multi target, ablation, and adversarial evaluation protocol required to turn the framework obligations into measurements.
-N1  - record_key=arxiv:2609.22664
-N1  - source_database=arXiv
-N1  - query_id=Q3.A1
-N1  - original_record_id=2609.22664
-N1  - retrieved_at=2026-09-22T06:40:43+00:00
-N1  - arxiv_id=2609.22664
-KW  - source-preprint
-ER  - 
-
-TY  - EPRINT
-TI  - SelfOp: An Optimization Algorithm for Self-Improving Security Agents
-AU  - Saad Ullah
-AU  - Yigitcan Kaya
-AU  - Christopher Kruegel
-AU  - Giovanni Vigna
-AU  - Gianluca Stringhini
-T2  - arXiv
-PY  - 2026
-DA  - 2026-09-19
-UR  - http://arxiv.org/abs/2609.22792v1
-AB  - LLM agents are increasingly used for security tasks: vulnerability discovery, exploit reproduction, and patch generation. Improving them at the model level demands expert demonstrations or computable rewards, which security tasks rarely offer: traces are costly, failures hard to diagnose, rewards sparse, and non-computable. Efforts thus shift to the harness and context, but manual tuning needs task-specific expertise and scales poorly, while automated methods rely on scarce ground truth, stronger optimizer models, or unguided propose-and-evaluate loops that reduce to costly trial and error. We introduce SelfOp, an algorithm that automatically improves a frozen security agent's task context (instructions, skills, and reference documents), without modifying its execution harness and model weights. SelfOp casts context optimization as chain-rule-inspired textual gradient descent: from a single instance's outcome, it propagates error signals backward through the evaluator, the agent's trajectory, and the context artifacts that shaped its behavior, yielding per-instance textual gradients. Gradients are accumulated across instances by clustering, ranking, and filtering, and committed only under cross-instance consensus. A convergence detector monitors the gradient signal itself and stops once the context has absorbed the generalizable information in the training data, without held-out validation data. We evaluate SelfOp on CyberGym, a benchmark of real-world vulnerability reproduction tasks. With fewer than 200 training examples, SelfOp yields a 17-point self-improvement for GPT-5.4-mini (with Codex), enough to surpass the frontier GPT-5.4 baseline by 6 points, and an 18.5-point self-improvement for GPT-5.4 itself. The optimized skills also transfer across models, highlighting that SelfOp-optimized skills learn generalizable task knowledge not model-specific patterns.
-N1  - record_key=arxiv:2609.22792
-N1  - source_database=arXiv
-N1  - query_id=Q3.A1
-N1  - original_record_id=2609.22792
-N1  - retrieved_at=2026-09-22T06:40:43+00:00
-N1  - arxiv_id=2609.22792
-KW  - source-preprint
-ER  - 
-
-TY  - EPRINT
-TI  - Deep Noir: Autonomous Steering Discovery via Architectural Chronometry in Transformer Models
-AU  - Frank E. Bobe
-AU  - Gregory D. Vetaw
-AU  - Darshan W. Bryner
-AU  - Matthew G. Cook
-AU  - Jose L. Salas-Vernis
-T2  - arXiv
-PY  - 2026
-DA  - 2026-09-17
-UR  - http://arxiv.org/abs/2609.20722v1
-AB  - Activation steering modifies LLM behavior at inference time, but identifying where and how strongly to steer remains manual. We introduce Deep Noir, a framework that uses Logit Lens convergence and causal head-level attribution to autonomously discover optimal steering parameters. Across three scales (1B x 3, 2-3B x 2, and 7-9B x 4), our engine achieves 16.7 percentage-point improvement on spam at 1B (standard deviation 4.7; 39 runs), with gains increasing to 21 to 42 percentage points at 7-9B across four architectures. On SST-2 sentiment, it achieves a 13.1 percentage-point improvement with zero code changes. Mechanistic grounding enables automated discovery of intervention points that generalize across tasks and architectures. On sentiment, RepE without head masking fails to improve over baseline, while Deep Noir improves all models (p less than 0.01). We further show that steering creates a predictable prompt-injection attack surface whose vulnerability increases monotonically with steering magnitude. This finding is relevant to agent systems deploying steered classifiers.
-N1  - record_key=arxiv:2609.20722
-N1  - source_database=arXiv
-N1  - query_id=Q3.A1
-N1  - original_record_id=2609.20722
-N1  - retrieved_at=2026-09-22T06:40:43+00:00
-N1  - arxiv_id=2609.20722
-KW  - source-preprint
-ER  - 
-
-TY  - EPRINT
-TI  - Pinocchio: Fast Uncertainty Estimates for Black-Box Language Models
-AU  - Kevin David Hayes
-AU  - Arka Pal
-AU  - Haosong Zhang
-AU  - Tom Goldstein
-AU  - Micah Goldblum
+TI  - Partition-Matched Evaluation of Community Features under Distribution Shift in Android Malware Function-Call Graphs
+AU  - Junru Zhu
+AU  - Yixin Yang
+AU  - Xiaoqing Ding
+AU  - Ruoyu Qi
 T2  - arXiv
 PY  - 2026
 DA  - 2026-09-21
-UR  - http://arxiv.org/abs/2609.24881v1
-AB  - In high-stakes decision-making applications of large language models (LLMs), practitioners require not only accurate LLMs but also uncertainty estimates for their predictions. Existing approaches to uncertainty estimation for LLMs require access to log-probabilities output by the model or require fine-tuning access. However, many industrial LLM products use closed-source API models, and many such API models like GPT do not return log-probabilities and may not allow fine-tuning. We introduce Pinocchio, an external calibrator that estimates the correctness of responses from black-box API models. Trained jointly on responses from seven LLMs, it achieves 0.862 AUROC predicting the correctness of held-out responses from those same models, and shows zero-shot transfer to thirteen unseen models across eight organizations. Our model needs only a single forward pass to generate an uncertainty estimate and requires no access to the target model's logits, weights, or internal states. A lightweight text only 0.8B checkpoint matches our largest model's AUROC. We release code for adding uncertainty estimation to existing repos in only two additional lines of code.
-N1  - record_key=arxiv:2609.24881
+UR  - http://arxiv.org/abs/2609.25256v1
+AB  - Graph-based Android malware classifiers can lose accuracy under malware-type or family shifts. We test whether mesoscopic organization in function-call graphs provides shift-stable information beyond local degree profiles (LDP), global statistics, lightweight metadata, and size-matched random partitions. Using 15,000 MalNet-Tiny, Common, and Distinct graphs, six Leiden descriptors specified before evaluation, and five optimizer seeds, communities raise Tiny macro F1 from 78.7% to 81.3% but yield 29.4-point source-only Common degradation. One size-matched random partition yields 27.8-point degradation. Across five random partitions, mean degradation is 27.9 points; the 95% two-level bootstrap interval for random minus community degradation is [-4.2, 1.2] points. With metadata, the corresponding difference is -0.2 points with interval [-1.1, 0.6]. Removing modularity raises structure-only Common macro F1 from 51.9% to 53.6%. The tested signature adds IID signal but shows no repeatable shift-stability advantage, demonstrating why mesoscopic graph claims need partition-matched controls and repeated null draws.
+N1  - record_key=arxiv:2609.25256
 N1  - source_database=arXiv
-N1  - query_id=Q3.A2
-N1  - original_record_id=2609.24881
-N1  - retrieved_at=2026-09-22T06:40:51+00:00
-N1  - arxiv_id=2609.24881
+N1  - query_id=Q6.A1
+N1  - original_record_id=2609.25256
+N1  - retrieved_at=2026-09-28T07:34:10+00:00
+N1  - arxiv_id=2609.25256
 KW  - source-preprint
 ER  - 
 
 TY  - EPRINT
-TI  - SKstars at SHROOM: Visions Agreement-Guided Ensembling of Zero-Shot and LoRA-Adapted Vision--Language Models
-AU  - Ali Athar
-AU  - Imran Ahsan
-AU  - Joon-Yong Jung
+TI  - HYDRA: Proactive Android Malware Drift Adaptation via Hierarchical Graph Contrastive Learning
+AU  - Han Chen
+AU  - Hanchen Wang
+AU  - Hongmei Chen
+AU  - Lu Qin
+AU  - Wenjie Zhang
+AU  - Ying Zhang
 T2  - arXiv
 PY  - 2026
-DA  - 2026-09-21
-UR  - http://arxiv.org/abs/2609.24198v1
-AB  - This paper describes the SKstars submission to SHROOM-Visions 2026, a shared task on fine-grained hallucination detection in large vision-language model outputs. The task requires systems to identify hallucinated character spans, assign hallucination categories, and provide confidence estimates for their predictions. Our approach combines zero-shot predictions from Qwen2.5-VL-72B-Instruct with those of a LoRA-adapted Qwen2.5-VL-7B-Instruct model. The outputs of the two models are integrated through a lightweight ensemble procedure, followed by span refinement and confidence adjustment. We evaluate the main system components on a small internal development subset and report the performance of the submitted system on the official English test set. SKstars achieved a Cor+Lbl score of 0.2902, ranking 15th among 29 teams, and obtained Cor and IoU scores of 0.3642 and 0.3151, respectively, ranking 18th on both metrics. The results show that combining a large zero-shot model with a smaller adapted model provides a practical framework for multilingual and fine-grained hallucination localization, while also highlighting the difficulty of transferring development-set improvements to hidden test data. Code and predictions: https://github.com/aliathar1401/SK-Stars-shroom-visions-2026
-N1  - record_key=arxiv:2609.24198
+DA  - 2026-09-22
+DO  - 10.1145/3830454.3832684
+UR  - http://arxiv.org/abs/2609.26352v1
+AB  - Concept drift, driven by the rapid evolution of Android malware, severely degrades the performance of machine learning detectors. Current adaptation strategies are often reactive, responding only after performance has dropped and imposing a significant manual annotation burden, or they are proactive but rely on unstable adversarial training and incomplete, single-level graph representations. To overcome these limitations, we propose HYDRA (Hybrid Drift Adaptation), a proactive adaptation framework that learns drift-invariant representations from hierarchically structured data. HYDRA first models applications using a hybrid graph structure, combining fine-grained Control Flow Graphs (CFGs) and coarse-grained Function Call Graphs (FCGs) to capture comprehensive behavioral patterns. It then introduces a novel cross-domain contrastive learning objective that aligns historical (source) and new (target) data distributions. By generating pseudo-labels for unlabeled target samples, our method pulls representations of semantically similar applications together, regardless of their domain, within a single, stable optimization process. This approach unifies feature learning and domain alignment, eliminating the need for complex adversarial objectives. Extensive experiments on large-scale, time-ordered malware datasets demonstrate that HYDRA achieves substantially lower False Negative and False Positive Rates than state-of-the-art baselines while requiring up to 87.5% fewer labeled samples. Our work thus offers a robust and efficient solution to combat concept drift in security applications.
+N1  - record_key=doi:10.1145/3830454.3832684
 N1  - source_database=arXiv
-N1  - query_id=Q3.A2
-N1  - original_record_id=2609.24198
-N1  - retrieved_at=2026-09-22T06:40:51+00:00
-N1  - arxiv_id=2609.24198
-KW  - source-preprint
+N1  - query_id=Q6.A1
+N1  - original_record_id=2609.26352
+N1  - retrieved_at=2026-09-28T07:34:10+00:00
+N1  - arxiv_id=2609.26352
+N1  - formal_doi=10.1145/3830454.3832684
 ER  - 
 
 TY  - EPRINT
-TI  - A Governance-Aware Large Language Model Orchestrated Agentic Digital Twin for Transmission System Operator Control Room Decision Support
-AU  - Costas Mylonas
-AU  - Magda Foti
-AU  - Emmanouel Varvarigos
+TI  - Evaluating Coding Agents on Kernel Exploit Generation
+AU  - Junyoung Jang
+AU  - Gwanhyun Lee
+AU  - Hwiwon Lee
+AU  - Kyuheon Kim
+AU  - Jongseong Kim
+AU  - Jinho Jung
+AU  - Lingming Zhang
 T2  - arXiv
 PY  - 2026
-DA  - 2026-09-18
-UR  - http://arxiv.org/abs/2609.22476v1
-AB  - Transmission system operators face rising complexity from renewable integration, reduced inertia, and tighter security margins. Large language models offer natural-language decision support, but their hallucinations, uncontrolled tool use, and weak traceability conflict with control room requirements. This paper presents a governance-aware agentic digital twin for transmission grid control rooms. The large language model only selects and parameterizes whitelisted analysis tools, and every proposed action passes through a governance layer that the model cannot bypass. The layer enforces four rules on every run. Only whitelisted tools execute. No run exceeds its step budget. No action with side effects executes without explicit operator approval. Every number in an answer is rendered by the layer from backend results with its unit, variable, and time. The rules are checked on a persistent audit trail for every run of a released 118-task benchmark, which covers analytics, simulation, multi-step workflows, and twelve families of adversarial inputs on a digital twin of the Greek transmission network. Across 590 runs of the primary model, tool selection reaches 96.5% and task success 93.7%, and all four rules hold without exception. In a separate three-repetition study across four large language models, 1416 runs in total, the rules again hold on every run, with an approximate 95% lower bound of 99.8%. Removing the layer makes the same model execute all 45 approval-requiring runs without authorization and leaves only 39.2% of its answers with backend-supported numbers. Enforcement costs 12 to 16 milliseconds per request.
-N1  - record_key=arxiv:2609.22476
-N1  - source_database=arXiv
-N1  - query_id=Q3.A2
-N1  - original_record_id=2609.22476
-N1  - retrieved_at=2026-09-22T06:40:51+00:00
-N1  - arxiv_id=2609.22476
-KW  - source-preprint
-ER  - 
-
-TY  - EPRINT
-TI  - Reasoning Topology Matters: A Controlled Study of LLM-Based Cybersecurity Analysis
-AU  - Jiling Zhou
-AU  - Aisvarya Adeseye
-AU  - Antti Hakkala
-AU  - Seppo Virtanen
-AU  - Jouni Isoaho
-T2  - arXiv
-PY  - 2026
-DA  - 2026-09-21
-UR  - http://arxiv.org/abs/2609.24710v1
-AB  - Large Language Models (LLMs) are increasingly used in cybersecurity, where accurate analysis often requires multi-step and context-dependent reasoning over complex and heterogeneous data. However, existing prompting approaches typically focus on eliciting reasoning without explicitly considering how intermediate reasoning steps are structurally organized. We introduce Security Reasoning Topology, which models reasoning through three representative structures: Linear, Branching, and Graph. To evaluate their effects, we conduct controlled experiments on three cybersecurity datasets covering MITRE ATT&CK network traffic, cyber threat intelligence (CTI), and CVE vulnerability analysis. We evaluate multiple LLMs, including Llama 2 (7B, 13B, 70B), GPT-5.1, and Mistral Large 3, while keeping task inputs consistent and controlling reasoning structure through system-level prompting. Results show that reasoning topology substantially affects performance: Graph reasoning achieves the highest overall accuracy, improving over few-shot prompting by 9.8-12.2 percentage points across datasets, while Branching provides a strong intermediate solution. The results further show that the effect of reasoning topology remains consistent across model families and scales, highlighting reasoning topology as an important design factor for LLM-based cybersecurity analysis.
-N1  - record_key=arxiv:2609.24710
+DA  - 2026-09-22
+UR  - http://arxiv.org/abs/2609.25591v1
+AB  - Coding agents now find real vulnerabilities in production software. However, bug discovery results do not measure whether agents can construct exploit primitives. We introduce KEX-bench, a benchmark for evaluating coding agents on exploit primitive generation against real operating-system kernels. KEX-bench contains 45 task instances across 40 Linux and Windows CVEs, covering kernel address leak, instruction-pointer control, heap read, heap write, and arbitrary address write. Each task runs in an isolated virtual machine, exposes controlled tools, and uses a deterministic verifier to check primitive-specific success. We evaluate state-of-the-art coding agents paired with frontier and open-weight models under fixed tool-call budgets. Without a reference proof of concept (PoC), the strongest configuration solves 1 of 20 Windows tasks (5.0%) and 14 of 25 Linux tasks (56.0%). With a reference PoC, the strongest configuration solves 31 of 45 tasks (68.9%). This highlights the gap where agents reach kernel crashes but fail to shape kernel state into exploit primitives. We release KEX-bench for reproducible research on AI-assisted exploitation at https://kex-bench.github.io.
+N1  - record_key=arxiv:2609.25591
 N1  - source_database=arXiv
 N1  - query_id=Q7.A1
-N1  - original_record_id=2609.24710
-N1  - retrieved_at=2026-09-22T06:41:15+00:00
-N1  - arxiv_id=2609.24710
+N1  - original_record_id=2609.25591
+N1  - retrieved_at=2026-09-28T07:34:13+00:00
+N1  - arxiv_id=2609.25591
 KW  - source-preprint
 ER  - 

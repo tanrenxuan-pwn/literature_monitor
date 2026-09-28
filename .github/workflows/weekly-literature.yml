@@ -18,10 +18,16 @@ on:
           - probe
           - dry-run
           - email-test
+          - recover-email
           - live
+      source_run_id:
+        description: 'Failed GitHub run ID used only by recover-email'
+        required: false
+        type: string
 
 permissions:
   contents: write
+  actions: read
 
 concurrency:
   group: literature-monitor-${{ github.ref }}
@@ -33,6 +39,7 @@ env:
   SOURCES: openalex,semantic_scholar,arxiv,ieee
   RUN_MODE: ${{ github.event.inputs.mode || 'live' }}
   RUN_ID: weekly-${{ github.run_id }}
+  SOURCE_RUN_ID: ${{ github.event.inputs.source_run_id || '' }}
 
 jobs:
   search:
@@ -63,14 +70,24 @@ jobs:
           --github-output "${GITHUB_OUTPUT}"
 
       - name: Install dependencies
-        if: ${{ steps.recovery_gate.outputs.should_run == 'true' }}
+        if: ${{ steps.recovery_gate.outputs.should_run == 'true' && env.RUN_MODE != 'recover-email' }}
         run: python -m pip install --disable-pip-version-check -r requirements.txt
 
       - name: Validate retrieval invariants
-        if: ${{ steps.recovery_gate.outputs.should_run == 'true' }}
+        if: ${{ steps.recovery_gate.outputs.should_run == 'true' && env.RUN_MODE != 'recover-email' }}
         run: python scripts/validate_retrieval.py --self-test
 
+      - name: Download source run artifacts
+        if: ${{ steps.recovery_gate.outputs.should_run == 'true' && env.RUN_MODE == 'recover-email' }}
+        uses: actions/download-artifact@v4
+        with:
+          name: literature-monitor-${{ env.SOURCE_RUN_ID }}
+          path: recovered-artifact
+          run-id: ${{ env.SOURCE_RUN_ID }}
+          github-token: ${{ github.token }}
+
       - name: Run selected retrieval mode
+        id: retrieval
         if: ${{ steps.recovery_gate.outputs.should_run == 'true' }}
         env:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
@@ -111,6 +128,17 @@ jobs:
             email-test)
               echo 'Email test uses existing exports and does not query providers.'
               ;;
+            recover-email)
+              if [[ ! "${SOURCE_RUN_ID}" =~ ^[1-9][0-9]*$ ]]; then
+                echo 'recover-email requires a numeric source_run_id.' >&2
+                exit 2
+              fi
+              python scripts/recover_weekly_artifact.py \
+                --artifact-dir recovered-artifact \
+                --source-run-id "${SOURCE_RUN_ID}" \
+                --repository-root .
+              echo "archive_run_id=weekly-${SOURCE_RUN_ID}" >> "${GITHUB_OUTPUT}"
+              ;;
             live)
               window_args=()
               if [[ -n "${WEEKLY_START_DATE}" && -n "${WEEKLY_END_DATE}" ]]; then
@@ -123,6 +151,7 @@ jobs:
               python scripts/export_ris.py \
                 --input exports/latest_new.csv \
                 --output exports/latest_new.ris
+              echo "archive_run_id=${RUN_ID}" >> "${GITHUB_OUTPUT}"
               ;;
             *)
               echo "Unsupported RUN_MODE: ${RUN_MODE}" >&2
@@ -131,7 +160,9 @@ jobs:
           esac
 
       - name: Commit incremental state and outputs
-        if: ${{ success() && steps.recovery_gate.outputs.should_run == 'true' && env.RUN_MODE == 'live' }}
+        if: ${{ success() && steps.recovery_gate.outputs.should_run == 'true' && (env.RUN_MODE == 'live' || env.RUN_MODE == 'recover-email') }}
+        env:
+          ARCHIVE_RUN_ID: ${{ steps.retrieval.outputs.archive_run_id }}
         run: |
           set -Eeuo pipefail
           git config user.name 'github-actions[bot]'
@@ -141,7 +172,7 @@ jobs:
           # weekly repository commit. Incremental runs need only these paths.
           git add -f -- \
             data/state/seen_keys.txt \
-            "data/state/runs/${RUN_ID}.json" \
+            "data/state/runs/${ARCHIVE_RUN_ID}.json" \
             data/normalized \
             exports/latest_new.csv \
             exports/latest_new.ris
@@ -156,11 +187,23 @@ jobs:
           else
             git diff --cached --stat
             git commit -m 'weekly literature update [skip ci]'
-            git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
 
+          for attempt in 1 2 3 4; do
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              exit 0
+            fi
+            if [[ "${attempt}" -eq 4 ]]; then
+              echo 'Unable to push weekly state after 4 attempts.' >&2
+              exit 1
+            fi
+            delay=$((attempt * 30))
+            echo "Push attempt ${attempt} failed; retrying in ${delay} seconds." >&2
+            sleep "${delay}"
+          done
+
       - name: Send weekly email report
-        if: ${{ success() && steps.recovery_gate.outputs.should_run == 'true' && (env.RUN_MODE == 'live' || env.RUN_MODE == 'email-test') }}
+        if: ${{ success() && steps.recovery_gate.outputs.should_run == 'true' && (env.RUN_MODE == 'live' || env.RUN_MODE == 'email-test' || env.RUN_MODE == 'recover-email') }}
         # A live retrieval remains successful if SMTP is temporarily unavailable.
         # The dedicated email test still fails visibly when its delivery fails.
         continue-on-error: ${{ env.RUN_MODE == 'live' }}
@@ -170,8 +213,8 @@ jobs:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           MAIL_TO: ${{ secrets.MAIL_TO }}
-          RUN_ID: ${{ env.RUN_ID }}
-          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          RUN_ID: ${{ steps.retrieval.outputs.archive_run_id || env.RUN_ID }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ env.SOURCE_RUN_ID || github.run_id }}
         run: python scripts/send_weekly_email.py
 
       - name: Upload run artifacts
@@ -183,6 +226,9 @@ jobs:
           path: |
             exports/latest_new.csv
             exports/latest_new.ris
+            data/state/seen_keys.txt
             data/state/runs/${{ env.RUN_ID }}.json
+            data/state/runs/${{ steps.retrieval.outputs.archive_run_id }}.json
             data/normalized/*${{ env.RUN_ID }}.csv
+            data/normalized/*${{ steps.retrieval.outputs.archive_run_id }}.csv
             data/validation/${{ env.RUN_ID }}/

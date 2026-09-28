@@ -29,6 +29,7 @@ import import_acm
 import run_backfill as backfill
 import run_incremental as monitor
 import export_ris
+import recover_weekly_artifact
 import weekly_recovery_gate as recovery_gate
 
 if hasattr(sys.stdout, "reconfigure"):
@@ -1687,6 +1688,59 @@ def run_self_tests() -> dict[str, Any]:
         manual = recovery_gate.decide("workflow_dispatch", "", today=date(2026, 9, 22), runs_dir=runs_dir)
         assert manual["should_run"] is True and manual["recovery"] is False
     checks["weekly_recovery_gate"] = "ok"
+
+    with tempfile.TemporaryDirectory() as temp:
+        temp_root = Path(temp)
+        artifact_dir = temp_root / "artifact"
+        recovered_root = temp_root / "repository"
+        archive_run_id = "weekly-123456"
+        normalized_dir = artifact_dir / "data" / "normalized"
+        manifest_dir = artifact_dir / "data" / "state" / "runs"
+        exports_dir = artifact_dir / "exports"
+        normalized_dir.mkdir(parents=True)
+        manifest_dir.mkdir(parents=True)
+        exports_dir.mkdir(parents=True)
+        recovery_row = {
+            "record_key": "doi:10.1000/recovery",
+            "title": "Recovery Test",
+            "publication_year": "2026",
+            "publication_date": "2026-09-28",
+            "doi": "10.1000/recovery",
+            "source_database": "OpenAlex",
+        }
+        all_path = normalized_dir / f"candidates_all_2026-09-28_{archive_run_id}.csv"
+        new_path = normalized_dir / f"new_candidates_2026-09-28_{archive_run_id}.csv"
+        common.write_csv(all_path, [recovery_row], common.FIELDS)
+        common.write_csv(new_path, [recovery_row], common.FIELDS)
+        common.write_csv(exports_dir / "latest_new.csv", [recovery_row], common.FIELDS)
+        (exports_dir / "latest_new.ris").write_text(
+            "TY  - JOUR\nTI  - Recovery Test\nER  -\n", encoding="utf-8"
+        )
+        common.write_json(
+            manifest_dir / f"{archive_run_id}.json",
+            {
+                "run_id": archive_run_id,
+                "mode": "incremental",
+                "run_status": "ok",
+                "state_committed": True,
+                "source_failures": [],
+                "unique_rows": 1,
+                "new_rows": 1,
+            },
+        )
+        recovered = recover_weekly_artifact.recover_artifact(
+            artifact_dir,
+            "123456",
+            recovered_root,
+        )
+        assert recovered["archive_run_id"] == archive_run_id
+        assert recovered["unique_rows"] == 1 and recovered["new_rows"] == 1
+        assert (recovered_root / "exports" / "latest_new.csv").is_file()
+        assert (recovered_root / "exports" / "latest_new.ris").is_file()
+        assert "doi:10.1000/recovery" in common.read_seen_keys(
+            recovered_root / "data" / "state" / "seen_keys.txt"
+        )
+    checks["weekly_artifact_recovery"] = "ok"
     return {"status": "pass", "checks": checks}
 
 

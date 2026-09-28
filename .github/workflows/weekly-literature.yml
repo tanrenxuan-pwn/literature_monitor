@@ -53,6 +53,7 @@ jobs:
           fetch-depth: 0
 
       - name: Set up Python
+        if: ${{ env.RUN_MODE != 'recover-email' }}
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -63,11 +64,16 @@ jobs:
         env:
           EVENT_NAME: ${{ github.event_name }}
           EVENT_SCHEDULE: ${{ github.event.schedule }}
-        run: >-
-          python scripts/weekly_recovery_gate.py
-          --event-name "${EVENT_NAME}"
-          --event-schedule "${EVENT_SCHEDULE}"
-          --github-output "${GITHUB_OUTPUT}"
+        run: |
+          set -Eeuo pipefail
+          python_bin=python
+          if [[ "${RUN_MODE}" == 'recover-email' ]]; then
+            python_bin=python3
+          fi
+          "${python_bin}" scripts/weekly_recovery_gate.py \
+            --event-name "${EVENT_NAME}" \
+            --event-schedule "${EVENT_SCHEDULE}" \
+            --github-output "${GITHUB_OUTPUT}"
 
       - name: Install dependencies
         if: ${{ steps.recovery_gate.outputs.should_run == 'true' && env.RUN_MODE != 'recover-email' }}
@@ -133,7 +139,7 @@ jobs:
                 echo 'recover-email requires a numeric source_run_id.' >&2
                 exit 2
               fi
-              python scripts/recover_weekly_artifact.py \
+              python3 scripts/recover_weekly_artifact.py \
                 --artifact-dir recovered-artifact \
                 --source-run-id "${SOURCE_RUN_ID}" \
                 --repository-root .
@@ -215,7 +221,12 @@ jobs:
           MAIL_TO: ${{ secrets.MAIL_TO }}
           RUN_ID: ${{ steps.retrieval.outputs.archive_run_id || env.RUN_ID }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ env.SOURCE_RUN_ID || github.run_id }}
-        run: python scripts/send_weekly_email.py
+        run: |
+          if [[ "${RUN_MODE}" == 'recover-email' ]]; then
+            python3 scripts/send_weekly_email.py
+          else
+            python scripts/send_weekly_email.py
+          fi
 
       - name: Upload run artifacts
         if: ${{ always() && steps.recovery_gate.outputs.should_run == 'true' }}

@@ -239,6 +239,71 @@ arxiv:2610.22520
 arxiv:2610.22702
 arxiv:2610.22943
 arxiv:2610.23030
+arxiv:2610.23035
+arxiv:2610.24471
+arxiv:2610.24609
+arxiv:2610.24623
+arxiv:2610.24807
+arxiv:2610.24873
+arxiv:2610.25071
+arxiv:2610.25121
+arxiv:2610.25134
+arxiv:2610.25705
+arxiv:2610.25916
+arxiv:2610.25937
+arxiv:2610.26001
+arxiv:2610.27103
+arxiv:2610.27234
+arxiv:2610.27249
+arxiv:2610.27288
+arxiv:2610.27383
+arxiv:2610.27611
+arxiv:2610.27828
+arxiv:2610.27868
+arxiv:2610.27871
+arxiv:2610.28430
+arxiv:2610.28543
+arxiv:2610.28611
+arxiv:2610.28678
+arxiv:2610.28802
+arxiv:2610.29046
+arxiv:2610.29155
+arxiv:2610.29225
+arxiv:2610.29379
+arxiv:2610.29456
+arxiv:2610.29812
+arxiv:2610.29934
+arxiv:2610.29961
+arxiv:2610.30184
+arxiv:2610.30202
+arxiv:2610.30365
+arxiv:2610.30379
+arxiv:2610.30495
+arxiv:2610.30738
+arxiv:2610.30946
+arxiv:2610.31404
+arxiv:2610.31713
+arxiv:2610.31844
+arxiv:2610.32212
+arxiv:2610.32648
+arxiv:2610.32752
+arxiv:2610.32876
+arxiv:2610.33036
+arxiv:2610.33056
+arxiv:2610.33224
+arxiv:2610.33352
+arxiv:2610.33489
+arxiv:2610.33509
+arxiv:2610.33716
+arxiv:2610.33732
+arxiv:2610.33924
+arxiv:2610.34098
+arxiv:2610.34431
+arxiv:2610.34871
+arxiv:2610.34928
+arxiv:2610.35477
+arxiv:2610.35804
+arxiv:2610.35829
 author_year:a i oladipo|2026|a hybrid detection framework for sql injection reducing false positives through similarity based pattern matching and proactive developer integration
 author_year:abdelhamied a ateya|2026|a comprehensive survey of communication technologies security frameworks and intelligent architectures for medical internet of things and quantum enabled healthcare
 author_year:abdoulie ceesay|2026|ace an ai orchestrated intrusion detection and compliance mapping engine
@@ -251,6 +316,7 @@ author_year:abhirama subramanyam penamakuri|2026|ra coa training free fashion im
 author_year:achintya desai|2026|pagent program analysis guided llm agent for proof of concept generation
 author_year:adel belkhiri|2026|mallocsan a memory safety tool for native closed source applications
 author_year:ahcheong lee|2026|top down multi agent llm system with runtime data for misra c violation detection
+author_year:aidar myrzakhan|2026|learning when to commit schedule distillation for fast diffusion language models
 author_year:akash iyer|2026|from requirements to attack trees grounded llm agents for design time security review
 author_year:akash kushwaha|2026|advronids a constraint aware framework for adversarially robust network intrusion detection via min max training and attribution analysis
 author_year:akihisha fujiyama|2026|forgeable confirmation in automated computer security testing deterministic rules versus ai judges
@@ -259,6 +325,7 @@ author_year:ali habibullah|2026|where llm graders succeed and break evidence fro
 author_year:alif al hasan|2026|what breaks when llms code characterizing operational safety failures of agentic code assistants
 author_year:alireza lotfi|2026|a2abreak systematic security analysis of the a2a protocol
 author_year:aman priyanshu|2026|vulnerability localization benchmark measuring agentic security analysis at repository scale
+author_year:amine lbath|2026|reva real time vulnerability detection through contextual probing of large language models
 author_year:amirali sajadi|2026|an empirical analysis of codeql false positives and query refinements for java vulnerabilities
 author_year:amit kachroo|2026|functionally equivalent or not graph grounded differential surrogate execution for code equivalence
 author_year:andre panossian|2026|transformed in translation two stage structural uncertainty in llm based scientific autoformalization
@@ -273,10 +340,12 @@ author_year:armaghan butt|2026|canal channel aware noise allocation for differen
 author_year:arnab chattopadhayay|2026|belief state engine augmenting llms for principled planning under partial observability
 author_year:artur santos de farias|2026|assessing static analysis tools for security vulnerability detection an empirical study
 author_year:arul princy a|2026|reliable detection of cyber threats in smart grids using a hybrid xgboost and lstm framework
+author_year:asad gohar|2026|doctalk enhancing medical knowledge retrieval via fine tuned large language models with chain of thought reasoning for robust clinical decision support
 author_year:asma mustafa alhadi|2026|memory safety in kernel development an ai assisted comparative study of rust and c based approaches to preventing memory corruption
 author_year:ayse sila okcu|2026|the belief action gap in language model agents
 author_year:baihong chen|2026|cpygraph a version aware static analysis framework for native cpython bytecode
 author_year:bangya liu|2026|cyberarena benchmarking ai agents in live symmetric attack and defense combat
+author_year:bassey echeng isong|2026|from code author to code reviewer a systematic review of practitioner experience with generative ai in software engineering
 author_year:bhanwar gupta|2026|gauge a formal framework for measuring cryptographic security under heterogeneous adversary cost models
 author_year:bhanwar gupta|2026|wlpa a network management framework for allocating scarce quantum safe link postures under weakest link exposure
 author_year:bijied brahimi|2026|delphi scanner efficient and interpretable static malware detection via api sequence modeling
@@ -284,6 +353,7 @@ author_year:bin zeng|2026|drift hardware independent peripheral data flow recons
 author_year:bowen cai|2026|mind the gap detecting description execution mismatch attacks in dao governance
 author_year:boyue caroline hu|2026|correct verdicts flawed reasoning structured auditing of llm based vulnerability reasoning
 author_year:bravish ghosh|2026|proof gated signing solver checked transaction guards that hold under state drift for onchain ai agents
+author_year:bryant gipson|2026|holo nn holographic nearest neighbor search via compressive sensing
 author_year:camilo alejandro sjöberg tala|2026|eclipse v2 0 a reproducible scaffold for severe confirmatory testing through preregistration single shot validation and static analysis screening
 author_year:chang liu|2026|when llm decompilers recompile more and preserve less
 author_year:chanhee park|2026|agenthop a diagnostic benchmark for agentic multi hop scientific question answering
@@ -291,6 +361,7 @@ author_year:chao huang|2026|fingerprinting multimodal large language models
 author_year:chaofan li|2026|from component snapshots to lifecycle traces agent based software composition analysis
 author_year:chaojie wei|2026|pwnagent a knowledge guided multi agent system for automatic exploit generation
 author_year:chen zhao|2026|from suppression to repair mitigating object hallucination in large vision language models via localized distribution alignment
+author_year:chengzhi yi|2026|semweaver refining llm generated static vulnerability checkers with analyzer internal evidence
 author_year:chien tsun chen|2026|a design theory for ai assisted software development derived from christopher alexander s theory of form
 author_year:christina stodt|2026|from circuits to policies a review and taxonomy of decision making and strategy selection in llms and llm agents
 author_year:chunzheng zhu|2026|craft causal responsibility and failure tracing in medical vision language models
@@ -299,6 +370,7 @@ author_year:costas mylonas|2026|a governance aware large language model orchestr
 author_year:d j s sako|2026|on premise codebert driven model for vulnerability detection in source code
 author_year:daksh raghuvanshi|2026|storebench a live commerce environment for evaluating and training autonomous operator agents
 author_year:daria voronkova|2026|codetd topology of attention detects hallucinations in code llms
+author_year:david excel ozowara|2026|a systematic review of ai assisted code generation in regulated software environments reliability governance and compliance implications
 author_year:dayeon kang|2026|when apps outlive vendors security implications of iot abandonware
 author_year:dianxiang sun|2026|secchain operationalizing security guidelines for multi agent smart contract generation
 author_year:divyanshu kumar|2026|black box red teaming of agentic ai a taxonomy driven framework for automated risk discovery
@@ -314,14 +386,20 @@ author_year:duojie jiahua|2026|personality adaptive conversational ai for emotio
 author_year:elia nikolaou|2026|camelot camel orchestrated with temporal logic for static verification and liveness
 author_year:elia onofri|2026|raim robust aggregation of inexpensive models for hallucination detection
 author_year:eliott quéré|2026|homard hammering off chip memory via aggregate power rail disclosure
+author_year:ethan seefried|2026|benchmarking the quantum leap auditing llm evaluation for quantum code generation
+author_year:f fornari|2026|ai assisted devsecops for secure software delivery in earth observation projects
 author_year:fabian scherf|2026|using llm agents for security testing of compiled mobile applications
 author_year:faiza babar|2026|privacy preserving techniques in uav networks a systematic literature review of methods tools and future directions
 author_year:fangyuan zhang|2026|one is not enough the untold story of multiple security patches for one vulnerability
 author_year:fares trad|2026|adversarial testing of automated program repair agents for security vulnerabilities
 author_year:feiyang li|2026|probability is not enough exploring and counting divergent tokens for reasoning uncertainty quantification in llms
 author_year:fnu tanish|2026|tracevic causal reasoning over code evolution for identifying vulnerability inducing commits
+author_year:francesco crescenzo grasso|2026|vuldec vulnerability detection in binaries via neural decompilation
 author_year:frank e bobe|2026|deep noir autonomous steering discovery via architectural chronometry in transformer models
 author_year:futian wang|2026|mac rrg iterative multi agent collaboration for x ray radiology report generation
+author_year:gadi evron|2026|where ai vulnerability discovery harnesses go quiet structural false negatives and hidden vulnerabilities
+author_year:ganni galea curmi|2026|how much does the harness matter and for whom a multi model study of context in llm driven vulnerability discovery
+author_year:georgios feretzakis|2026|trust mechanisms for offline generative ai at the edge a connectivity regime framework and an empirical study on a raspberry pi 5
 author_year:georgios koutidis|2026|constrained action ai remediation for siem xdr via a nemo guardrails proxy
 author_year:georgios koutidis|2026|preparing an ai augmented siem for the eu cyber resilience act a practitioner case study
 author_year:gerardo iuliano|2026|the role of prompt patterns in llm based smart contract vulnerability detection
@@ -329,10 +407,12 @@ author_year:gian luca bailo|2026|system switch when should a fast decision model
 author_year:gou tan|2026|trustworthy runtime error healing in real world repositories a benchmark and guardrail
 author_year:guan yan yang|2026|class based obfuscation with multi objective evolutionary algorithms on source code
 author_year:guan zhong gong|2026|evidence grounded logic vulnerability detection for smart contracts via runtime context reasoning
+author_year:guoqiang hua|2026|5ugue agentic hardware in the loop fuzzing for 5g devices and beyond
 author_year:haichuan hu|2026|multifixer a coordinator proposer based multi agent framework for fixing multi hunk bugs
 author_year:halil dursunoglu|2026|sema guard semantic and graph based vulnerability detection in assembly code
 author_year:hamed khosravi|2026|prime towards verifiable evidence grounded reasoning in llm agents
 author_year:han chen|2026|hydra proactive android malware drift adaptation via hierarchical graph contrastive learning
+author_year:han zhou|2026|autoframing synthesizing dynamic frames of c code with llms
 author_year:hang cui|2026|beyond predefined sinks security aware dependency analysis for llm agents
 author_year:hang he|2026|checkerbench can long horizon agents synthesize static analysis checkers
 author_year:hao sun|2026|case level verification in scanner llm cascades overcoming the alert aggregation bottleneck to expand the frr tpr trade off space
@@ -340,10 +420,15 @@ author_year:hao yan|2026|guiding ai to fix its own flaws an empirical study on l
 author_year:hao zheng|2026|a survey on llm integrated hardware design verification
 author_year:haocheng ye|2026|invisible ink visible lies how production watermarking causes llms to hallucinate
 author_year:haoran ou|2026|skilllite evidence guided malicious skill auditing with compact llms
+author_year:haoran xue|2026|how effectively do security skills guide coding agents in vulnerability detection in linux kernel
 author_year:harsha nooka|2026|webmcp a browser native navigator modelcontext standard for agentic web automation
 author_year:hayeong ryu|2026|look before you leap factual decoding with internal attribution signals
 author_year:heng sheng chang|2026|accuracy and uncertainty in machine deception detection research white paper
 author_year:heyang tan|2026|oblivul alert conditioned safety obligation modeling and bidirectional counterfactual validation for code vulnerability detection
+author_year:hiroyasu usami|2026|from candidate admission to task level return auditing llm generated code under execution contracts
+author_year:hongseung yu|2026|mzcache on device llm memory management under multitasking
+author_year:hongyu li|2026|beyond binary labels diagnostic evaluation of llm safety with prompt level rubrics
+author_year:huaijin wang|2026|locate then reason end to end patch presence testing in stripped binaries
 author_year:huan zhao|2026|automated lemma discovery in agentic program verification
 author_year:hui zhang|2026|learning when to trust medical knowledge regression safe routing for clinical reasoning
 author_year:huixi li|2026|evopatch iot evolution aware cross architecture vulnerability retrieval and patch state profiling for busybox based iot firmware
@@ -352,6 +437,7 @@ author_year:hwang yechan|2026|marbo relational belief grounding for llm agents i
 author_year:hyojung han|2026|off target effects of response style alignment in a korean 27b language model
 author_year:i de zarzà|2026|editorial advanced integration of large language models for autonomous systems and critical decision support
 author_year:iliano fasolino|2026|in rag we trust measuring robustness of retrieval augmented generation under document poisoning
+author_year:ilya andreevich shelestov|2026|on premise open weight large language models for interpretable web vulnerability detection a benchmark against cloud models and rule based static analysis
 author_year:iman farshchi|2026|rethinking assessment for engineering students in higher education in the age of generative ai a critical narrative review
 author_year:ishan k singavarapu|2026|a trust ledger and an execution check for cpg based c to lean 4 autoformalization separating declined from silently incorrect translations
 author_year:issam seddik|2026|why backdooring neural networks is so easy
@@ -372,31 +458,42 @@ author_year:jianzhang du|2026|hoss fast oblivious semantic search with heterogen
 author_year:jianzhe lin|2026|clarification is not correction llms fail to let go
 author_year:jiaqing wu|2026|from guessing to seeing enhancing llm based program repair via trace guided multi strategy debate
 author_year:jiashen wei|2026|automated debugging of datalog programs
+author_year:jiawei dong|2026|sopo socratic guided policy optimization for span level hallucination detection
 author_year:jiawei yang|2026|multi stage on demand program slicing for modular analysis of multi threaded programs
 author_year:jiaxin xi|2026|understanding the performance effectiveness trade offs of addresssanitizer in real world programs an empirical study
 author_year:jiayi li|2026|when does correction become repair mechanistic auditing of internal interventions in tool using llms
 author_year:jie xu|2026|no isolated evolution no blind search memory guided prompt co evolution for industrial multi agent vulnerability detection
+author_year:jie ying|2026|agenttriage replayable security diagnosis across heterogeneous agent runtimes
 author_year:jie yu|2026|cots competitive token selection for latent reasoning in large language models
 author_year:jieru liu|2026|eyeseek a large language model for screening and improving health literacy in primary eye care
 author_year:jiexin wang|2026|toward secure code generation bridging correctness and security via task adaptive vulnerability modeling and execution based benchmarking
 author_year:jiho kim|2026|ctxfuzz context aware directed fuzzing via runtime fuzzer agent cooperation
 author_year:jiling zhou|2026|reasoning topology matters a controlled study of llm based cybersecurity analysis
+author_year:jin bao chen|2026|vulnsage adjudicating sast reports by connecting llm reasoning to program structure
 author_year:jinghao wen|2026|understanding llm hallucinations caused by soft errors
 author_year:jinhao pan|2026|learning from self generated responses reliability uncertainty self distillation for reasoning
+author_year:jinwei hu|2026|the one pixel of reasoning one truthful relation is enough to mislead llm agents
+author_year:jisheng dang|2026|aerial r1 reinforcing aerial reasoning and segmentation in mllms
+author_year:jitendra solanki|2026|semantic observability for autonomous systems diagnostics
 author_year:joas antonio dos santos barbosa|2026|from capability to assurance in autonomous penetration testing harnesses a framework and reference implementation
 author_year:john seon keun yi|2026|grace graph grounded reflective agent copilot engine for expert in the loop knowledge expansion
 author_year:joshua kalyanapu|2026|transcope what the software hides about llm training data the hardware reveals at scale and accelerators magnify
 author_year:josé afonso|2026|x js a live benchmark for node js taint style vulnerabilities
 author_year:julian gänz|2026|freesbee a constant time compilation pipeline
 author_year:jungmin park|2026|ai assisted design of a post quantum cryptographic accelerator a deployed silicon case study
+author_year:junhao wang|2026|omni ubench benchmarking omni modal llm based guardrails across safety utility and reliability
 author_year:junjie wang|2026|program graph learning for software vulnerability analysis a survey
 author_year:junming liu|2026|llm based code auditing by inferring and evaluating developer assumptions
 author_year:junru zhu|2026|partition matched evaluation of community features under distribution shift in android malware function call graphs
 author_year:junseob kim|2026|a doctrine grounded visual question answering dataset for tactical combat casualty care
 author_year:junxiang wang|2026|augmenting multi technique static analysis with large language models a neuro symbolic approach to smart contract vulnerability detection
 author_year:junyoung jang|2026|evaluating coding agents on kernel exploit generation
+author_year:justin tan|2026|agentphishing a benchmark of llm email agents under adaptive attack
+author_year:jyoti prakash|2026|a hybrid information flow analysis framework for android hybrid apps
+author_year:kai wei|2026|cve to att ck mapping via evidence constrained ranking
 author_year:kaiyu xie|2026|excavatorfuzz llm guided path difficulty driven directed greybox fuzzing
 author_year:kevin david hayes|2026|pinocchio fast uncertainty estimates for black box language models
+author_year:kodi vishruth aithal|2026|autosecaudit an extensible multi scanner orchestration framework with ai assisted remediation guidance precision fuzzing and delta auditing in devsecops
 author_year:konstantinos giapantzis|2026|continuous static assurance and symbolic execution for secure software supply chains
 author_year:ladise ceylin has|2026|biodigital diagnosis and personalized risk assessment in periodontal diseases
 author_year:laxmipriya ganesh iyer|2026|closed world resolution against tool hallucination in llm agents
@@ -405,10 +502,12 @@ author_year:li lu|2026|where do the tokens go understanding and reducing costs i
 author_year:li zhang|2026|when the agent becomes the kernel a systematization of security on the path to ai native operating systems
 author_year:liam davis|2026|did the llm answer the question a semantic reconstruction game for jailbreak evaluation
 author_year:liang he|2026|reprobench benchmarking llm agents on reproducing vulnerability from scratch
+author_year:liping yang|2026|abench adversarily benchmarking large language models across taxonomized values
 author_year:litao hu|2026|the winner s curse in llm self improvement loops selection noise lock in and acceptance rules
 author_year:longzhu he|2026|concealing llm based multi agent topology via phantom structure injection
 author_year:luoxi tang|2026|polar llm powered synthesis of real world cyber evidence for prioritization and mitigation
 author_year:luyao bai|2026|sok from finding to deployment systematizing the os kernel bug lifecycle
+author_year:m mikail demir|2026|commit or abstain system one decision models llms and missing legal authority
 author_year:m mohan rao|2026|code review assistant spots bugs suggests fixes
 author_year:mahmoud e farfoura|2026|the double edged sword of ai pair programmers a systematic literature review of security vulnerabilities in ai generated code and agentic development environments
 author_year:maitri kushwaha|2026|a sound semantics approximation of solidity for enhanced vulnerability detection
@@ -424,13 +523,16 @@ author_year:md nazmul islam ananto|2026|tofu exploiting and fuzzing the llm orch
 author_year:md rashedul hasan|2026|self discovering security oracles meta learning vulnerability detection strategies through adversarial self play
 author_year:md wasiul haque|2026|llmsec av a vulnerability taxonomy and llm driven software weakness discovery framework for autonomous vehicles
 author_year:meghana sunil|2026|rethinking knowledge retrieval for generation a survey on rag architectures and applications
+author_year:meng chen wu|2026|pluralistic alignment in large language models objectives human references and preference representations
 author_year:merve astekin|2026|engineering sustainable agents a systematic comparison of agentic llms for developer workflows
 author_year:miao li|2026|match the canvas not just the answer predictability aware sft for diffusion language models
+author_year:michele guerra|2026|data void exploits in web searching llms
 author_year:minfeng qi|2026|detecting logic vulnerabilities across the contract and device layers of blockchain enabled iot with multi agent heterogeneous graph attention
 author_year:mingyang chen|2026|structure guided semantic deobfuscation of android identifiers
 author_year:mingyang peng|2026|ai assisted software testing opportunities and challenges
 author_year:minsun shim|2026|confuse the model control the flow understanding and mitigating privacy leakage from llm agents with information flow control
 author_year:minxian xu|2026|cloud native and distributed systems for efficient and scalable large language models a research agenda
+author_year:mirza masfiqur rahman|2026|splash contrastive audit pressure for detecting and localizing security hallucinations in generated code
 author_year:mohamad fani sulaima|2026|ethical and governance challenges of large language models in power and energy systems a review and framework for responsible ai deployment
 author_year:mohamad fani sulaima|2026|trustworthy large language models llms for power system operations from grid copilots to verifiable decision support
 author_year:mohamed abbas elmasry|2026|authorization assurance for tool using llm agents a structured review of enforcement semantics and effect level security evidence
@@ -438,7 +540,11 @@ author_year:mohammad farhad|2026|llmvul a vulnerability labeled dataset of llm g
 author_year:mohammad khalooei|2026|does location matter a black box causal audit reveals model dependent audio grounding in lalm hallucination
 author_year:mohammed almaawi|2026|deep learning based intelligent platform for code analysis and vulnerability discovery
 author_year:mohammed imran choudhary|2026|ai augmented network forensics leveraging llms for real time threat detection and automated response in enterprise environments
+author_year:mohammed saqlain|2026|real pmids wrong papers harness design for biomedical claim verification agents
 author_year:mohsen iranmanesh|2026|p2patch exploit guided vulnerability repair
+author_year:mojdeh rahmanian|2026|tracing hallucinations in llm reasoning for uml class diagram generation an empirical taxonomy and mitigation study
+author_year:morris c|2026|lightweight 8d bitwise hyperchaotic encryption with multi round spn for secure medical image cloud storage and retrieval
+author_year:mostafijur rahman akhond|2026|making small code llms more efficient for secure code review with neuro symbolic fine tuning
 author_year:moule lin|2026|uncertainty quantification for llm agents a taxonomy an evaluation protocol and an empirical study
 author_year:mr rajiv gurve|2026|the ethics and accuracy of generative ai in higher education evaluating student reliance on ai writing tools epistemic vulnerability and pedagogical transformation
 author_year:mr swapnil joshi|2026|infrastructure as code security a review of automation compliance and risk management
@@ -446,10 +552,13 @@ author_year:mubashar iqbal|2026|cost aware hierarchical multi agent ransomware d
 author_year:mughees ur rehman|2026|ruleautopilot synthesizing deployable suricata rules from network traffic
 author_year:na wang|2026|dmg dual stream multiple instance learning network for hunting vulnerable smart contracts via adaptive granularity fusion
 author_year:nanna inie|2026|a critical review of critical thinking in hci research about ai
+author_year:navyansh mahla|2026|actionrag evidence refining graph diffusion for long term memory in llm agents
 author_year:nikolaos kekatos|2026|formal runtime verification for tool using llm agents an offline same benchmark study on agentdojo and stac
 author_year:nikolay avramov|2026|atlas efficient verifiable semantic search
 author_year:nilesh jaiswal|2026|beyond vector similarity hierarchical context aware graph rag vs standard rag in enterprise code migration
 author_year:nima karimipour|2026|llm based repair of static nullability errors
+author_year:nishant abhishek|2026|agenticvulhunter bringing local agentic vulnerability hunting to your terminal
+author_year:nithin sivakumaran|2026|tom2vec continuous theory of mind tokens for multi agent coordination
 author_year:nurjahan|2026|an evidence first multi llm framework for auditable critical infrastructure dependency modeling
 author_year:obada kraishan|2026|same name different server a security census of silent drift in the model context protocol ecosystem
 author_year:oliver stevanovic|2026|automating attack graph construction for agentic pentesting towards neuro symbolic vulnerability hunting
@@ -461,8 +570,11 @@ author_year:omer almomani|2026|trustworthy phishing url detection using machine 
 author_year:pavan maddula|2026|quad state safety evaluation of open weight large language models on non canonical inputs
 author_year:pavan nallamothu|2026|trusting the filename a systematization and detection study of file write attacks from untrusted archive and download metadata
 author_year:peipei liu|2026|the codeinverter suite structure and data aware binary decompilation with efficient llms
+author_year:pellegrino casoria|2026|from hype to roi an economic model for llm adoption in information systems and security operations
 author_year:pengfei he|2026|aspire agentic safety prompt injection red teaming engine
+author_year:piotr marszalik|2026|when pebbles are not atomic a polynomial separation between pure and entangled pebbling
 author_year:prakriti baral|2026|behavior centric malware classification with fine grained malicious logic localization
+author_year:prateek kumar rajput|2026|securing agent generated code with its own development history
 author_year:prateek kumar rajput|2026|trajectory level security debt in llm coding agents
 author_year:pratik dutta|2026|unlocking the regulatory genome by argus an evidence constrained agentic framework for interpreting single nucleotide variants
 author_year:prof rana afreen sheikh|2026|machine learning based vulnerability detection in ai generated source code a systematic literature review and research directions
@@ -482,18 +594,24 @@ author_year:ravishka rathnasuriya|2026|characterizing overconfident failure in l
 author_year:renjie huang|2026|fully automating template polyhedral analysis by leveraging llms
 author_year:rijvan beg|2026|multimodal generative cyber forensics network for unified malware intelligence synthesis through temporal evidence alignment neuro symbolic hypergraph reasoning and cognitive threat attributions
 author_year:rikelmy rodrigues menezes|2026|generative ai assistants in software development productivity gains code quality and security trade offs
+author_year:riku kato|2026|raise or check predicting the necessity of additional fuzzing for continuous fuzzing
 author_year:rishabh sharma|2026|when does selection replace extraction a pre registered test of agent memory with a typed decision model
 author_year:ro encarnación|2026|what current ai benchmarks leave unmeasured modality search citations and implications for safety evaluations
+author_year:rodrigo casado noguerales|2026|binary discrete diffusion candidate set diffusion for logic and planning tasks
 author_year:roee idan|2026|an empirical security analysis of open source software used in onboard satellite systems
 author_year:rongchen li|2026|reseda automatic and precise program level redos triage via interprocedural taint analysis and agentic exploit generation
 author_year:ronghao ni|2026|learning to triage vulnerability reports from program analysis an empirical study in node js
 author_year:rongke liu|2026|on the relationship between model quantization and model inversion attacks
 author_year:roshin sleeba c|2026|bridging the first hour gap evaluating ai reliability and benchmarking deficiencies in cyber incident response for law enforcement
 author_year:rui cao|2026|defifusion combining transaction events with smart contracts to detect price manipulation attacks
+author_year:rui melo|2026|self evolving static analysis via llm pseudo labeling
 author_year:ruidong han|2026|secreason vulnerability detection and in stream self repair for llm code generation
+author_year:ruijie zhang|2026|regomender a multi agent framework for automated rego policy repair
+author_year:ruitao feng|2026|narratives mislead an empirical study of how llms misjudge cvss severity in bug bounty reports
 author_year:ruo han li|2026|graml graph grounded reasoning and multi task learning for llm based software vulnerability detection
 author_year:ruoqi guo|2026|just ask jev reinforcement learning for calibrated decisions as a zero shot detector of ai alignment failures
 author_year:ruoyu wang|2026|typatch transforming patches into typestate rules for kernel bug detection
+author_year:rupsingh puransingh mathwale|2026|cyber defence agentic ai and the sociotechnical paradigm a survey of ai driven cybersecurity
 author_year:rushabh vipulkumar patel|2026|pentestchain a cost aware mcp orchestrated framework for automated penetration testing with free tier llms
 author_year:saad ullah|2026|selfop an optimization algorithm for self improving security agents
 author_year:sabrina kaniewski|2026|retrieve reproduce reveal dissecting retrieval augmented software vulnerability detection
@@ -503,9 +621,11 @@ author_year:saisab sadhu|2026|cited but not consulted a counterfactual audit of 
 author_year:salem aljanah|2026|a security risk assessment framework for ai powered development tools
 author_year:salma aboelmagd|2026|hardware assisted multi stage ransomware detection with adaptive machine learning
 author_year:samarth kishor|2026|soundness checking of taint flow models
+author_year:samuel roy anthony truss|2026|agentic and generative ai for intelligent autonomous vulnerability assessment and penetration testing a systematic analysis
 author_year:samuele doria|2026|humans vs machines a comparison with ai agents in software reverse engineering
 author_year:santiago perez acuna|2026|ensembling llms for ai augmented cybersecurity software requirements generation
 author_year:sarah wilson|2026|efficiency hallucination formalizing and measuring behavioral calibration in llm based code optimization
+author_year:savan doshi|2026|medical fine tuning reshapes not reduces patient facing ai risk a rubric based llm judge evaluation framework
 author_year:shaghayegh sadeghi|2026|sailor solver assisted interactive llm based optimization recovery
 author_year:shaoguang wu|2026|skaeg automatic exploit generation based on shared keywords in embedded systems
 author_year:shaojian qiu|2026|ifma vd boosting vulnerability detection with inter function multilateral association insights
@@ -514,23 +634,32 @@ author_year:shawal khalid|2026|advancing blockchain oriented software engineerin
 author_year:shenao wang|2026|malskills detecting malicious skills in the agentic supply chain via neuro symbolic reasoning
 author_year:shenghan zheng|2026|benchshield formal model backed instrumentation for reward integrity in llm agent evaluation infrastructure
 author_year:shihab ahmed|2026|orcagen orchestrating context aware malware deception with rag guided generative ai
+author_year:shiwen shan|2026|statemirror pre execution detection of hallucinated tool calls in coding agents
+author_year:shiwu zhao|2026|from instructions to exploits applying program analysis to malicious agent skills across natural language and code
+author_year:shreeram suresh chandra|2026|a benchmark for controllable speaking style captioning in audio language models
+author_year:silu xiang|2026|global trends and thematic evolution in breast cancer and frailty research a multi database bibliometric analysis 1973 2025
 author_year:simon bernbeck|2026|privdev mapping static analysis data types to dpv
 author_year:simona boboila|2026|bluestar tiered agentic architecture for autonomous cyber defense
+author_year:siyuan li|2026|a neuro symbolic reasoning engine for compilation free patch presence testing
 author_year:sungju yun|2026|clear causal context based agentic reasoning for vulnerability detection
 author_year:suprajyotsna dasari|2026|automated testing techniques for enterprise software systems with genai integration
 author_year:suyang zhong|2026|agentic evolution of sql test generators
 author_year:taehyeon yun|2026|correct answers unsupported findings evidence binding in forensic reconstruction of llm agent logs
 author_year:tashi stirewalt|2026|closing the interpretability gap explainable ml based malware detection for defensive cyberspace operations
+author_year:tengwei song|2026|memplan memory conditioned pddl planning for partially observable text environments
 author_year:the anh nguyen|2026|vulnerable models in the ai supply chain an empirical study of adoption propagation and usage patterns
 author_year:theodoros moutesidis|2026|the model proposes the code disposes a pre registered ablation of a verifier and acceptance stage in an llm orchestrated offensive security agent
 author_year:thomas klassert|2026|introspective uncertainty estimation for llm based code generation
 author_year:timo schefold|2026|the deception delta adversarial evaluation of llm based smart contract bytecode forensics
 author_year:tobias braun|2026|u space uncovering when and why uncertainty arises in language models
 author_year:tobias heldt|2026|does ai help cyber attackers or defenders evidence from nonpublic vulnerabilities and subsequent attacks
+author_year:tue le|2026|secure agentic coding through counterexample grounded feedback
 author_year:varun teja chundru|2026|domain specific hallucination detection in large language models
+author_year:vasu chowdary|2026|sentinelml behavioral machine learning based ransomware detection with decoupled ai security analysis
 author_year:vincent tamaramiebi daniel|2026|a systematic review of ai driven automated software vulnerability detection systems
 author_year:vineet kumar|2026|all verdicts are not equal rethinking llm judge reliability
 author_year:vishnu asutosh dasu|2026|refusing the impossible a taxonomy and benchmark for code hallucination in large language models
+author_year:vita santa barletta|2026|a digital twin to improve cyber social impact
 author_year:wachiraphan charoenwet|2026|agenticscr an autonomous agentic secure code review for immature vulnerabilities detection
 author_year:wai kin wong|2026|state aware fuzzing of javascript engines with llm guided instrumentation
 author_year:wangshu zhu|2026|hazardweaver scientific route selection for hazard analysis agents
@@ -542,6 +671,8 @@ author_year:xiangyue ma|2026|deepgroundrepair from api grounded generation to sh
 author_year:xiaokai rong|2026|post hoc attention steering of large language models for robust code understanding under obfuscation
 author_year:xiaoling zhang|2026|hieronym leveraging hierarchical multi source information for function renaming in stripped binary
 author_year:xiaoyang wang|2026|unanimously wrong certified abstention from how medical llm consensus forms
+author_year:xiaoyu wu|2026|tire top down formula instantiation with reliable execution for physics problem synthesis
+author_year:xiarun chen|2026|symlift neural semantic lifting for compile free vulnerability detection in context incomplete code fragments
 author_year:xin shen|2026|on the lexical superstition of large language models for code comprehension re evaluation on code of low lexical quality
 author_year:xin wang|2026|relog execution aware logging with runtime feedback for llm oriented debugging
 author_year:xing su|2026|trace driven automated poc synthesis for on chain attacks
@@ -555,8 +686,10 @@ author_year:xu zhang|2026|understanding in context multimodal jailbreaks via pos
 author_year:xuanfa jin|2026|remember and reweight enhancing multi agent debate with experience memory and confidence estimation
 author_year:xuejian zhang|2026|natural hazards critical infrastructure systems and resilience enhancement a structured state of the art review and a synthesis based rapid assessment framework
 author_year:yacine majdoub|2026|understanding and mitigating library related issues in llm generated code
+author_year:yali du|2026|hallucinations of large language models in cross language code translation phenomena and mitigation
 author_year:yan wang|2026|t rex teaching large language models to reason with verbalized execution semantics
 author_year:yang hong|2026|foresight over graph reasoning beyond local horizons for knowledge base question answering
+author_year:yanyan wu|2026|clinsdt llm encoded clinical semantic guidance for sepsis treatment via decision transformer
 author_year:yao xin|2026|rise repair like insertions for stealthy evasion of vulnerability detection models
 author_year:yao zhang|2026|interfuse scalable detection of memory safety violations via differential reasoning and hierarchical context fusion
 author_year:yasamin akrami|2026|large language models and agentic ai for vulnerability management a systematic review
@@ -565,8 +698,12 @@ author_year:yi rong|2026|verifying economic security of smart contracts via unin
 author_year:yi song|2026|compass predicting the relationship of multiple patches for vulnerabilities with llms
 author_year:yi ting shen|2026|acea an adversarial co evolution arena for head to head red team and blue team llm testing
 author_year:yifeng di|2026|when dependencies depend a large scale study on conditional dependencies and their security implications in c c
+author_year:yifeng he|2026|from prose to properties testing research claims with aratest for agent native science
 author_year:yifeng xiao|2026|symbolic temporal supervision of llm agents using contracts
 author_year:yihan dai|2026|reducing hallucinations in llm generated code via semantic triangulation
+author_year:yihan yang|2026|can agentic code review catch vulnerabilities before they are merged
+author_year:yiheng li|2026|mpidetector detecting multi modal prompt injection via llm based reasoning
+author_year:yihua xu|2026|sempre semantic aware protocol reverse engineering via consistency driven joint optimization
 author_year:yilian shi|2026|evirepair evidence driven agents for reliable vulnerability repair
 author_year:yilun ma|2026|smartdecompiler r1 enhancing faithful and explainable smart contract bytecode decompilation with reinforcement learning
 author_year:yingjia wan|2026|how humans and llms read gender into gender neutral physical descriptions
@@ -585,6 +722,7 @@ author_year:yuanliang zhang|2026|ctforge automatically generating test suites fo
 author_year:yuanteng chen|2026|you only need 2 3 of the chosen experts an empirical study of dynamic expert pruning in fine grained moe llms
 author_year:yuanwei wu|2026|echo replacing the compliance proxy with response harmfulness in optimization based jailbreak attack
 author_year:yuanxiang shi|2026|swe test benchmarking llm vulnerability discovery via input prediction
+author_year:yuchen chen|2026|ragleak supply chain privacy backdoors in retrieval augmented generation
 author_year:yue xing|2026|the like trap multi stage poisoning against agents in similarity based recommendation systems
 author_year:yuewantong song|2026|idoracle template guided sql sink mediation for object level authorization in java applications
 author_year:yufei chen|2026|poisoning the neighborhood a topology aware topic level attack on large scale hnsw based rag systems
@@ -605,13 +743,16 @@ author_year:zhejun jiang|2026|bayesian entropy based reordering for calibrated d
 author_year:zhenghao he|2026|reliable parallel decoding in masked diffusion language models
 author_year:zhengsong zhang|2026|artifact for patchaudit uncovering faulty security patches and lingering zero days at scale
 author_year:zhihao chen|2026|how your credentials are leaked by llm agent skills an empirical study
+author_year:zhihong liu|2026|trusting the tool asymmetric deference of llm vulnerability auditors to static analysis evidence
 author_year:zhilin li|2026|mind the gap do widely used sast tools really cover the language specific top cwes
+author_year:zhiwei liu|2026|egi bench an enterprise general intelligence benchmark suite
 author_year:zhiwei shang|2026|fusion is the new mutation bandit guided evolution on workflow graphs
 author_year:zhongan bi|2026|evaluating deep search agents under hierarchical web evidence poisoning
 author_year:zhongli fang|2026|a trustworthy watermarking framework for llm generated food safety content
 author_year:zhuo chen|2026|breaking the illusion of review reliability under static evaluation scope fuzzing for llm based scientific reviewers
 author_year:zibo liu|2026|seeing the forest a taxonomy guided analysis and improvement of malicious pypi package detectors
 author_year:zihao rao|2026|safedep detecting state mutation unsoundness in rust via dependency slicing and llm reasoning
+author_year:zijian liu|2026|omni woodpecker hallucination correction via evidence prior rebalancing for omni llms
 author_year:zixiao zhao|2026|empowering lightweight language models for security code review via context aware distillation
 author_year:zixuan weng|2026|attention sees mlp refuses tracing the attention to mlp safety pathway in llms
 author_year:zixuan zhang|2026|llmdpa pre execution privacy auditing of dp sgd via evidence constrained semantic analysis
@@ -631,6 +772,7 @@ doi:10.1007/s43926-026-00525-1
 doi:10.1007/s44443-026-01312-2
 doi:10.1016/j.adhoc.2026.104410
 doi:10.1016/j.cose.2026.105143
+doi:10.1016/j.cosrev.2026.101083
 doi:10.1016/j.jss.2026.113104
 doi:10.1016/j.nexus.2026.100869
 doi:10.1016/j.nexus.2026.100870
@@ -640,9 +782,12 @@ doi:10.1038/s41598-026-74760-5
 doi:10.1038/s41746-026-03332-8
 doi:10.1061/nhrefo.nheng-2965
 doi:10.1080/10447318.2026.2722522
+doi:10.1088/2040-8986/aeb615
 doi:10.1111/exsy.70437
 doi:10.1117/12.3124383
 doi:10.1145/3773078.3831748
+doi:10.1145/3795866.3844495
+doi:10.1145/3799682.3840809
 doi:10.1145/3830454.3832684
 doi:10.1145/3830454.3846550
 doi:10.1145/3830454.3846626
@@ -714,16 +859,21 @@ doi:10.1145/3856304
 doi:10.1186/s42400-026-00649-5
 doi:10.1186/s42400-026-00657-5
 doi:10.14722/ndss.2027.230685
+doi:10.14722/ndss.2027.232247
 doi:10.15439/2026f7378
 doi:10.15439/2026f8556
 doi:10.15849/ijasca.129
 doi:10.1609/aies.v9i2.43191
+doi:10.17148/ijarcce.2026.151070
+doi:10.17148/ijarcce.2026.151071
 doi:10.21203/rs.3.rs-10876072/v1
 doi:10.21203/rs.3.rs-10911223/v1
 doi:10.22214/ijraset.2026.84845
+doi:10.22323/1.523.0002
 doi:10.32388/7hxkqe.2
 doi:10.32734/jocai.v10i2.24898
 doi:10.3389/fnagi.2026.1967205
+doi:10.3389/fonc.2026.1975523
 doi:10.3389/frai.2026.1962295
 doi:10.3390/analytics5040042
 doi:10.3390/electronics15184241
@@ -751,15 +901,19 @@ doi:10.55640/ijaair-v03i09-06
 doi:10.55640/irjmshc-v03i09-01
 doi:10.56201/ijcsmt.vol.11.no12.2025.pg98.116
 doi:10.56201/ijcsmt.vol.12.no2.2026.pg205.216
+doi:10.56334/sei/9.10.5
 doi:10.5772/intechopen.1015225
 doi:10.58532/nbennur3439c2
 doi:10.58830/ozgur.pub1444.c5841
 doi:10.59256/indjcst.20260503034
 doi:10.62643/ijerst.2026.v22.n3.4665
+doi:10.63158/journalisi.v8i5.1826
 doi:10.63544/8wxdhb56
 doi:10.65405/zhcpaq10
 doi:10.66104/z67gjz21
+doi:10.66571/tsarka-3134-6057-11
 doi:10.66823/2egmd793
+doi:10.68104/ijasit.v1.i4.44
 doi:10.70267/aitia.2026300307
 doi:10.70267/aitia.2026370377
 doi:10.71143/sn89wx46
@@ -993,6 +1147,69 @@ key:arxiv:2610.22520
 key:arxiv:2610.22702
 key:arxiv:2610.22943
 key:arxiv:2610.23030
+key:arxiv:2610.23035
+key:arxiv:2610.24471
+key:arxiv:2610.24609
+key:arxiv:2610.24623
+key:arxiv:2610.24807
+key:arxiv:2610.24873
+key:arxiv:2610.25071
+key:arxiv:2610.25134
+key:arxiv:2610.25705
+key:arxiv:2610.25916
+key:arxiv:2610.25937
+key:arxiv:2610.26001
+key:arxiv:2610.27103
+key:arxiv:2610.27234
+key:arxiv:2610.27249
+key:arxiv:2610.27288
+key:arxiv:2610.27383
+key:arxiv:2610.27611
+key:arxiv:2610.27828
+key:arxiv:2610.27868
+key:arxiv:2610.27871
+key:arxiv:2610.28430
+key:arxiv:2610.28543
+key:arxiv:2610.28611
+key:arxiv:2610.28678
+key:arxiv:2610.28802
+key:arxiv:2610.29046
+key:arxiv:2610.29155
+key:arxiv:2610.29225
+key:arxiv:2610.29379
+key:arxiv:2610.29456
+key:arxiv:2610.29812
+key:arxiv:2610.29934
+key:arxiv:2610.29961
+key:arxiv:2610.30184
+key:arxiv:2610.30202
+key:arxiv:2610.30379
+key:arxiv:2610.30495
+key:arxiv:2610.30738
+key:arxiv:2610.30946
+key:arxiv:2610.31404
+key:arxiv:2610.31713
+key:arxiv:2610.31844
+key:arxiv:2610.32212
+key:arxiv:2610.32648
+key:arxiv:2610.32752
+key:arxiv:2610.32876
+key:arxiv:2610.33036
+key:arxiv:2610.33056
+key:arxiv:2610.33224
+key:arxiv:2610.33352
+key:arxiv:2610.33489
+key:arxiv:2610.33509
+key:arxiv:2610.33716
+key:arxiv:2610.33732
+key:arxiv:2610.33924
+key:arxiv:2610.34098
+key:arxiv:2610.34431
+key:arxiv:2610.34871
+key:arxiv:2610.34928
+key:arxiv:2610.35477
+key:arxiv:2610.35804
+key:arxiv:2610.35829
 key:doi:10.1002/spe.70121
 key:doi:10.1002/spy2.70260
 key:doi:10.1007/978-3-032-15632-7_17
@@ -1007,6 +1224,7 @@ key:doi:10.1007/s43926-026-00525-1
 key:doi:10.1007/s44443-026-01312-2
 key:doi:10.1016/j.adhoc.2026.104410
 key:doi:10.1016/j.cose.2026.105143
+key:doi:10.1016/j.cosrev.2026.101083
 key:doi:10.1016/j.jss.2026.113104
 key:doi:10.1016/j.nexus.2026.100869
 key:doi:10.1016/j.nexus.2026.100870
@@ -1016,9 +1234,12 @@ key:doi:10.1038/s41598-026-74760-5
 key:doi:10.1038/s41746-026-03332-8
 key:doi:10.1061/nhrefo.nheng-2965
 key:doi:10.1080/10447318.2026.2722522
+key:doi:10.1088/2040-8986/aeb615
 key:doi:10.1111/exsy.70437
 key:doi:10.1117/12.3124383
 key:doi:10.1145/3773078.3831748
+key:doi:10.1145/3795866.3844495
+key:doi:10.1145/3799682.3840809
 key:doi:10.1145/3830454.3832684
 key:doi:10.1145/3830454.3846550
 key:doi:10.1145/3830454.3846626
@@ -1090,16 +1311,21 @@ key:doi:10.1145/3856304
 key:doi:10.1186/s42400-026-00649-5
 key:doi:10.1186/s42400-026-00657-5
 key:doi:10.14722/ndss.2027.230685
+key:doi:10.14722/ndss.2027.232247
 key:doi:10.15439/2026f7378
 key:doi:10.15439/2026f8556
 key:doi:10.15849/ijasca.129
 key:doi:10.1609/aies.v9i2.43191
+key:doi:10.17148/ijarcce.2026.151070
+key:doi:10.17148/ijarcce.2026.151071
 key:doi:10.21203/rs.3.rs-10876072/v1
 key:doi:10.21203/rs.3.rs-10911223/v1
 key:doi:10.22214/ijraset.2026.84845
+key:doi:10.22323/1.523.0002
 key:doi:10.32388/7hxkqe.2
 key:doi:10.32734/jocai.v10i2.24898
 key:doi:10.3389/fnagi.2026.1967205
+key:doi:10.3389/fonc.2026.1975523
 key:doi:10.3389/frai.2026.1962295
 key:doi:10.3390/analytics5040042
 key:doi:10.3390/electronics15184241
@@ -1127,15 +1353,19 @@ key:doi:10.55640/ijaair-v03i09-06
 key:doi:10.55640/irjmshc-v03i09-01
 key:doi:10.56201/ijcsmt.vol.11.no12.2025.pg98.116
 key:doi:10.56201/ijcsmt.vol.12.no2.2026.pg205.216
+key:doi:10.56334/sei/9.10.5
 key:doi:10.5772/intechopen.1015225
 key:doi:10.58532/nbennur3439c2
 key:doi:10.58830/ozgur.pub1444.c5841
 key:doi:10.59256/indjcst.20260503034
 key:doi:10.62643/ijerst.2026.v22.n3.4665
+key:doi:10.63158/journalisi.v8i5.1826
 key:doi:10.63544/8wxdhb56
 key:doi:10.65405/zhcpaq10
 key:doi:10.66104/z67gjz21
+key:doi:10.66571/tsarka-3134-6057-11
 key:doi:10.66823/2egmd793
+key:doi:10.68104/ijasit.v1.i4.44
 key:doi:10.70267/aitia.2026300307
 key:doi:10.70267/aitia.2026370377
 key:doi:10.71143/sn89wx46
@@ -1330,6 +1560,53 @@ provider:arxiv|2610.22520
 provider:arxiv|2610.22702
 provider:arxiv|2610.22943
 provider:arxiv|2610.23030
+provider:arxiv|2610.24471
+provider:arxiv|2610.24609
+provider:arxiv|2610.24623
+provider:arxiv|2610.24807
+provider:arxiv|2610.24873
+provider:arxiv|2610.25071
+provider:arxiv|2610.25121
+provider:arxiv|2610.25134
+provider:arxiv|2610.25705
+provider:arxiv|2610.27103
+provider:arxiv|2610.27234
+provider:arxiv|2610.27249
+provider:arxiv|2610.27611
+provider:arxiv|2610.28543
+provider:arxiv|2610.28611
+provider:arxiv|2610.28678
+provider:arxiv|2610.29225
+provider:arxiv|2610.29456
+provider:arxiv|2610.29812
+provider:arxiv|2610.29934
+provider:arxiv|2610.29961
+provider:arxiv|2610.30379
+provider:arxiv|2610.30738
+provider:arxiv|2610.30946
+provider:arxiv|2610.31713
+provider:arxiv|2610.31844
+provider:arxiv|2610.32212
+provider:arxiv|2610.32648
+provider:arxiv|2610.32752
+provider:arxiv|2610.32876
+provider:arxiv|2610.33036
+provider:arxiv|2610.33056
+provider:arxiv|2610.33224
+provider:arxiv|2610.33352
+provider:arxiv|2610.33489
+provider:arxiv|2610.33509
+provider:arxiv|2610.33716
+provider:arxiv|2610.33732
+provider:arxiv|2610.33924
+provider:arxiv|2610.34098
+provider:arxiv|2610.34431
+provider:arxiv|2610.34871
+provider:arxiv|2610.34928
+provider:arxiv|2610.35477
+provider:arxiv|2610.35804
+provider:arxiv|2610.35829
+provider:openalex arxiv|2610.30365
 provider:openalex arxiv|https://openalex.org/w7167926735
 provider:openalex arxiv|https://openalex.org/w7211886289
 provider:openalex arxiv|https://openalex.org/w7211894712
@@ -1370,9 +1647,18 @@ provider:openalex arxiv|https://openalex.org/w7222029856
 provider:openalex arxiv|https://openalex.org/w7222126234
 provider:openalex arxiv|https://openalex.org/w7222293283
 provider:openalex arxiv|https://openalex.org/w7222299464
+provider:openalex arxiv|https://openalex.org/w7222962659
+provider:openalex arxiv|https://openalex.org/w7223064929
+provider:openalex arxiv|https://openalex.org/w7223106119
+provider:openalex arxiv|https://openalex.org/w7223122561
+provider:openalex arxiv|https://openalex.org/w7223151732
+provider:openalex arxiv|https://openalex.org/w7223156673
+provider:openalex arxiv|https://openalex.org/w7223216147
+provider:openalex arxiv|https://openalex.org/w7223288870
 provider:openalex semantic scholar arxiv|51b1ecffaed58d922d052e0f5d63a6f8bdc88bfb
 provider:openalex semantic scholar arxiv|https://openalex.org/w7212010671
 provider:openalex semantic scholar arxiv|https://openalex.org/w7212044991
+provider:openalex semantic scholar|a9c1f585bc3368aca73638ed780b404365dae303
 provider:openalex semantic scholar|https://openalex.org/w7207763218
 provider:openalex semantic scholar|https://openalex.org/w7214983650
 provider:openalex|https://openalex.org/w4400374531
@@ -1399,6 +1685,7 @@ provider:openalex|https://openalex.org/w7201832959
 provider:openalex|https://openalex.org/w7201986320
 provider:openalex|https://openalex.org/w7202149707
 provider:openalex|https://openalex.org/w7204635274
+provider:openalex|https://openalex.org/w7206176683
 provider:openalex|https://openalex.org/w7207653643
 provider:openalex|https://openalex.org/w7207817237
 provider:openalex|https://openalex.org/w7207841935
@@ -1412,6 +1699,7 @@ provider:openalex|https://openalex.org/w7211936956
 provider:openalex|https://openalex.org/w7212009522
 provider:openalex|https://openalex.org/w7212027573
 provider:openalex|https://openalex.org/w7212081179
+provider:openalex|https://openalex.org/w7212111584
 provider:openalex|https://openalex.org/w7212153472
 provider:openalex|https://openalex.org/w7212164196
 provider:openalex|https://openalex.org/w7212194770
@@ -1552,6 +1840,26 @@ provider:openalex|https://openalex.org/w7222025068
 provider:openalex|https://openalex.org/w7222169157
 provider:openalex|https://openalex.org/w7222453343
 provider:openalex|https://openalex.org/w7222703701
+provider:openalex|https://openalex.org/w7222899286
+provider:openalex|https://openalex.org/w7222980956
+provider:openalex|https://openalex.org/w7223006049
+provider:openalex|https://openalex.org/w7223043571
+provider:openalex|https://openalex.org/w7223053498
+provider:openalex|https://openalex.org/w7223083844
+provider:openalex|https://openalex.org/w7223090303
+provider:openalex|https://openalex.org/w7223096734
+provider:openalex|https://openalex.org/w7223097369
+provider:openalex|https://openalex.org/w7223105542
+provider:openalex|https://openalex.org/w7223140281
+provider:openalex|https://openalex.org/w7223172530
+provider:openalex|https://openalex.org/w7223200122
+provider:openalex|https://openalex.org/w7223222562
+provider:openalex|https://openalex.org/w7223223518
+provider:openalex|https://openalex.org/w7223352252
+provider:openalex|https://openalex.org/w7223375988
+provider:openalex|https://openalex.org/w7223381451
+provider:openalex|https://openalex.org/w7223443830
+provider:openalex|https://openalex.org/w7223444975
 provider:semantic scholar|17e552b6bad21526caeead3a269d95aaa272d405
 title:0472ce763d6ce9a2241de06670367343a74c6851
 title:2ff67088b49a549e896edd658aeaaa9cbf0b7352
@@ -1569,34 +1877,48 @@ title:ca2d6e2b8dce72c8a78f936b59b6dc160b66107d
 title:d213ed083aa6392aac6f43b21d050f2e30055235
 title:d3537687a3c4dba684309e939f5bdb4286b9ad72
 title:d5dce89fb6221d9d53bb1a982152e9453e7da5e1
+title_year:5ugue agentic hardware in the loop fuzzing for 5g devices and beyond|2026
 title_year:6g enabled intelligent iot emerging architectures ai native networking digital twins and security challenges|2026
+title_year:a benchmark for controllable speaking style captioning in audio language models|2026
 title_year:a comprehensive survey of communication technologies security frameworks and intelligent architectures for medical internet of things and quantum enabled healthcare|2026
 title_year:a critical review of critical thinking in hci research about ai|2026
 title_year:a decision basis contract for auditable llm assisted medical billing verification deterministic rules verbatim evidence and fail closed abstention|2026
 title_year:a design theory for ai assisted software development derived from christopher alexander s theory of form|2026
+title_year:a digital twin to improve cyber social impact|2026
 title_year:a doctrine grounded visual question answering dataset for tactical combat casualty care|2026
 title_year:a governance aware large language model orchestrated agentic digital twin for transmission system operator control room decision support|2026
 title_year:a hybrid detection framework for sql injection reducing false positives through similarity based pattern matching and proactive developer integration|2026
+title_year:a hybrid information flow analysis framework for android hybrid apps|2026
+title_year:a neuro symbolic reasoning engine for compilation free patch presence testing|2026
 title_year:a security risk assessment framework for ai powered development tools|2026
 title_year:a sound semantics approximation of solidity for enhanced vulnerability detection|2026
 title_year:a survey on llm integrated hardware design verification|2026
+title_year:a systematic review of ai assisted code generation in regulated software environments reliability governance and compliance implications|2026
 title_year:a systematic review of ai driven automated software vulnerability detection systems|2026
 title_year:a trust ledger and an execution check for cpg based c to lean 4 autoformalization separating declined from silently incorrect translations|2026
 title_year:a trustworthy watermarking framework for llm generated food safety content|2026
 title_year:a2abreak systematic security analysis of the a2a protocol|2026
+title_year:abench adversarily benchmarking large language models across taxonomized values|2026
 title_year:absentia detecting broken access control vulnerabilities in web applications|2026
 title_year:accuracy and uncertainty in machine deception detection research white paper|2026
 title_year:ace an ai orchestrated intrusion detection and compliance mapping engine|2026
 title_year:acea an adversarial co evolution arena for head to head red team and blue team llm testing|2026
+title_year:actionrag evidence refining graph diffusion for long term memory in llm agents|2026
 title_year:advancing blockchain oriented software engineering empirical investigations and ai augmented tooling for secure smart contract development|2026
 title_year:adversarial testing of automated program repair agents for security vulnerabilities|2026
 title_year:advronids a constraint aware framework for adversarially robust network intrusion detection via min max training and attribution analysis|2026
+title_year:aerial r1 reinforcing aerial reasoning and segmentation in mllms|2026
 title_year:agenthop a diagnostic benchmark for agentic multi hop scientific question answering|2026
+title_year:agentic and generative ai for intelligent autonomous vulnerability assessment and penetration testing a systematic analysis|2026
 title_year:agentic evolution of sql test generators|2026
 title_year:agenticscr an autonomous agentic secure code review for immature vulnerabilities detection|2026
+title_year:agenticvulhunter bringing local agentic vulnerability hunting to your terminal|2026
 title_year:agentperturb evaluating llm agent robustness under controlled interaction perturbations|2026
+title_year:agentphishing a benchmark of llm email agents under adaptive attack|2026
+title_year:agenttriage replayable security diagnosis across heterogeneous agent runtimes|2026
 title_year:agroground multi granularity grounded recognition in agriculture|2026
 title_year:ai assisted design of a post quantum cryptographic accelerator a deployed silicon case study|2026
+title_year:ai assisted devsecops for secure software delivery in earth observation projects|2026
 title_year:ai assisted software testing opportunities and challenges|2026
 title_year:ai augmented network forensics leveraging llms for real time threat detection and automated response in enterprise environments|2026
 title_year:all verdicts are not equal rethinking llm judge reliability|2026
@@ -1613,21 +1935,26 @@ title_year:attacking and defending multi agent collaborative filtering systems t
 title_year:attention sees mlp refuses tracing the attention to mlp safety pathway in llms|2026
 title_year:augmenting multi technique static analysis with large language models a neuro symbolic approach to smart contract vulnerability detection|2026
 title_year:authorization assurance for tool using llm agents a structured review of enforcement semantics and effect level security evidence|2026
+title_year:autoframing synthesizing dynamic frames of c code with llms|2026
 title_year:automated debugging of datalog programs|2026
 title_year:automated lemma discovery in agentic program verification|2026
 title_year:automated testing techniques for enterprise software systems with genai integration|2026
 title_year:automating attack graph construction for agentic pentesting towards neuro symbolic vulnerability hunting|2026
+title_year:autosecaudit an extensible multi scanner orchestration framework with ai assisted remediation guidance precision fuzzing and delta auditing in devsecops|2026
 title_year:autotrans ai assisted automatic translation of security assertions for risc v processors|2026
 title_year:bayesian entropy based reordering for calibrated diffusion language models|2026
 title_year:behavior centric malware classification with fine grained malicious logic localization|2026
 title_year:belief state engine augmenting llms for principled planning under partial observability|2026
+title_year:benchmarking the quantum leap auditing llm evaluation for quantum code generation|2026
 title_year:benchshield formal model backed instrumentation for reward integrity in llm agent evaluation infrastructure|2026
 title_year:bertrag as a bert enhanced retrieval augmented generation framework for preserving awori and ogu indigenous knowledge|2026
+title_year:beyond binary labels diagnostic evaluation of llm safety with prompt level rubrics|2026
 title_year:beyond maliciousness static and runtime attack surface profiling of agent skills|2026
 title_year:beyond predefined sinks security aware dependency analysis for llm agents|2026
 title_year:beyond static guarantees measuring the static pass dynamic fail gap in security sensitive and llm generated python code|2026
 title_year:beyond text matching towards reference free evaluation for human oriented binary reverse engineering|2026
 title_year:beyond vector similarity hierarchical context aware graph rag vs standard rag in enterprise code migration|2026
+title_year:binary discrete diffusion candidate set diffusion for logic and planning tasks|2026
 title_year:biodigital diagnosis and personalized risk assessment in periodontal diseases|2026
 title_year:biophys bridge a benchmark for interdisciplinary scientific reasoning in physics grounded biological research|2026
 title_year:black box red teaming of agentic ai a taxonomy driven framework for automated risk discovery|2026
@@ -1637,6 +1964,7 @@ title_year:breaking the illusion of review reliability under static evaluation s
 title_year:bridging the first hour gap evaluating ai reliability and benchmarking deficiencies in cyber incident response for law enforcement|2026
 title_year:c to rust fallacy automatic refactoring memory security|2026
 title_year:camelot camel orchestrated with temporal logic for static verification and liveness|2026
+title_year:can agentic code review catch vulnerabilities before they are merged|2026
 title_year:canal channel aware noise allocation for differentially private feature distillation in medical image segmentation|2026
 title_year:case level verification in scanner llm cascades overcoming the alert aggregation bottleneck to expand the frr tpr trade off space|2026
 title_year:cashews source preprocessor for llm based malicious package detection|2026
@@ -1649,12 +1977,14 @@ title_year:clarification is not correction llms fail to let go|2026
 title_year:class based obfuscation with multi objective evolutionary algorithms on source code|2026
 title_year:classcanner efficient c class recovery from binaries driven by object flow graphs|2026
 title_year:clear causal context based agentic reasoning for vulnerability detection|2026
+title_year:clinsdt llm encoded clinical semantic guidance for sepsis treatment via decision transformer|2026
 title_year:closed world resolution against tool hallucination in llm agents|2026
 title_year:closing the interpretability gap explainable ml based malware detection for defensive cyberspace operations|2026
 title_year:cloud native and distributed systems for efficient and scalable large language models a research agenda|2026
 title_year:code review assistant spots bugs suggests fixes|2026
 title_year:codesentinel ai context aware deep learning for automated software vulnerability detection and cwe classification|2026
 title_year:codetd topology of attention detects hallucinations in code llms|2026
+title_year:commit or abstain system one decision models llms and missing legal authority|2026
 title_year:companionsafe from multi turn safety evaluation to guardrails for ai companions|2026
 title_year:compass predicting the relationship of multiple patches for vulnerabilities with llms|2026
 title_year:concealing llm based multi agent topology via phantom structure injection|2026
@@ -1670,7 +2000,10 @@ title_year:cpygraph a version aware static analysis framework for native cpython
 title_year:craft causal responsibility and failure tracing in medical vision language models|2026
 title_year:ctforge automatically generating test suites for software configuration|2026
 title_year:ctxfuzz context aware directed fuzzing via runtime fuzzer agent cooperation|2026
+title_year:cve to att ck mapping via evidence constrained ranking|2026
+title_year:cyber defence agentic ai and the sociotechnical paradigm a survey of ai driven cybersecurity|2026
 title_year:cyberarena benchmarking ai agents in live symmetric attack and defense combat|2026
+title_year:data void exploits in web searching llms|2026
 title_year:decomposing ponzi schemes multi aspect lifecycle analysis for detecting fraudulent smart contracts|2026
 title_year:deep learning based intelligent platform for code analysis and vulnerability discovery|2026
 title_year:deep noir autonomous steering discovery via architectural chronometry in transformer models|2026
@@ -1681,6 +2014,7 @@ title_year:detecting logic vulnerabilities across the contract and device layers
 title_year:devsecops a comprehensive survey of secure software development and deployment practices|2026
 title_year:did the llm answer the question a semantic reconstruction game for jailbreak evaluation|2026
 title_year:dmg dual stream multiple instance learning network for hunting vulnerable smart contracts via adaptive granularity fusion|2026
+title_year:doctalk enhancing medical knowledge retrieval via fine tuned large language models with chain of thought reasoning for robust clinical decision support|2026
 title_year:dodr deterministic operator driven reasoning in latent space|2026
 title_year:does ai help cyber attackers or defenders evidence from nonpublic vulnerabilities and subsequent attacks|2026
 title_year:does location matter a black box causal audit reveals model dependent audio grounding in lalm hallucination|2026
@@ -1690,6 +2024,7 @@ title_year:echo replacing the compliance proxy with response harmfulness in opti
 title_year:eclipse v2 0 a reproducible scaffold for severe confirmatory testing through preregistration single shot validation and static analysis screening|2026
 title_year:editorial advanced integration of large language models for autonomous systems and critical decision support|2026
 title_year:efficiency hallucination formalizing and measuring behavioral calibration in llm based code optimization|2026
+title_year:egi bench an enterprise general intelligence benchmark suite|2026
 title_year:embedding level pretraining for assembly level vulnerability detection using transformer models|2026
 title_year:empowering lightweight language models for security code review via context aware distillation|2026
 title_year:engineering sustainable agents a systematic comparison of agentic llms for developer workflows|2026
@@ -1711,12 +2046,17 @@ title_year:foresight over graph reasoning beyond local horizons for knowledge ba
 title_year:forgeable confirmation in automated computer security testing deterministic rules versus ai judges|2026
 title_year:formal runtime verification for tool using llm agents an offline same benchmark study on agentdojo and stac|2026
 title_year:freesbee a constant time compilation pipeline|2026
+title_year:from candidate admission to task level return auditing llm generated code under execution contracts|2026
 title_year:from capability to assurance in autonomous penetration testing harnesses a framework and reference implementation|2026
 title_year:from circuits to policies a review and taxonomy of decision making and strategy selection in llms and llm agents|2026
+title_year:from code author to code reviewer a systematic review of practitioner experience with generative ai in software engineering|2026
 title_year:from component snapshots to lifecycle traces agent based software composition analysis|2026
 title_year:from guessing to seeing enhancing llm based program repair via trace guided multi strategy debate|2026
+title_year:from hype to roi an economic model for llm adoption in information systems and security operations|2026
+title_year:from instructions to exploits applying program analysis to malicious agent skills across natural language and code|2026
 title_year:from manual to llm assisted formal verification of a pkcs 1 signature parser|2026
 title_year:from matching models to recruiting agents a systematized narrative review of ai recruitment systems evaluation and governance|2026
+title_year:from prose to properties testing research claims with aratest for agent native science|2026
 title_year:from requirements to attack trees grounded llm agents for design time security review|2026
 title_year:from suppression to repair mitigating object hallucination in large vision language models via localized distribution alignment|2026
 title_year:from unreliable to usable decomposing failure modes and confidence signals in llm entity extraction evidence from cyber threat intelligence|2026
@@ -1727,15 +2067,20 @@ title_year:ganadi uncovering c c oss reuse genealogies via pivotal function base
 title_year:gauge a formal framework for measuring cryptographic security under heterogeneous adversary cost models|2026
 title_year:generative ai assistants in software development productivity gains code quality and security trade offs|2026
 title_year:global research architecture of rna binding proteins in neurodegenerative diseases a web of science bibliometric study with pubmed record verification 2001 2025|2026
+title_year:global trends and thematic evolution in breast cancer and frailty research a multi database bibliometric analysis 1973 2025|2026
 title_year:grace graph grounded reflective agent copilot engine for expert in the loop knowledge expansion|2026
 title_year:graml graph grounded reasoning and multi task learning for llm based software vulnerability detection|2026
 title_year:guiding ai to fix its own flaws an empirical study on llm driven secure code generation|2026
+title_year:hallucinations of large language models in cross language code translation phenomena and mitigation|2026
 title_year:hardware assisted multi stage ransomware detection with adaptive machine learning|2026
 title_year:hazardweaver scientific route selection for hazard analysis agents|2026
 title_year:hieronym leveraging hierarchical multi source information for function renaming in stripped binary|2026
+title_year:holo nn holographic nearest neighbor search via compressive sensing|2026
 title_year:homard hammering off chip memory via aggregate power rail disclosure|2026
 title_year:hoss fast oblivious semantic search with heterogeneous gpu cpu tee architecture|2026
+title_year:how effectively do security skills guide coding agents in vulnerability detection in linux kernel|2026
 title_year:how humans and llms read gender into gender neutral physical descriptions|2026
+title_year:how much does the harness matter and for whom a multi model study of context in llm driven vulnerability discovery|2026
 title_year:how your credentials are leaked by llm agent skills an empirical study|2026
 title_year:humans vs machines a comparison with ai agents in software reverse engineering|2026
 title_year:hydra proactive android malware drift adaptation via hierarchical graph contrastive learning|2026
@@ -1755,7 +2100,9 @@ title_year:learning from failures a failure driven prompt refinement for llm bas
 title_year:learning from self generated responses reliability uncertainty self distillation for reasoning|2026
 title_year:learning to revise reasoning with segment wise on policy distillation|2026
 title_year:learning to triage vulnerability reports from program analysis an empirical study in node js|2026
+title_year:learning when to commit schedule distillation for fast diffusion language models|2026
 title_year:learning when to trust medical knowledge regression safe routing for clinical reasoning|2026
+title_year:lightweight 8d bitwise hyperchaotic encryption with multi round spn for secure medical image cloud storage and retrieval|2026
 title_year:listqa a benchmark for evaluating list formatted factual knowledge retrieval in large language models|2026
 title_year:llm based code auditing by inferring and evaluating developer assumptions|2026
 title_year:llm based repair of static nullability errors|2026
@@ -1764,31 +2111,41 @@ title_year:llmdpa pre execution privacy auditing of dp sgd via evidence constrai
 title_year:llmsec av a vulnerability taxonomy and llm driven software weakness discovery framework for autonomous vehicles|2026
 title_year:llmvul a vulnerability labeled dataset of llm generated c c functions from real production repositories|2026
 title_year:local sensitivity in exponential selection failure modes and valid calibrations|2026
+title_year:locate then reason end to end patch presence testing in stripped binaries|2026
 title_year:look before you leap factual decoding with internal attribution signals|2026
 title_year:mac rrg iterative multi agent collaboration for x ray radiology report generation|2026
 title_year:machine learning based vulnerability detection in ai generated source code a systematic literature review and research directions|2026
+title_year:making small code llms more efficient for secure code review with neuro symbolic fine tuning|2026
 title_year:mallocsan a memory safety tool for native closed source applications|2026
 title_year:malskills detecting malicious skills in the agentic supply chain via neuro symbolic reasoning|2026
 title_year:maltotal cost effective and language agnostic malicious code poisoning detection for millions of repositories|2026
 title_year:marbo relational belief grounding for llm agents in social deduction games|2026
 title_year:match the canvas not just the answer predictability aware sft for diffusion language models|2026
+title_year:medical fine tuning reshapes not reduces patient facing ai risk a rubric based llm judge evaluation framework|2026
 title_year:memory safety in kernel development an ai assisted comparative study of rust and c based approaches to preventing memory corruption|2026
+title_year:memplan memory conditioned pddl planning for partially observable text environments|2026
 title_year:metrics failure in llm based code vulnerability repair an empirical study and a change aware screen|2026
 title_year:mind the gap detecting description execution mismatch attacks in dao governance|2026
 title_year:mind the gap do widely used sast tools really cover the language specific top cwes|2026
 title_year:mission im possible towards autonomous discovery of autopilot logic flaws in open source drone frameworks|2026
 title_year:mitigating hallucinations in natural language generation through prompt engineering a mechanism oriented narrative review|2026
 title_year:mobilecybench evaluating agent vulnerability discovery via executable probes|2026
+title_year:mpidetector detecting multi modal prompt injection via llm based reasoning|2026
 title_year:multi stage on demand program slicing for modular analysis of multi threaded programs|2026
 title_year:multifixer a coordinator proposer based multi agent framework for fixing multi hunk bugs|2026
 title_year:multimodal generative cyber forensics network for unified malware intelligence synthesis through temporal evidence alignment neuro symbolic hypergraph reasoning and cognitive threat attributions|2026
+title_year:mzcache on device llm memory management under multitasking|2026
+title_year:narratives mislead an empirical study of how llms misjudge cvss severity in bug bounty reports|2026
 title_year:natural hazards critical infrastructure systems and resilience enhancement a structured state of the art review and a synthesis based rapid assessment framework|2026
 title_year:no box vulnerability analysis description only detection of indirect prompt injection vulnerabilities in mcp servers|2026
 title_year:no isolated evolution no blind search memory guided prompt co evolution for industrial multi agent vulnerability detection|2026
 title_year:nv reason ct 3d visual language model for ct analysis|2026
 title_year:oblivul alert conditioned safety obligation modeling and bidirectional counterfactual validation for code vulnerability detection|2026
 title_year:off target effects of response style alignment in a korean 27b language model|2026
+title_year:omni ubench benchmarking omni modal llm based guardrails across safety utility and reliability|2026
+title_year:omni woodpecker hallucination correction via evidence prior rebalancing for omni llms|2026
 title_year:on premise codebert driven model for vulnerability detection in source code|2026
+title_year:on premise open weight large language models for interpretable web vulnerability detection a benchmark against cloud models and rule based static analysis|2026
 title_year:on the lexical superstition of large language models for code comprehension re evaluation on code of low lexical quality|2026
 title_year:on the relationship between model quantization and model inversion attacks|2026
 title_year:one is not enough the untold story of multiple security patches for one vulnerability|2026
@@ -1804,6 +2161,7 @@ title_year:pentestchain a cost aware mcp orchestrated framework for automated pe
 title_year:personality adaptive conversational ai for emotional support a simulation study integrating big five detection with zurich model inspired regulation|2026
 title_year:pinocchio fast uncertainty estimates for black box language models|2026
 title_year:plc bin2src retrieving corresponding structured text source files for plc binaries|2026
+title_year:pluralistic alignment in large language models objectives human references and preference representations|2026
 title_year:poisoning the neighborhood a topology aware topic level attack on large scale hnsw based rag systems|2026
 title_year:polar llm powered synthesis of real world cyber evidence for prioritization and mitigation|2026
 title_year:post hoc attention steering of large language models for robust code understanding under obfuscation|2026
@@ -1822,12 +2180,16 @@ title_year:quad state safety evaluation of open weight large language models on 
 title_year:ra coa training free fashion image captioning via retrieval augmented chain of attributes|2026
 title_year:rag ct mitigating privacy risks on retrieval augmented generation systems via scanning prompt distribution|2026
 title_year:rag narok retrieval aware knowledge corpus poisoning in rag with source specific refutation|2026
+title_year:ragleak supply chain privacy backdoors in retrieval augmented generation|2026
 title_year:raim robust aggregation of inexpensive models for hallucination detection|2026
+title_year:raise or check predicting the necessity of additional fuzzing for continuous fuzzing|2026
 title_year:reachability is only the beginning toward effect aware vulnerability analysis for ai agents|2026
 title_year:reachability not observation containing systems whose wiring changes|2026
+title_year:real pmids wrong papers harness design for biomedical claim verification agents|2026
 title_year:reasoning topology matters a controlled study of llm based cybersecurity analysis|2026
 title_year:reducing hallucinations in llm generated code via semantic triangulation|2026
 title_year:refusing the impossible a taxonomy and benchmark for code hallucination in large language models|2026
+title_year:regomender a multi agent framework for automated rego policy repair|2026
 title_year:reliable detection of cyber threats in smart grids using a hybrid xgboost and lstm framework|2026
 title_year:reliable parallel decoding in masked diffusion language models|2026
 title_year:relog execution aware logging with runtime feedback for llm oriented debugging|2026
@@ -1840,6 +2202,7 @@ title_year:reseda automatic and precise program level redos triage via interproc
 title_year:rethinking assessment for engineering students in higher education in the age of generative ai a critical narrative review|2026
 title_year:rethinking knowledge retrieval for generation a survey on rag architectures and applications|2026
 title_year:retrieve reproduce reveal dissecting retrieval augmented software vulnerability detection|2026
+title_year:reva real time vulnerability detection through contextual probing of large language models|2026
 title_year:rise repair like insertions for stealthy evasion of vulnerability detection models|2026
 title_year:riskscope pre audit triage for incentive and control risks in smart contracts|2026
 title_year:ruleautopilot synthesizing deployable suricata rules from network traffic|2026
@@ -1850,14 +2213,21 @@ title_year:sailor solver assisted interactive llm based optimization recovery|20
 title_year:same name different server a security census of silent drift in the model context protocol ecosystem|2026
 title_year:secchain operationalizing security guidelines for multi agent smart contract generation|2026
 title_year:secreason vulnerability detection and in stream self repair for llm code generation|2026
+title_year:secure agentic coding through counterexample grounded feedback|2026
 title_year:securelite lightweight vulnerability detection on cvefixes with tf idf gradient boosting and a tiny transformer plus llm assisted triage|2026
+title_year:securing agent generated code with its own development history|2026
 title_year:security smell detection in dockerfiles|2026
 title_year:seeing the forest a taxonomy guided analysis and improvement of malicious pypi package detectors|2026
 title_year:self discovering security oracles meta learning vulnerability detection strategies through adversarial self play|2026
+title_year:self evolving static analysis via llm pseudo labeling|2026
 title_year:selfop an optimization algorithm for self improving security agents|2026
 title_year:sema guard semantic and graph based vulnerability detection in assembly code|2026
+title_year:semantic observability for autonomous systems diagnostics|2026
 title_year:semanticvul evidence grounded structured llm explanations for vulnerability detection|2026
+title_year:sempre semantic aware protocol reverse engineering via consistency driven joint optimization|2026
 title_year:semvul semantic enhanced graph neural networks for code property graph based vulnerability detection|2026
+title_year:semweaver refining llm generated static vulnerability checkers with analyzer internal evidence|2026
+title_year:sentinelml behavioral machine learning based ransomware detection with decoupled ai security analysis|2026
 title_year:sifting the noise a comparative study of llm agents in vulnerability false positive filtering|2026
 title_year:skaeg automatic exploit generation based on shared keywords in embedded systems|2026
 title_year:skilllite evidence guided malicious skill auditing with compact llms|2026
@@ -1869,13 +2239,17 @@ title_year:smartmemory detecting on chain off chain communication inconsistency 
 title_year:soft spatial reasoning|2026
 title_year:sok from finding to deployment systematizing the os kernel bug lifecycle|2026
 title_year:solidity meets llms a transformer based approach to smart contract vulnerability detection|2026
+title_year:sopo socratic guided policy optimization for span level hallucination detection|2026
 title_year:soundness checking of taint flow models|2026
+title_year:splash contrastive audit pressure for detecting and localizing security hallucinations in generated code|2026
 title_year:spsyn synthesizing defi price manipulation exploits via semantic recovery and state guided search|2026
 title_year:state aware fuzzing of javascript engines with llm guided instrumentation|2026
+title_year:statemirror pre execution detection of hallucinated tool calls in coding agents|2026
 title_year:storebench a live commerce environment for evaluating and training autonomous operator agents|2026
 title_year:structure guided semantic deobfuscation of android identifiers|2026
 title_year:swe test benchmarking llm vulnerability discovery via input prediction|2026
 title_year:symbolic temporal supervision of llm agents using contracts|2026
+title_year:symlift neural semantic lifting for compile free vulnerability detection in context incomplete code fragments|2026
 title_year:system switch when should a fast decision model stop and think|2026
 title_year:syzharness patch based kernel bug reproduction with llm synthesized fuzzing harnesses|2026
 title_year:t rex teaching large language models to reason with verbalized execution semantics|2026
@@ -1890,20 +2264,26 @@ title_year:the ethics and accuracy of generative ai in higher education evaluati
 title_year:the history is the detector executing cve patch history end to end|2026
 title_year:the like trap multi stage poisoning against agents in similarity based recommendation systems|2026
 title_year:the model proposes the code disposes a pre registered ablation of a verifier and acceptance stage in an llm orchestrated offensive security agent|2026
+title_year:the one pixel of reasoning one truthful relation is enough to mislead llm agents|2026
 title_year:the role of prompt patterns in llm based smart contract vulnerability detection|2026
 title_year:the winner s curse in llm self improvement loops selection noise lock in and acceptance rules|2026
+title_year:tire top down formula instantiation with reliable execution for physics problem synthesis|2026
 title_year:tofu exploiting and fuzzing the llm orchestrator tool trust boundary|2026
+title_year:tom2vec continuous theory of mind tokens for multi agent coordination|2026
 title_year:top down multi agent llm system with runtime data for misra c violation detection|2026
 title_year:toward secure code generation bridging correctness and security via task adaptive vulnerability modeling and execution based benchmarking|2026
 title_year:towards scalable and cost efficient vulnerability detection a study on automatic query generation|2026
 title_year:towards trustworthy foundation models a systematic review of safety evaluation and defence mechanisms|2026
 title_year:trace driven automated poc synthesis for on chain attacks|2026
 title_year:tracevic causal reasoning over code evolution for identifying vulnerability inducing commits|2026
+title_year:tracing hallucinations in llm reasoning for uml class diagram generation an empirical taxonomy and mitigation study|2026
 title_year:tracing the invisible semantic message flow discovery via data contracts in real world distributed systems|2026
 title_year:trajectory level security debt in llm coding agents|2026
 title_year:transcope what the software hides about llm training data the hardware reveals at scale and accelerators magnify|2026
 title_year:transformed in translation two stage structural uncertainty in llm based scientific autoformalization|2026
+title_year:trust mechanisms for offline generative ai at the edge a connectivity regime framework and an empirical study on a raspberry pi 5|2026
 title_year:trusting the filename a systematization and detection study of file write attacks from untrusted archive and download metadata|2026
+title_year:trusting the tool asymmetric deference of llm vulnerability auditors to static analysis evidence|2026
 title_year:trustworthy large language models llms for power system operations from grid copilots to verifiable decision support|2026
 title_year:trustworthy phishing url detection using machine learning performance analysis and future directions|2026
 title_year:trustworthy runtime error healing in real world repositories a benchmark and guardrail|2026
@@ -1923,8 +2303,10 @@ title_year:using llm agents for security testing of compiled mobile applications
 title_year:verifying economic security of smart contracts via unintended return|2026
 title_year:vex bench benchmarking llm agents for assessing exploitability of software supply chain vulnerabilities|2026
 title_year:viruscascade hijacking collaborative reflection in llm powered recommender agents|2026
+title_year:vuldec vulnerability detection in binaries via neural decompilation|2026
 title_year:vulnerability localization benchmark measuring agentic security analysis at repository scale|2026
 title_year:vulnerable models in the ai supply chain an empirical study of adoption propagation and usage patterns|2026
+title_year:vulnsage adjudicating sast reports by connecting llm reasoning to program structure|2026
 title_year:vulvalidate auditing function level vulnerability labels with executable evidence|2026
 title_year:vulweaver weaving broken semantics for grounded vulnerability detection|2026
 title_year:walking the embedding space datastore extraction from multimodal rag|2026
@@ -1938,7 +2320,9 @@ title_year:when dependencies depend a large scale study on conditional dependenc
 title_year:when does correction become repair mechanistic auditing of internal interventions in tool using llms|2026
 title_year:when does selection replace extraction a pre registered test of agent memory with a typed decision model|2026
 title_year:when llm decompilers recompile more and preserve less|2026
+title_year:when pebbles are not atomic a polynomial separation between pure and entangled pebbling|2026
 title_year:when the agent becomes the kernel a systematization of security on the path to ai native operating systems|2026
+title_year:where ai vulnerability discovery harnesses go quiet structural false negatives and hidden vulnerabilities|2026
 title_year:where did the repair first go wrong localizing the origins of silent failures in agentic vulnerability repair|2026
 title_year:where do the tokens go understanding and reducing costs in llm agents for vulnerability discovery|2026
 title_year:where llm graders succeed and break evidence from two computer science exams|2026
